@@ -1,0 +1,669 @@
+<!doctype html>
+<html lang="fr-BE" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cambr.IA — L'intelligence artificielle, à taille humaine</title>
+  <meta name="description" content="Cambr.IA conçoit des agents IA et des automatisations sur mesure pour les PME belges. Moins de tâches répétitives, plus de temps pour ce qui compte.">
+  <meta name="theme-color" content="#0C0A09">
+  <meta name="color-scheme" content="dark">
+  <link rel="canonical" href="https://cambr-ia.be/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_BE">
+  <meta property="og:site_name" content="Cambr.IA">
+  <meta property="og:title" content="Cambr.IA — L'intelligence artificielle, à taille humaine">
+  <meta property="og:description" content="Agents IA et automatisations sur mesure pour les PME belges.">
+  <meta property="og:url" content="https://cambr-ia.be/">
+  <meta property="og:image" content="https://cambr-ia.be/assets/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/space-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/dm-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script>
+    (function (d) {
+      var c = d.documentElement.classList;
+      c.replace('no-js', 'js');
+      if (!window.matchMedia || !matchMedia('(prefers-reduced-motion: reduce)').matches) c.add('motion-ok');
+      /* Filet de sécurité : si le JS principal ne démarre pas, on ré-affiche tout. */
+      setTimeout(function () { if (!c.contains('is-ready')) { c.remove('motion-ok'); c.add('is-loaded'); } }, 4000);
+    })(document);
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Cambr.IA",
+    "url": "https://cambr-ia.be/",
+    "description": "Agents IA et automatisations sur mesure pour les PME belges.",
+    "areaServed": { "@type": "Country", "name": "Belgique" },
+    "email": "contact@cambr-ia.be",
+    "knowsLanguage": ["fr", "nl", "en", "it"]
+  }
+  </script>
+</head>
+<body>
+  <!-- Sprite d'icônes (tracés Lucide, licence ISC) -->
+  <svg width="0" height="0" class="sprite" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+      <symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></symbol>
+      <symbol id="i-bot" viewBox="0 0 24 24"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></symbol>
+      <symbol id="i-workflow" viewBox="0 0 24 24"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></symbol>
+      <symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></symbol>
+      <symbol id="i-cap" viewBox="0 0 24 24"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></symbol>
+      <symbol id="i-scan" viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3"/><path d="m16 16-1.9-1.9"/></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+      <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></symbol>
+      <symbol id="i-key" viewBox="0 0 24 24"><path d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z"/><circle cx="16.5" cy="7.5" r=".5"/></symbol>
+      <symbol id="i-trend" viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5v14"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+      <symbol id="i-play" viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></symbol>
+      <symbol id="i-replay" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+      <symbol id="i-ear" viewBox="0 0 24 24"><path d="M6 8.5a6.5 6.5 0 1 1 13 0c0 6-6 6-6 10a3.5 3.5 0 1 1-7 0"/><path d="M15 8.5a2.5 2.5 0 0 0-5 0v1a2 2 0 1 1 0 4"/></symbol>
+      <symbol id="i-map" viewBox="0 0 24 24"><path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"/><path d="M15 5.764v15"/><path d="M9 3.236v15"/></symbol>
+      <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol>
+      <symbol id="i-buoy" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/><circle cx="12" cy="12" r="4"/></symbol>
+      <symbol id="i-inbox" viewBox="0 0 24 24"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></symbol>
+      <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    </defs>
+  </svg>
+
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <!-- Préchargement (masqué sans JavaScript et en mouvement réduit) -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <span class="loader__brand">Cambr<span class="dot">.</span>IA</span>
+      <span class="loader__count"><span data-loader-count>00</span>%</span>
+    </div>
+    <div class="loader__bar"><span></span></div>
+  </div>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="spotlight" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"><span></span></div>
+
+  <header class="site-header" data-header>
+    <div class="container site-header__inner">
+      <a class="brand" href="#intro" aria-label="Cambr.IA — retour en haut">
+        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M24.5 8.6A11 11 0 1 0 24.5 23.4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+          <circle cx="24.5" cy="8.6" r="2.6" class="brand__node"/>
+          <circle cx="24.5" cy="23.4" r="2.6" class="brand__node"/>
+          <circle cx="16" cy="16" r="2.2" class="brand__core"/>
+          <path d="M16 16 24.5 8.6M16 16l8.5 7.4" stroke="currentColor" stroke-width="1.2" opacity=".55"/>
+        </svg>
+        <span class="brand__word">Cambr<span class="dot">.</span>IA</span>
+      </a>
+
+      <nav class="nav" aria-label="Navigation principale">
+        <ul class="nav__list">
+          <li><a href="#chapitre-1">L'histoire</a></li>
+          <li><a href="#methode">Méthode</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#simulateur">Simulateur</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn btn--sm btn--accent header-cta magnetic" href="#contact">
+        <span>Parlons-en</span>
+        <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-mobile" data-menu-toggle>
+        <span class="visually-hidden" data-menu-label>Ouvrir le menu</span>
+        <svg class="icon icon--menu" aria-hidden="true"><use href="#i-menu"/></svg>
+        <svg class="icon icon--close" aria-hidden="true"><use href="#i-x"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="menu-mobile" id="menu-mobile" data-menu hidden>
+    <nav aria-label="Navigation mobile">
+      <ol class="menu-mobile__list">
+        <li><a href="#chapitre-1"><span class="mono">01</span>L'histoire</a></li>
+        <li><a href="#methode"><span class="mono">02</span>Méthode</a></li>
+        <li><a href="#services"><span class="mono">03</span>Services</a></li>
+        <li><a href="#simulateur"><span class="mono">04</span>Simulateur</a></li>
+        <li><a href="#faq"><span class="mono">05</span>FAQ</a></li>
+        <li><a href="#contact"><span class="mono">06</span>Contact</a></li>
+      </ol>
+    </nav>
+    <p class="menu-mobile__foot mono">contact@cambr-ia.be</p>
+  </div>
+
+  <!-- Repère de chapitres (bureau) -->
+  <nav class="chapters" aria-label="Chapitres de l'histoire" data-chapters>
+    <ol>
+      <li><a href="#intro" data-chapter-link="intro"><span class="chapters__num">00</span><span class="chapters__label">Prologue</span></a></li>
+      <li><a href="#chapitre-1" data-chapter-link="chapitre-1"><span class="chapters__num">01</span><span class="chapters__label">Le constat</span></a></li>
+      <li><a href="#chapitre-2" data-chapter-link="chapitre-2"><span class="chapters__num">02</span><span class="chapters__label">Le déclic</span></a></li>
+      <li><a href="#chapitre-3" data-chapter-link="chapitre-3"><span class="chapters__num">03</span><span class="chapters__label">La solution</span></a></li>
+      <li><a href="#simulateur" data-chapter-link="simulateur"><span class="chapters__num">04</span><span class="chapters__label">L'impact</span></a></li>
+      <li><a href="#contact" data-chapter-link="contact"><span class="chapters__num">05</span><span class="chapters__label">Épilogue</span></a></li>
+    </ol>
+  </nav>
+
+  <main id="contenu">
+
+    <!-- ============ PROLOGUE ============ -->
+    <section class="hero" id="intro" data-chapter="intro" data-mood="gold" aria-labelledby="hero-title">
+      <canvas class="hero__canvas" aria-hidden="true" data-neural></canvas>
+      <div class="hero__aurora" aria-hidden="true"></div>
+
+      <div class="container hero__content">
+        <p class="eyebrow" data-hero-fade>
+          <span class="pulse" aria-hidden="true"></span>
+          Agence IA &amp; automatisation — Belgique
+        </p>
+        <h1 class="hero__title" id="hero-title" data-hero-title>
+          L'intelligence artificielle,<br>
+          <em class="gold-text">à taille humaine.</em>
+        </h1>
+        <p class="hero__lead" data-hero-fade>
+          Cambr.IA conçoit des agents IA et des automatisations sur mesure pour les PME belges.
+          Moins de tâches répétitives. Plus de temps pour ce qui compte vraiment.
+        </p>
+        <div class="hero__actions" data-hero-fade>
+          <a class="btn btn--accent btn--lg magnetic" href="#contact">
+            <span>Réserver un appel découverte</span>
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+          </a>
+          <a class="btn btn--ghost btn--lg" href="#chapitre-1">
+            <span>Lire l'histoire</span>
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow-down"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="container hero__meta" data-hero-fade>
+        <dl class="hero__facts">
+          <div><dt>Appel découverte</dt><dd>30 min, offert</dd></div>
+          <div><dt>Premier prototype</dt><dd>en quelques semaines</dd></div>
+          <div><dt>Vos données</dt><dd>restent les vôtres</dd></div>
+        </dl>
+        <a class="scroll-hint" href="#chapitre-1">
+          <span class="scroll-hint__line" aria-hidden="true"></span>
+          <span class="mono">Défiler</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ CHAPITRE 01 — LE CONSTAT ============ -->
+    <section class="chapter chapter--problem" id="chapitre-1" data-chapter="chapitre-1" data-mood="ember" aria-labelledby="ch1-title">
+      <div class="problem" data-problem>
+        <div class="container problem__grid">
+          <div class="problem__story">
+            <p class="chapter-tag"><span class="mono">Chapitre 01</span> Le constat</p>
+            <h2 class="h2" id="ch1-title">L'équipe rentre chez elle.<br><span class="muted">La deuxième journée de Sophie commence.</span></h2>
+            <p class="lead muted">
+              Sophie dirige une PME de distribution d'emballages&nbsp;: douze personnes, des clients fidèles,
+              un métier qu'elle connaît par cœur. Mais chaque soir, une autre journée commence,
+              celle que personne ne voit.
+            </p>
+            <p class="problem__note mono">Une histoire inventée, que beaucoup de dirigeants reconnaîtront.</p>
+          </div>
+
+          <div class="evening">
+            <div class="evening__clock" aria-hidden="true">
+              <span class="evening__label mono">Ce soir, chez Sophie</span>
+              <span class="clock" data-clock>18:30</span>
+              <span class="evening__total mono" data-clock-total>+ 3 h 40 de tâches invisibles</span>
+            </div>
+            <ul class="tasks" aria-label="Ce qui attend Sophie ce soir : 3 heures 40 de tâches">
+              <li class="task" data-task><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg><span><strong>47 e-mails</strong> non lus, dont 9 demandes de devis</span><span class="task__time mono">1 h 10</span></li>
+              <li class="task" data-task><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg><span><strong>12 factures</strong> fournisseurs à encoder</span><span class="task__time mono">50 min</span></li>
+              <li class="task" data-task><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg><span><strong>3 relances</strong> de paiement à rédiger</span><span class="task__time mono">25 min</span></li>
+              <li class="task" data-task><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg><span>Le <strong>planning</strong> de l'équipe à refaire</span><span class="task__time mono">40 min</span></li>
+              <li class="task" data-task><svg class="icon" aria-hidden="true"><use href="#i-workflow"/></svg><span>Ce <strong>fichier Excel</strong> qui ne se remplit pas tout seul</span><span class="task__time mono">35 min</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="container problem__punch" data-punch>
+          <p class="punch">Ce n'est pas un manque de talent.<br><span class="ember-text">C'est un manque de temps.</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CHAPITRE 02 — LE DÉCLIC ============ -->
+    <section class="chapter chapter--turn" id="chapitre-2" data-chapter="chapitre-2" data-mood="teal" aria-labelledby="ch2-title">
+      <div class="container">
+        <p class="chapter-tag"><span class="mono">Chapitre 02</span> Le déclic</p>
+        <h2 class="visually-hidden" id="ch2-title">Le déclic</h2>
+        <p class="manifesto" data-manifesto>
+          Et si les tâches répétitives se faisaient toutes seules&nbsp;? Pas par magie.
+          Grâce à des agents IA conçus pour <em>votre</em> façon de travailler, branchés sur
+          <em>vos</em> outils, et qui restent sous <em>votre</em> contrôle.
+        </p>
+      </div>
+
+      <div class="marquee" aria-label="Exemples d'outils que nous connectons">
+        <div class="marquee__track" data-marquee>
+          <ul class="marquee__list">
+            <li>Gmail</li><li>Outlook</li><li>Excel</li><li>Google Sheets</li><li>Odoo</li><li>Teams</li><li>WhatsApp Business</li><li>Notion</li><li>HubSpot</li><li>Make</li><li>n8n</li><li>Shopify</li>
+          </ul>
+          <ul class="marquee__list" aria-hidden="true">
+            <li>Gmail</li><li>Outlook</li><li>Excel</li><li>Google Sheets</li><li>Odoo</li><li>Teams</li><li>WhatsApp Business</li><li>Notion</li><li>HubSpot</li><li>Make</li><li>n8n</li><li>Shopify</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Méthode : parcours horizontal sur grand écran -->
+      <div class="journey" id="methode" data-journey aria-labelledby="methode-title">
+        <div class="journey__pin" data-journey-pin>
+          <div class="container journey__head">
+            <h3 class="h2" id="methode-title">Une méthode en quatre temps.<br><span class="muted">Sans jargon, sans surprise.</span></h3>
+            <div class="journey__progress" aria-hidden="true"><span data-journey-bar></span></div>
+          </div>
+          <ol class="journey__track" data-journey-track>
+            <li class="step">
+              <span class="step__num" aria-hidden="true">01</span>
+              <svg class="icon step__icon" aria-hidden="true"><use href="#i-ear"/></svg>
+              <h4 class="step__title">Écouter</h4>
+              <p>Un appel de trente minutes, puis une demi-journée avec vous et votre équipe pour comprendre comment vous travaillez au quotidien.</p>
+              <p class="step__out mono">Livrable&nbsp;: la liste des tâches qui vous coûtent le plus</p>
+            </li>
+            <li class="step">
+              <span class="step__num" aria-hidden="true">02</span>
+              <svg class="icon step__icon" aria-hidden="true"><use href="#i-map"/></svg>
+              <h4 class="step__title">Cartographier</h4>
+              <p>Nous classons chaque idée selon le temps gagné, la difficulté et le risque. Vous savez exactement ce qui vaut la peine, et ce qui ne la vaut pas.</p>
+              <p class="step__out mono">Livrable&nbsp;: une feuille de route chiffrée</p>
+            </li>
+            <li class="step">
+              <span class="step__num" aria-hidden="true">03</span>
+              <svg class="icon step__icon" aria-hidden="true"><use href="#i-wrench"/></svg>
+              <h4 class="step__title">Construire</h4>
+              <p>Un premier prototype branché sur vos vrais outils, testé avec vos vrais cas. On ajuste ensemble jusqu'à ce qu'il fasse gagner du temps pour de bon.</p>
+              <p class="step__out mono">Livrable&nbsp;: un agent en production</p>
+            </li>
+            <li class="step">
+              <span class="step__num" aria-hidden="true">04</span>
+              <svg class="icon step__icon" aria-hidden="true"><use href="#i-buoy"/></svg>
+              <h4 class="step__title">Accompagner</h4>
+              <p>Formation de l'équipe, documentation claire, suivi des résultats. Vous gardez la main, et nous restons joignables quand vous en avez besoin.</p>
+              <p class="step__out mono">Livrable&nbsp;: une équipe autonome</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CHAPITRE 03 — LA SOLUTION ============ -->
+    <section class="chapter chapter--solution" id="chapitre-3" data-chapter="chapitre-3" data-mood="gold" aria-labelledby="ch3-title">
+      <div class="container">
+        <header class="section-head" id="services">
+          <p class="chapter-tag"><span class="mono">Chapitre 03</span> La solution</p>
+          <h2 class="h2" id="ch3-title" data-reveal>Ce que nous construisons<br><span class="gold-text">pour vous.</span></h2>
+          <p class="lead muted" data-reveal>Pas de logiciel générique à apprendre. Des outils taillés pour vos processus, qui travaillent en arrière-plan.</p>
+        </header>
+
+        <ul class="bento" data-bento>
+          <li class="card card--xl" data-tilt>
+            <div class="card__glow" aria-hidden="true"></div>
+            <svg class="icon card__icon" aria-hidden="true"><use href="#i-bot"/></svg>
+            <h3 class="card__title">Agents IA conversationnels</h3>
+            <p>Un assistant qui répond à vos clients sur votre site, par e-mail ou sur WhatsApp, 24 h sur 24, en français, en néerlandais ou en anglais. Il connaît vos produits, vos prix et vos conditions, et vous passe la main dès qu'un humain est nécessaire.</p>
+            <ul class="chips" aria-label="Exemples">
+              <li>Service client</li><li>Prise de rendez-vous</li><li>Qualification de prospects</li>
+            </ul>
+            <div class="card__visual" aria-hidden="true" data-chat>
+              <div class="bubble bubble--in">Bonjour, vous livrez à Namur&nbsp;?</div>
+              <div class="bubble bubble--out">Oui, le mardi et le vendredi. Pour quelle quantité&nbsp;?</div>
+              <div class="bubble bubble--in">Environ 500 cartons par mois.</div>
+              <div class="bubble bubble--out">Parfait. Je prépare votre devis, vous le recevez dans deux minutes.</div>
+              <p class="chat-meta mono"><span class="pulse"></span>Agent Cambr.IA · en ligne 24 h/24</p>
+            </div>
+          </li>
+          <li class="card" data-tilt>
+            <div class="card__glow" aria-hidden="true"></div>
+            <svg class="icon card__icon" aria-hidden="true"><use href="#i-workflow"/></svg>
+            <h3 class="card__title">Automatisation de processus</h3>
+            <p>Les copier-coller entre vos outils disparaissent. Commandes, CRM, comptabilité, planning&nbsp;: tout se synchronise tout seul.</p>
+          </li>
+          <li class="card" data-tilt>
+            <div class="card__glow" aria-hidden="true"></div>
+            <svg class="icon card__icon" aria-hidden="true"><use href="#i-file"/></svg>
+            <h3 class="card__title">Traitement de documents</h3>
+            <p>Factures, bons de commande, contrats&nbsp;: l'IA lit, extrait, vérifie et classe. Vous ne contrôlez plus que les exceptions.</p>
+          </li>
+          <li class="card" data-tilt>
+            <div class="card__glow" aria-hidden="true"></div>
+            <svg class="icon card__icon" aria-hidden="true"><use href="#i-scan"/></svg>
+            <h3 class="card__title">Audit IA</h3>
+            <p>Un regard extérieur sur vos processus pour repérer où l'IA rapporte vraiment, et où elle ne vaut pas l'investissement.</p>
+          </li>
+          <li class="card" data-tilt>
+            <div class="card__glow" aria-hidden="true"></div>
+            <svg class="icon card__icon" aria-hidden="true"><use href="#i-cap"/></svg>
+            <h3 class="card__title">Formation des équipes</h3>
+            <p>Des ateliers concrets pour que vos collaborateurs utilisent l'IA au quotidien, avec confiance et en toute sécurité.</p>
+          </li>
+        </ul>
+
+        <!-- Démonstration d'agent -->
+        <div class="demo" data-demo>
+          <div class="demo__intro">
+            <p class="chapter-tag"><span class="mono">En coulisses</span> Un agent au travail</p>
+            <h3 class="h3">Une demande de devis arrive à 23h14.<br><span class="muted">Sophie dort enfin.</span></h3>
+            <p class="muted">Voici ce que fait un agent Cambr.IA pendant ce temps. Rien ne part sans validation humaine.</p>
+            <button class="btn btn--ghost" type="button" data-demo-play>
+              <svg class="icon" aria-hidden="true" data-demo-icon><use href="#i-play"/></svg>
+              <span data-demo-label>Lancer la démonstration</span>
+            </button>
+            <p class="demo__disclaimer mono">Démonstration simulée, à titre d'illustration.</p>
+          </div>
+
+          <div class="console" role="group" aria-label="Simulation d'un agent IA">
+            <div class="console__bar">
+              <span class="console__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="mono">agent-devis · cambr.ia</span>
+              <span class="console__status mono" data-demo-status>en veille</span>
+            </div>
+            <div class="console__mail">
+              <svg class="icon" aria-hidden="true"><use href="#i-inbox"/></svg>
+              <div>
+                <p class="console__from mono">De&nbsp;: Brasserie du Vieux Moulin · 23:14</p>
+                <p class="console__subject">« Bonjour, pourriez-vous nous faire une offre pour 2 000 cartons de 6 bouteilles par mois, livrés à Gosselies à partir de novembre ? »</p>
+              </div>
+            </div>
+            <ol class="console__log" data-demo-log aria-live="polite"></ol>
+            <div class="console__foot" data-demo-foot>
+              <div class="console__stats">
+                <span><span class="mono muted">Temps humain estimé</span><strong>~25 min</strong></span>
+                <span><span class="mono muted">Temps agent</span><strong class="gold-text" data-demo-timer>0,0 s</strong></span>
+              </div>
+              <button class="btn btn--accent btn--sm" type="button" data-demo-approve disabled>
+                <svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>
+                <span>Valider et envoyer</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CHAPITRE 04 — L'IMPACT ============ -->
+    <section class="chapter chapter--impact" id="simulateur" data-chapter="simulateur" data-mood="gold" aria-labelledby="sim-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="chapter-tag"><span class="mono">Chapitre 04</span> L'impact</p>
+          <h2 class="h2" id="sim-title" data-reveal>Combien de temps l'IA<br>pourrait-elle <span class="gold-text">vous rendre&nbsp;?</span></h2>
+          <p class="lead muted" data-reveal>Bougez les curseurs. L'estimation se met à jour en direct.</p>
+        </header>
+
+        <form class="sim" data-sim aria-describedby="sim-hypo" onsubmit="return false">
+          <fieldset class="sim__inputs">
+            <legend class="visually-hidden">Paramètres de votre entreprise</legend>
+
+            <div class="range">
+              <div class="range__head">
+                <label for="sim-people">Personnes concernées</label>
+                <output for="sim-people" class="range__value" data-out="people">5</output>
+              </div>
+              <input type="range" id="sim-people" name="people" min="1" max="50" step="1" value="5">
+            </div>
+
+            <div class="range">
+              <div class="range__head">
+                <label for="sim-hours">Heures de tâches répétitives par personne et par semaine</label>
+                <output for="sim-hours" class="range__value" data-out="hours">6 h</output>
+              </div>
+              <input type="range" id="sim-hours" name="hours" min="1" max="20" step="1" value="6">
+            </div>
+
+            <div class="range">
+              <div class="range__head">
+                <label for="sim-cost">Coût horaire chargé</label>
+                <output for="sim-cost" class="range__value" data-out="cost">40 €</output>
+              </div>
+              <input type="range" id="sim-cost" name="cost" min="20" max="120" step="5" value="40">
+            </div>
+
+            <div class="range">
+              <div class="range__head">
+                <label for="sim-share">Part automatisable</label>
+                <output for="sim-share" class="range__value" data-out="share">40 %</output>
+              </div>
+              <input type="range" id="sim-share" name="share" min="10" max="70" step="5" value="40">
+            </div>
+
+            <p class="sim__hypo muted" id="sim-hypo">
+              Hypothèses&nbsp;: 46 semaines travaillées par an, 38 h par semaine. Le résultat est un ordre de grandeur,
+              pas une promesse. L'audit le précise sur vos vrais processus.
+            </p>
+          </fieldset>
+
+          <div class="sim__results" aria-live="polite">
+            <div class="result result--main">
+              <span class="result__label mono">Heures récupérées par an</span>
+              <span class="result__value"><span data-res="hours">552</span><small> h</small></span>
+            </div>
+            <div class="result">
+              <span class="result__label mono">Valeur du temps libéré</span>
+              <span class="result__value"><span data-res="value">22 080</span><small> €</small></span>
+            </div>
+            <div class="result">
+              <span class="result__label mono">Soit l'équivalent de</span>
+              <span class="result__value"><span data-res="weeks">15</span><small> semaines de travail</small></span>
+            </div>
+            <div class="sim__meter" aria-hidden="true">
+              <span class="sim__meter-fill" data-res-meter></span>
+            </div>
+            <a class="btn btn--accent magnetic" href="#contact" data-sim-cta>
+              <span>Vérifions ce chiffre ensemble</span>
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+            </a>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============ ENGAGEMENTS ============ -->
+    <section class="principles" aria-labelledby="principes-title">
+      <div class="container">
+        <header class="section-head section-head--split">
+          <h2 class="h2" id="principes-title" data-reveal>Une IA digne<br>de <span class="gold-text">confiance.</span></h2>
+          <p class="lead muted" data-reveal>L'IA n'a de valeur que si vous pouvez compter dessus. Voici nos quatre engagements, sans exception.</p>
+        </header>
+        <ul class="principles__list">
+          <li class="principle" data-reveal>
+            <svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg>
+            <h3>RGPD dès la conception</h3>
+            <p>Des fournisseurs choisis pour leur conformité, un hébergement européen dès que c'est possible, et rien d'autre que les données strictement nécessaires.</p>
+          </li>
+          <li class="principle" data-reveal>
+            <svg class="icon" aria-hidden="true"><use href="#i-eye"/></svg>
+            <h3>Pas de boîte noire</h3>
+            <p>Chaque agent est documenté. Vous savez ce qu'il fait, pourquoi il le fait, et comment l'arrêter.</p>
+          </li>
+          <li class="principle" data-reveal>
+            <svg class="icon" aria-hidden="true"><use href="#i-key"/></svg>
+            <h3>Vous restez propriétaire</h3>
+            <p>Comptes, données et automatisations sont à votre nom. Aucune dépendance artificielle envers nous.</p>
+          </li>
+          <li class="principle" data-reveal>
+            <svg class="icon" aria-hidden="true"><use href="#i-trend"/></svg>
+            <h3>Des résultats mesurés</h3>
+            <p>Nous fixons ensemble des indicateurs avant de commencer, et nous les suivons. Si ça ne rapporte pas, on le dit.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="faq" id="faq" aria-labelledby="faq-title">
+      <div class="container faq__grid">
+        <header class="section-head">
+          <p class="chapter-tag"><span class="mono">Questions</span> fréquentes</p>
+          <h2 class="h2" id="faq-title" data-reveal>Vous vous<br>demandez peut-être…</h2>
+        </header>
+        <div class="faq__list">
+          <details class="qa" name="faq">
+            <summary><span>Je n'y connais rien en IA. Est-ce un problème&nbsp;?</span><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+            <div class="qa__body"><p>Au contraire, c'est notre point de départ. Vous connaissez votre métier, nous nous occupons de la technique. Tout est expliqué en mots simples, et votre équipe est formée à la fin du projet.</p></div>
+          </details>
+          <details class="qa" name="faq">
+            <summary><span>Combien coûte un projet&nbsp;?</span><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+            <div class="qa__body"><p>Cela dépend du périmètre. L'appel découverte est offert et le devis est forfaitaire, sans mauvaise surprise. Nous commençons toujours par le cas qui rapporte le plus vite, pour que le projet finance la suite.</p></div>
+          </details>
+          <details class="qa" name="faq">
+            <summary><span>Mes données sont-elles en sécurité&nbsp;?</span><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+            <div class="qa__body"><p>Nous appliquons le RGPD dès la conception&nbsp;: le moins de données possible, des fournisseurs conformes, un hébergement européen dès que c'est possible, et des accès que vous contrôlez. Les règles sont écrites noir sur blanc avant le démarrage.</p></div>
+          </details>
+          <details class="qa" name="faq">
+            <summary><span>L'IA va-t-elle remplacer mes collaborateurs&nbsp;?</span><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+            <div class="qa__body"><p>Notre objectif est de leur retirer les tâches qu'ils n'aiment pas faire, pas de les remplacer. Le temps libéré sert au conseil, à la relation client et à tout ce qu'une machine fait mal.</p></div>
+          </details>
+          <details class="qa" name="faq">
+            <summary><span>Faut-il changer nos logiciels&nbsp;?</span><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+            <div class="qa__body"><p>Rarement. Nous nous branchons sur ce que vous utilisez déjà (messagerie, tableur, ERP, CRM, comptabilité). Si un outil ne le permet pas, nous vous le disons dès l'audit.</p></div>
+          </details>
+          <details class="qa" name="faq">
+            <summary><span>Combien de temps avant les premiers résultats&nbsp;?</span><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+            <div class="qa__body"><p>Un premier prototype utilisable arrive généralement en quelques semaines. Les projets plus larges avancent par étapes courtes, chacune avec un résultat concret.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ÉPILOGUE — CONTACT ============ -->
+    <section class="chapter chapter--finale" id="contact" data-chapter="contact" data-mood="gold" aria-labelledby="contact-title">
+      <div class="finale__halo" aria-hidden="true"></div>
+      <div class="container">
+        <header class="finale__head">
+          <p class="chapter-tag"><span class="mono">Épilogue</span> À vous de jouer</p>
+          <h2 class="finale__title" id="contact-title" data-finale-title>Reprenez<br><em class="gold-text">vos soirées.</em></h2>
+          <p class="lead muted">Trente minutes pour parler de votre quotidien. Sans engagement, et sans jargon.</p>
+        </header>
+
+        <div class="contact">
+          <aside class="contact__aside">
+            <ul class="contact__points">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Réponse sous 24 h ouvrables</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Appel découverte de 30 min offert</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>En français, en néerlandais, en anglais ou en italien</li>
+            </ul>
+            <div class="contact__direct">
+              <p class="mono muted">Vous préférez écrire directement ?</p>
+              <a class="contact__mail" href="mailto:contact@cambr-ia.be">contact@cambr-ia.be</a>
+              <p class="contact__loc"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Wallonie, Belgique — partout en Belgique, sur place ou à distance</p>
+            </div>
+          </aside>
+
+          <form class="form" data-contact-form novalidate data-endpoint="" data-mailto="contact@cambr-ia.be">
+            <div class="form__row">
+              <div class="field">
+                <label for="f-name">Nom et prénom <span class="req" aria-hidden="true">*</span></label>
+                <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="f-name-err">
+                <p class="field__error" id="f-name-err" role="alert"></p>
+              </div>
+              <div class="field">
+                <label for="f-company">Entreprise</label>
+                <input id="f-company" name="company" type="text" autocomplete="organization">
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="field">
+                <label for="f-email">E-mail professionnel <span class="req" aria-hidden="true">*</span></label>
+                <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="f-email-err">
+                <p class="field__error" id="f-email-err" role="alert"></p>
+              </div>
+              <div class="field">
+                <label for="f-phone">Téléphone <span class="field__opt">(facultatif)</span></label>
+                <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel">
+              </div>
+            </div>
+
+            <fieldset class="field field--chips">
+              <legend>Votre besoin</legend>
+              <div class="chip-group">
+                <label class="chip-opt"><input type="checkbox" name="need" value="Agent IA conversationnel"><span>Agent IA</span></label>
+                <label class="chip-opt"><input type="checkbox" name="need" value="Automatisation de processus"><span>Automatisation</span></label>
+                <label class="chip-opt"><input type="checkbox" name="need" value="Traitement de documents"><span>Documents</span></label>
+                <label class="chip-opt"><input type="checkbox" name="need" value="Audit IA"><span>Audit</span></label>
+                <label class="chip-opt"><input type="checkbox" name="need" value="Formation"><span>Formation</span></label>
+                <label class="chip-opt"><input type="checkbox" name="need" value="Je ne sais pas encore"><span>Je ne sais pas encore</span></label>
+              </div>
+            </fieldset>
+
+            <div class="field">
+              <label for="f-msg">Votre quotidien en quelques mots <span class="req" aria-hidden="true">*</span></label>
+              <textarea id="f-msg" name="message" rows="5" required minlength="20" aria-describedby="f-msg-help f-msg-err" placeholder="Ex. : on passe deux heures par jour à recopier des commandes reçues par e-mail dans notre logiciel."></textarea>
+              <p class="field__help" id="f-msg-help">Au moins 20 caractères. Pas besoin d'être technique.</p>
+              <p class="field__error" id="f-msg-err" role="alert"></p>
+            </div>
+
+            <div class="field field--check">
+              <label class="check">
+                <input type="checkbox" name="consent" required aria-describedby="f-consent-err">
+                <span>J'accepte que Cambr.IA utilise ces informations pour me recontacter. <a href="mentions-legales.html#confidentialite">Politique de confidentialité</a></span>
+              </label>
+              <p class="field__error" id="f-consent-err" role="alert"></p>
+            </div>
+
+            <!-- Pot de miel anti-spam -->
+            <div class="hp" aria-hidden="true"><label>Ne pas remplir <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+
+            <button class="btn btn--accent btn--lg btn--block magnetic" type="submit" data-submit>
+              <span data-submit-label>Envoyer ma demande</span>
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+            </button>
+            <p class="form__status" data-form-status role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__giant" aria-hidden="true">Cambr<span class="dot">.</span>IA</p>
+      <div class="footer__grid">
+        <div>
+          <p class="footer__tag">L'intelligence artificielle, à taille humaine.</p>
+          <p class="muted">Agents IA &amp; automatisations sur mesure pour les PME belges.</p>
+        </div>
+        <nav aria-label="Pied de page">
+          <ul class="footer__links">
+            <li><a href="#methode">Méthode</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#simulateur">Simulateur</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div>
+          <a class="footer__mail" href="mailto:contact@cambr-ia.be">contact@cambr-ia.be</a>
+          <p class="muted">Wallonie, Belgique</p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="mono muted">© <span data-year>2026</span> Cambr.IA</p>
+        <p class="mono"><a href="mentions-legales.html">Mentions légales &amp; confidentialité</a></p>
+        <a class="mono back-top" href="#intro">Retour en haut ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/vendor/gsap.min.js" defer></script>
+  <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+  <script src="assets/vendor/SplitText.min.js" defer></script>
+  <script src="assets/vendor/lenis.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
