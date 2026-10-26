@@ -209,23 +209,23 @@ export const TRAITS: readonly TraitDef[] = [
     kind: 'origin',
     color: '#4fc9d8',
     icon: 'nomade',
-    desc: "Synergie économique : or supplémentaire après chaque combat contre un joueur, et des composants d’objets au fil des victoires. Les Nomades démarrent le combat portés par le vent.",
+    desc: "Synergie économique : or supplémentaire après chaque combat contre un Archonte, et des composants d’objets au fil des victoires. Les Nomades démarrent le combat portés par le vent.",
     lore: "Les caravanes célestes relient toutes les Sphères. Tout s’y vend, même le vent.",
     counter: 'Les Nomades sont faibles au combat : les punir tôt (forte pression en début de partie) les empêche de capitaliser.',
     thresholds: [2, 4, 6],
     levels: [
       {
-        desc: '+1 or après chaque combat JcJ. Les Nomades gagnent 15 % de vitesse d’attaque et 25 % de vitesse de déplacement pendant 6 s.',
+        desc: '+1 or après chaque combat contre un Archonte. Les Nomades gagnent 15 % de vitesse d’attaque et 25 % de vitesse de déplacement pendant 6 s.',
         economy: { goldAfterCombat: 1 },
         holders: { triggers: [{ on: 'combatStart', actions: [{ do: 'status', area: { shape: 'self' }, status: { kind: 'stats', duration: 6, id: 'nomade_wind', stats: [{ stat: 'asPct', value: 15 }, { stat: 'moveSpeedPct', value: 25 }], tag: 'Vent porteur' } }] }] },
       },
       {
-        desc: '+2 or après chaque combat JcJ et un composant toutes les 3 victoires. 22 % de vitesse d’attaque pendant 6 s.',
+        desc: '+2 or après chaque combat contre un Archonte et un composant toutes les 3 victoires. 22 % de vitesse d’attaque pendant 6 s.',
         economy: { goldAfterCombat: 2, componentEveryNWins: 3 },
         holders: { triggers: [{ on: 'combatStart', actions: [{ do: 'status', area: { shape: 'self' }, status: { kind: 'stats', duration: 6, id: 'nomade_wind', stats: [{ stat: 'asPct', value: 22 }, { stat: 'moveSpeedPct', value: 25 }], tag: 'Vent porteur' } }] }] },
       },
       {
-        desc: '+3 or après chaque combat JcJ et un composant toutes les 2 victoires. 32 % de vitesse d’attaque pendant 6 s.',
+        desc: '+3 or après chaque combat contre un Archonte et un composant toutes les 2 victoires. 32 % de vitesse d’attaque pendant 6 s.',
         economy: { goldAfterCombat: 3, componentEveryNWins: 2 },
         holders: { triggers: [{ on: 'combatStart', actions: [{ do: 'status', area: { shape: 'self' }, status: { kind: 'stats', duration: 6, id: 'nomade_wind', stats: [{ stat: 'asPct', value: 32 }, { stat: 'moveSpeedPct', value: 25 }], tag: 'Vent porteur' } }] }] },
       },
@@ -455,12 +455,16 @@ export const TRAITS: readonly TraitDef[] = [
     thresholds: [2, 4],
     levels: [
       {
-        desc: 'Corrosion : −30 % d’armure et de RM pendant 4 s.',
-        holders: { triggers: [{ on: 'abilityHit', actions: [{ do: 'status', status: { kind: 'stats', duration: 4, id: 'corrosion', stats: [{ stat: 'armorPct', value: -30 }, { stat: 'mrPct', value: -30 }], tag: 'Corrosion' } }] }] },
+        desc: 'Les Alchimistes gagnent 15 Puissance. Corrosion : −35 % d’armure et de RM pendant 4 s.',
+        holders: {
+          stats: [{ stat: 'ap', value: 15 }],
+          triggers: [{ on: 'abilityHit', actions: [{ do: 'status', status: { kind: 'stats', duration: 4, id: 'corrosion', stats: [{ stat: 'armorPct', value: -35 }, { stat: 'mrPct', value: -35 }], tag: 'Corrosion' } }] }],
+        },
       },
       {
-        desc: 'Corrosion : −50 % d’armure et de RM pendant 4 s, et Blessure (−33 % de soins).',
+        desc: 'Les Alchimistes gagnent 35 Puissance. Corrosion : −50 % d’armure et de RM pendant 4 s, et Blessure (−33 % de soins).',
         holders: {
+          stats: [{ stat: 'ap', value: 35 }],
           triggers: [
             {
               on: 'abilityHit',
@@ -483,8 +487,8 @@ export const TRAITS: readonly TraitDef[] = [
     thresholds: [2, 4],
     levels: [
       {
-        desc: 'Toutes les 2 attaques, obus : 90 % de la PA en dégâts physiques aux ennemis adjacents à la cible.',
-        holders: { triggers: [{ on: 'nthAttack', every: 2, actions: [{ do: 'damage', area: { shape: 'circle', at: 'target', radius: 1, side: 'enemies', excludeTarget: true }, amount: { ad: 90 }, type: 'physical', vfx: 'shell' }] }] },
+        desc: 'Toutes les 2 attaques, obus : 110 % de la PA en dégâts physiques aux ennemis adjacents à la cible.',
+        holders: { triggers: [{ on: 'nthAttack', every: 2, actions: [{ do: 'damage', area: { shape: 'circle', at: 'target', radius: 1, side: 'enemies', excludeTarget: true }, amount: { ad: 110 }, type: 'physical', vfx: 'shell' }] }] },
       },
       {
         desc: 'Toutes les 2 attaques, obus : 150 % de la PA. Les Artilleurs gagnent 15 % de vitesse d’attaque.',

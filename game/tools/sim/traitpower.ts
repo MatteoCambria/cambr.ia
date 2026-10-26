@@ -64,8 +64,13 @@ for (const t of TRAITS) {
 }
 mkdirSync('reports', { recursive: true });
 writeFileSync('reports/traitpower.json', JSON.stringify(rows, null, 1));
-console.log(`${((Date.now() - t0) / 1000).toFixed(0)} s — écart = gain de taux de victoire apporté par la synergie`);
+// repère : médiane des synergies au même nombre de champions (un palier à 4 pèse plus qu'un palier à 2)
+const median = (xs: number[]) => xs.sort((a, b) => a - b)[Math.floor(xs.length / 2)];
+const ref = new Map<number, number>();
+for (const n of new Set(rows.map((r) => r.count))) ref.set(n, median(rows.filter((r) => r.count === n).map((r) => r.delta)));
+console.log(`${((Date.now() - t0) / 1000).toFixed(0)} s — écart = gain de taux de victoire apporté par la synergie ; médianes : ${[...ref].map(([n, m]) => `${n} champions ${m} pts`).join(', ')}`);
 for (const r of rows.sort((a, b) => b.delta - a.delta)) {
-  const flag = r.delta > 30 ? '  ▲ très fort' : r.delta < 6 ? '  ▼ faible' : '';
+  const m = ref.get(r.count)!;
+  const flag = r.delta > m * 1.6 ? '  ▲ très fort' : r.delta < m * 0.4 ? '  ▼ faible' : '';
   console.log(`  ${(r.trait + ' (' + r.count + ')').padEnd(18)} ${String(r.delta).padStart(5)} pts  (${r.without} → ${r.withTrait} %)${flag}`);
 }

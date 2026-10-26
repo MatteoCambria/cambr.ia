@@ -474,3 +474,13 @@ input[type='range'] { accent-color: var(--gold); width: 220px; }
   .card { min-height: 92px; }
   .game { grid-template-rows: 46px 1fr auto; }
 }
+
+/* Premiers pas */
+.first-steps { width: min(640px, calc(100% - 32px)); padding: 22px 24px; }
+.first-steps h2 { color: var(--gold-bright); text-align: center; margin-bottom: 6px; }
+.first-steps > p { text-align: center; font-size: 13px; margin-bottom: 14px; }
+.first-steps ol { list-style: none; display: flex; flex-direction: column; gap: 10px; margin: 0 0 18px; padding: 0; }
+.first-steps li { display: grid; grid-template-columns: 30px 1fr; gap: 12px; align-items: start; }
+.first-steps li img { margin-top: 2px; }
+.first-steps li strong { display: block; color: var(--gold-bright); font-size: 15px; }
+.first-steps li span { font-size: 14px; line-height: 1.4; color: var(--text); }

@@ -1,0 +1,1718 @@
+{
+ "summary": {
+  "games": 300,
+  "difficulty": "normal",
+  "avgRounds": 34.8,
+  "pvpCombats": 44141,
+  "drawRate": 0.19,
+  "combatDuration": {
+   "mean": 27.5,
+   "p50": 26.8,
+   "p90": 37.6
+  },
+  "avgFinalLevel": 8.17,
+  "seconds": 148
+ },
+ "champions": [
+  {
+   "id": "ophelune",
+   "name": "Ophélune",
+   "cost": 5,
+   "pickRate": 3.3,
+   "n": 80,
+   "avgPlace": 1.86,
+   "top4": 95,
+   "win": 52.5,
+   "avgStar": 1,
+   "dmgPerRound": 534
+  },
+  {
+   "id": "myrrhine",
+   "name": "Myrrhine",
+   "cost": 5,
+   "pickRate": 6.2,
+   "n": 148,
+   "avgPlace": 2.2,
+   "top4": 94.6,
+   "win": 35.8,
+   "avgStar": 1.03,
+   "dmgPerRound": 402
+  },
+  {
+   "id": "neantis",
+   "name": "Néantis",
+   "cost": 5,
+   "pickRate": 5.2,
+   "n": 124,
+   "avgPlace": 2.2,
+   "top4": 91.1,
+   "win": 44.4,
+   "avgStar": 1.09,
+   "dmgPerRound": 2203
+  },
+  {
+   "id": "chronaxe",
+   "name": "Chronaxe",
+   "cost": 5,
+   "pickRate": 6.2,
+   "n": 148,
+   "avgPlace": 2.22,
+   "top4": 91.2,
+   "win": 40.5,
+   "avgStar": 1.03,
+   "dmgPerRound": 2179
+  },
+  {
+   "id": "solenne",
+   "name": "Solenne",
+   "cost": 5,
+   "pickRate": 4.8,
+   "n": 114,
+   "avgPlace": 2.35,
+   "top4": 91.2,
+   "win": 39.5,
+   "avgStar": 1.03,
+   "dmgPerRound": 1464
+  },
+  {
+   "id": "orrheon",
+   "name": "Maître Orrhéon",
+   "cost": 5,
+   "pickRate": 11.5,
+   "n": 276,
+   "avgPlace": 2.41,
+   "top4": 90.6,
+   "win": 33.7,
+   "avgStar": 1.03,
+   "dmgPerRound": 443
+  },
+  {
+   "id": "phenea",
+   "name": "Phénéa",
+   "cost": 5,
+   "pickRate": 6.3,
+   "n": 151,
+   "avgPlace": 2.42,
+   "top4": 88.1,
+   "win": 35.1,
+   "avgStar": 1.01,
+   "dmgPerRound": 2516
+  },
+  {
+   "id": "vorhn",
+   "name": "Vorhn",
+   "cost": 5,
+   "pickRate": 8.8,
+   "n": 210,
+   "avgPlace": 2.48,
+   "top4": 90.5,
+   "win": 28.6,
+   "avgStar": 1.03,
+   "dmgPerRound": 1104
+  },
+  {
+   "id": "abyssandre",
+   "name": "Abyssandre",
+   "cost": 5,
+   "pickRate": 7.5,
+   "n": 181,
+   "avgPlace": 2.61,
+   "top4": 89.5,
+   "win": 26,
+   "avgStar": 1.04,
+   "dmgPerRound": 1174
+  },
+  {
+   "id": "mirelle",
+   "name": "Mirelle",
+   "cost": 1,
+   "pickRate": 4.3,
+   "n": 103,
+   "avgPlace": 3.5,
+   "top4": 63.1,
+   "win": 33,
+   "avgStar": 2.22,
+   "dmgPerRound": 1421
+  },
+  {
+   "id": "lunor",
+   "name": "Lunor",
+   "cost": 4,
+   "pickRate": 11.4,
+   "n": 274,
+   "avgPlace": 3.59,
+   "top4": 65.7,
+   "win": 23,
+   "avgStar": 1.36,
+   "dmgPerRound": 1894
+  },
+  {
+   "id": "felis",
+   "name": "Félis",
+   "cost": 3,
+   "pickRate": 16,
+   "n": 384,
+   "avgPlace": 3.7,
+   "top4": 63.3,
+   "win": 20.8,
+   "avgStar": 1.89,
+   "dmgPerRound": 2243
+  },
+  {
+   "id": "octave",
+   "name": "Octave",
+   "cost": 4,
+   "pickRate": 10.2,
+   "n": 245,
+   "avgPlace": 3.72,
+   "top4": 64.5,
+   "win": 20.4,
+   "avgStar": 1.32,
+   "dmgPerRound": 481
+  },
+  {
+   "id": "ombral",
+   "name": "Ombral",
+   "cost": 3,
+   "pickRate": 14.6,
+   "n": 350,
+   "avgPlace": 3.84,
+   "top4": 60.3,
+   "win": 21.1,
+   "avgStar": 1.93,
+   "dmgPerRound": 2265
+  },
+  {
+   "id": "morvain",
+   "name": "Morvain",
+   "cost": 4,
+   "pickRate": 8.1,
+   "n": 194,
+   "avgPlace": 3.9,
+   "top4": 59.3,
+   "win": 17,
+   "avgStar": 1.18,
+   "dmgPerRound": 593
+  },
+  {
+   "id": "tison",
+   "name": "Tison",
+   "cost": 1,
+   "pickRate": 7.4,
+   "n": 178,
+   "avgPlace": 3.96,
+   "top4": 61.8,
+   "win": 15.7,
+   "avgStar": 2.12,
+   "dmgPerRound": 1525
+  },
+  {
+   "id": "ignivar",
+   "name": "Ignivar",
+   "cost": 4,
+   "pickRate": 16.8,
+   "n": 403,
+   "avgPlace": 4.02,
+   "top4": 59.1,
+   "win": 14.1,
+   "avgStar": 1.21,
+   "dmgPerRound": 1078
+  },
+  {
+   "id": "auguste",
+   "name": "Auguste",
+   "cost": 3,
+   "pickRate": 21.1,
+   "n": 506,
+   "avgPlace": 4.06,
+   "top4": 57.5,
+   "win": 15.6,
+   "avgStar": 1.73,
+   "dmgPerRound": 679
+  },
+  {
+   "id": "gaspard",
+   "name": "Gaspard Vis-de-Fer",
+   "cost": 2,
+   "pickRate": 10,
+   "n": 241,
+   "avgPlace": 4.1,
+   "top4": 57.3,
+   "win": 14.9,
+   "avgStar": 2.05,
+   "dmgPerRound": 1900
+  },
+  {
+   "id": "celestin",
+   "name": "Célestin",
+   "cost": 4,
+   "pickRate": 30.1,
+   "n": 722,
+   "avgPlace": 4.1,
+   "top4": 57.9,
+   "win": 13.6,
+   "avgStar": 1.15,
+   "dmgPerRound": 880
+  },
+  {
+   "id": "valerian",
+   "name": "Valérian",
+   "cost": 4,
+   "pickRate": 24.6,
+   "n": 590,
+   "avgPlace": 4.11,
+   "top4": 57.8,
+   "win": 12,
+   "avgStar": 1.18,
+   "dmgPerRound": 648
+  },
+  {
+   "id": "cendrine",
+   "name": "Cendrine",
+   "cost": 3,
+   "pickRate": 11.9,
+   "n": 285,
+   "avgPlace": 4.14,
+   "top4": 59.3,
+   "win": 15.1,
+   "avgStar": 1.88,
+   "dmgPerRound": 2412
+  },
+  {
+   "id": "yselle",
+   "name": "Yselle",
+   "cost": 2,
+   "pickRate": 12.8,
+   "n": 308,
+   "avgPlace": 4.16,
+   "top4": 56.5,
+   "win": 12.7,
+   "avgStar": 2.03,
+   "dmgPerRound": 1561
+  },
+  {
+   "id": "aldaia",
+   "name": "Aldaïa",
+   "cost": 4,
+   "pickRate": 21.1,
+   "n": 506,
+   "avgPlace": 4.21,
+   "top4": 57.5,
+   "win": 12.6,
+   "avgStar": 1.22,
+   "dmgPerRound": 1860
+  },
+  {
+   "id": "nerea",
+   "name": "Néréa",
+   "cost": 4,
+   "pickRate": 9.8,
+   "n": 236,
+   "avgPlace": 4.23,
+   "top4": 53.8,
+   "win": 14,
+   "avgStar": 1.28,
+   "dmgPerRound": 2232
+  },
+  {
+   "id": "tic",
+   "name": "Tic",
+   "cost": 1,
+   "pickRate": 5.2,
+   "n": 125,
+   "avgPlace": 4.24,
+   "top4": 56,
+   "win": 12.8,
+   "avgStar": 2.22,
+   "dmgPerRound": 497
+  },
+  {
+   "id": "pulsara",
+   "name": "Pulsara",
+   "cost": 4,
+   "pickRate": 15.9,
+   "n": 381,
+   "avgPlace": 4.28,
+   "top4": 52.8,
+   "win": 12.1,
+   "avgStar": 1.19,
+   "dmgPerRound": 1980
+  },
+  {
+   "id": "grumhald",
+   "name": "Grumhald",
+   "cost": 3,
+   "pickRate": 30,
+   "n": 721,
+   "avgPlace": 4.29,
+   "top4": 54.4,
+   "win": 14,
+   "avgStar": 1.71,
+   "dmgPerRound": 1503
+  },
+  {
+   "id": "ilvane",
+   "name": "Ilvane",
+   "cost": 2,
+   "pickRate": 8.8,
+   "n": 212,
+   "avgPlace": 4.34,
+   "top4": 51.4,
+   "win": 18.4,
+   "avgStar": 2.08,
+   "dmgPerRound": 640
+  },
+  {
+   "id": "melisande",
+   "name": "Mélisande",
+   "cost": 4,
+   "pickRate": 15.8,
+   "n": 380,
+   "avgPlace": 4.34,
+   "top4": 52.6,
+   "win": 13.9,
+   "avgStar": 1.19,
+   "dmgPerRound": 1900
+  },
+  {
+   "id": "gorm",
+   "name": "Gorm",
+   "cost": 2,
+   "pickRate": 18.5,
+   "n": 444,
+   "avgPlace": 4.4,
+   "top4": 53.8,
+   "win": 12.4,
+   "avgStar": 1.99,
+   "dmgPerRound": 1071
+  },
+  {
+   "id": "calyx",
+   "name": "Calyx",
+   "cost": 3,
+   "pickRate": 11.1,
+   "n": 267,
+   "avgPlace": 4.43,
+   "top4": 52.4,
+   "win": 13.5,
+   "avgStar": 1.91,
+   "dmgPerRound": 2300
+  },
+  {
+   "id": "astree",
+   "name": "Astrée",
+   "cost": 3,
+   "pickRate": 24.7,
+   "n": 593,
+   "avgPlace": 4.44,
+   "top4": 50.4,
+   "win": 12.6,
+   "avgStar": 1.71,
+   "dmgPerRound": 686
+  },
+  {
+   "id": "isaure",
+   "name": "Isaure",
+   "cost": 3,
+   "pickRate": 16.7,
+   "n": 401,
+   "avgPlace": 4.47,
+   "top4": 48.6,
+   "win": 13,
+   "avgStar": 1.87,
+   "dmgPerRound": 2400
+  },
+  {
+   "id": "amara",
+   "name": "Amara",
+   "cost": 4,
+   "pickRate": 17.4,
+   "n": 417,
+   "avgPlace": 4.53,
+   "top4": 49.2,
+   "win": 11.5,
+   "avgStar": 1.18,
+   "dmgPerRound": 1935
+  },
+  {
+   "id": "kesh",
+   "name": "Kesh",
+   "cost": 2,
+   "pickRate": 9.8,
+   "n": 234,
+   "avgPlace": 4.54,
+   "top4": 48.3,
+   "win": 13.7,
+   "avgStar": 2.1,
+   "dmgPerRound": 1579
+  },
+  {
+   "id": "ysolde",
+   "name": "Dame Ysolde",
+   "cost": 3,
+   "pickRate": 21.2,
+   "n": 508,
+   "avgPlace": 4.55,
+   "top4": 49.2,
+   "win": 9.8,
+   "avgStar": 1.73,
+   "dmgPerRound": 783
+  },
+  {
+   "id": "thalassor",
+   "name": "Thalassor",
+   "cost": 4,
+   "pickRate": 20.7,
+   "n": 497,
+   "avgPlace": 4.59,
+   "top4": 48.7,
+   "win": 9.9,
+   "avgStar": 1.17,
+   "dmgPerRound": 670
+  },
+  {
+   "id": "oriel",
+   "name": "Oriel",
+   "cost": 2,
+   "pickRate": 11.1,
+   "n": 267,
+   "avgPlace": 4.6,
+   "top4": 48.7,
+   "win": 12.7,
+   "avgStar": 2.01,
+   "dmgPerRound": 1498
+  },
+  {
+   "id": "heliodore",
+   "name": "Héliodore",
+   "cost": 3,
+   "pickRate": 24,
+   "n": 577,
+   "avgPlace": 4.62,
+   "top4": 48,
+   "win": 10.4,
+   "avgStar": 1.85,
+   "dmgPerRound": 2557
+  },
+  {
+   "id": "bertrade",
+   "name": "Bertrade",
+   "cost": 1,
+   "pickRate": 7.5,
+   "n": 180,
+   "avgPlace": 4.68,
+   "top4": 43.3,
+   "win": 11.1,
+   "avgStar": 2.03,
+   "dmgPerRound": 604
+  },
+  {
+   "id": "rugor",
+   "name": "Rugor",
+   "cost": 1,
+   "pickRate": 11,
+   "n": 263,
+   "avgPlace": 4.7,
+   "top4": 47.1,
+   "win": 8,
+   "avgStar": 2.05,
+   "dmgPerRound": 767
+  },
+  {
+   "id": "cassian",
+   "name": "Cassian",
+   "cost": 2,
+   "pickRate": 19.8,
+   "n": 475,
+   "avgPlace": 4.72,
+   "top4": 47.6,
+   "win": 8.8,
+   "avgStar": 1.95,
+   "dmgPerRound": 1500
+  },
+  {
+   "id": "brindille",
+   "name": "Brindille",
+   "cost": 1,
+   "pickRate": 14.3,
+   "n": 343,
+   "avgPlace": 4.72,
+   "top4": 45.8,
+   "win": 12,
+   "avgStar": 2.04,
+   "dmgPerRound": 580
+  },
+  {
+   "id": "hargo",
+   "name": "Hargo",
+   "cost": 2,
+   "pickRate": 17.9,
+   "n": 430,
+   "avgPlace": 4.73,
+   "top4": 47.4,
+   "win": 10,
+   "avgStar": 1.97,
+   "dmgPerRound": 822
+  },
+  {
+   "id": "vesna",
+   "name": "Vesna",
+   "cost": 2,
+   "pickRate": 18.6,
+   "n": 447,
+   "avgPlace": 4.77,
+   "top4": 45.6,
+   "win": 9.8,
+   "avgStar": 2.01,
+   "dmgPerRound": 1130
+  },
+  {
+   "id": "iota",
+   "name": "Iota",
+   "cost": 1,
+   "pickRate": 13.6,
+   "n": 327,
+   "avgPlace": 4.79,
+   "top4": 44.3,
+   "win": 8,
+   "avgStar": 2.12,
+   "dmgPerRound": 1743
+  },
+  {
+   "id": "ronceval",
+   "name": "Ronceval",
+   "cost": 2,
+   "pickRate": 19.8,
+   "n": 476,
+   "avgPlace": 4.8,
+   "top4": 43.9,
+   "win": 8.2,
+   "avgStar": 2.07,
+   "dmgPerRound": 1997
+  },
+  {
+   "id": "velane",
+   "name": "Vélane",
+   "cost": 3,
+   "pickRate": 14.5,
+   "n": 348,
+   "avgPlace": 4.81,
+   "top4": 43.7,
+   "win": 10.1,
+   "avgStar": 1.86,
+   "dmgPerRound": 746
+  },
+  {
+   "id": "seraphine",
+   "name": "Séraphine",
+   "cost": 2,
+   "pickRate": 18.3,
+   "n": 440,
+   "avgPlace": 4.86,
+   "top4": 44.5,
+   "win": 7,
+   "avgStar": 2.05,
+   "dmgPerRound": 1862
+  },
+  {
+   "id": "nebulos",
+   "name": "Nébulos",
+   "cost": 1,
+   "pickRate": 12.4,
+   "n": 297,
+   "avgPlace": 4.93,
+   "top4": 41.4,
+   "win": 7.4,
+   "avgStar": 2.02,
+   "dmgPerRound": 577
+  },
+  {
+   "id": "aurel",
+   "name": "Aurel",
+   "cost": 1,
+   "pickRate": 11.4,
+   "n": 273,
+   "avgPlace": 4.99,
+   "top4": 40.7,
+   "win": 8.1,
+   "avgStar": 2.04,
+   "dmgPerRound": 720
+  },
+  {
+   "id": "barnabe",
+   "name": "Barnabé",
+   "cost": 3,
+   "pickRate": 12.4,
+   "n": 297,
+   "avgPlace": 4.99,
+   "top4": 40.1,
+   "win": 7.7,
+   "avgStar": 1.71,
+   "dmgPerRound": 1840
+  },
+  {
+   "id": "sirocco",
+   "name": "Sirocco",
+   "cost": 3,
+   "pickRate": 22.4,
+   "n": 538,
+   "avgPlace": 5.13,
+   "top4": 38.3,
+   "win": 6.5,
+   "avgStar": 1.73,
+   "dmgPerRound": 1249
+  },
+  {
+   "id": "clemence",
+   "name": "Clémence",
+   "cost": 2,
+   "pickRate": 9,
+   "n": 217,
+   "avgPlace": 5.21,
+   "top4": 36.9,
+   "win": 9.7,
+   "avgStar": 2.04,
+   "dmgPerRound": 638
+  },
+  {
+   "id": "murene",
+   "name": "Murène",
+   "cost": 1,
+   "pickRate": 10.7,
+   "n": 256,
+   "avgPlace": 5.23,
+   "top4": 36.7,
+   "win": 9.4,
+   "avgStar": 2.05,
+   "dmgPerRound": 780
+  },
+  {
+   "id": "coralie",
+   "name": "Coralie",
+   "cost": 1,
+   "pickRate": 7.3,
+   "n": 175,
+   "avgPlace": 5.58,
+   "top4": 30.3,
+   "win": 4.6,
+   "avgStar": 2.14,
+   "dmgPerRound": 1037
+  },
+  {
+   "id": "taliya",
+   "name": "Taliya",
+   "cost": 2,
+   "pickRate": 10.2,
+   "n": 245,
+   "avgPlace": 5.64,
+   "top4": 24.9,
+   "win": 4.5,
+   "avgStar": 1.99,
+   "dmgPerRound": 738
+  },
+  {
+   "id": "liora",
+   "name": "Liora",
+   "cost": 1,
+   "pickRate": 4.5,
+   "n": 108,
+   "avgPlace": 5.73,
+   "top4": 24.1,
+   "win": 4.6,
+   "avgStar": 2.08,
+   "dmgPerRound": 517
+  },
+  {
+   "id": "pim",
+   "name": "Pim",
+   "cost": 1,
+   "pickRate": 8.8,
+   "n": 212,
+   "avgPlace": 5.73,
+   "top4": 24.5,
+   "win": 3.3,
+   "avgStar": 2.24,
+   "dmgPerRound": 1413
+  }
+ ],
+ "traits": [
+  {
+   "id": "invocateur",
+   "name": "Invocateur",
+   "n": 228,
+   "avgPlace": 3.11,
+   "top4": 75.9,
+   "win": 28.5,
+   "avgStar": 0,
+   "rate": 9.5
+  },
+  {
+   "id": "assassin",
+   "name": "Assassin",
+   "n": 275,
+   "avgPlace": 3.4,
+   "top4": 67.3,
+   "win": 26.2,
+   "avgStar": 0,
+   "rate": 11.5
+  },
+  {
+   "id": "rouage",
+   "name": "Rouage",
+   "n": 560,
+   "avgPlace": 3.91,
+   "top4": 60.4,
+   "win": 17.9,
+   "avgStar": 0,
+   "rate": 23.3
+  },
+  {
+   "id": "astral",
+   "name": "Astral",
+   "n": 745,
+   "avgPlace": 4.03,
+   "top4": 58.7,
+   "win": 16.6,
+   "avgStar": 0,
+   "rate": 31
+  },
+  {
+   "id": "selene",
+   "name": "Sélène",
+   "n": 552,
+   "avgPlace": 4.05,
+   "top4": 57.8,
+   "win": 17.6,
+   "avgStar": 0,
+   "rate": 23
+  },
+  {
+   "id": "artilleur",
+   "name": "Artilleur",
+   "n": 324,
+   "avgPlace": 4.05,
+   "top4": 59.3,
+   "win": 17,
+   "avgStar": 0,
+   "rate": 13.5
+  },
+  {
+   "id": "briseur",
+   "name": "Briseur",
+   "n": 1185,
+   "avgPlace": 4.16,
+   "top4": 57,
+   "win": 13.8,
+   "avgStar": 0,
+   "rate": 49.4
+  },
+  {
+   "id": "sylve",
+   "name": "Sylve",
+   "n": 838,
+   "avgPlace": 4.21,
+   "top4": 55.7,
+   "win": 14.3,
+   "avgStar": 0,
+   "rate": 34.9
+  },
+  {
+   "id": "braise",
+   "name": "Braise",
+   "n": 531,
+   "avgPlace": 4.22,
+   "top4": 57.1,
+   "win": 13.4,
+   "avgStar": 0,
+   "rate": 22.1
+  },
+  {
+   "id": "arcaniste",
+   "name": "Arcaniste",
+   "n": 757,
+   "avgPlace": 4.25,
+   "top4": 55.1,
+   "win": 14.5,
+   "avgStar": 0,
+   "rate": 31.5
+  },
+  {
+   "id": "gardien",
+   "name": "Gardien",
+   "n": 1281,
+   "avgPlace": 4.32,
+   "top4": 53.4,
+   "win": 13.5,
+   "avgStar": 0,
+   "rate": 53.4
+  },
+  {
+   "id": "alchimiste",
+   "name": "Alchimiste",
+   "n": 337,
+   "avgPlace": 4.49,
+   "top4": 49.6,
+   "win": 12.5,
+   "avgStar": 0,
+   "rate": 14
+  },
+  {
+   "id": "nomade",
+   "name": "Nomade",
+   "n": 674,
+   "avgPlace": 4.52,
+   "top4": 49.7,
+   "win": 13.2,
+   "avgStar": 0,
+   "rate": 28.1
+  },
+  {
+   "id": "oracle",
+   "name": "Oracle",
+   "n": 324,
+   "avgPlace": 4.52,
+   "top4": 47.5,
+   "win": 16.7,
+   "avgStar": 0,
+   "rate": 13.5
+  },
+  {
+   "id": "zenith",
+   "name": "Zénith",
+   "n": 852,
+   "avgPlace": 4.58,
+   "top4": 48.6,
+   "win": 9.5,
+   "avgStar": 0,
+   "rate": 35.5
+  },
+  {
+   "id": "duelliste",
+   "name": "Duelliste",
+   "n": 911,
+   "avgPlace": 4.59,
+   "top4": 49,
+   "win": 10.9,
+   "avgStar": 0,
+   "rate": 38
+  },
+  {
+   "id": "abysse",
+   "name": "Abysse",
+   "n": 528,
+   "avgPlace": 4.62,
+   "top4": 48.9,
+   "win": 10.6,
+   "avgStar": 0,
+   "rate": 22
+  },
+  {
+   "id": "tireur",
+   "name": "Tireur",
+   "n": 655,
+   "avgPlace": 4.74,
+   "top4": 44.1,
+   "win": 9.3,
+   "avgStar": 0,
+   "rate": 27.3
+  }
+ ],
+ "traitLevels": [
+  {
+   "key": "invocateur:4",
+   "n": 5,
+   "avgPlace": 1,
+   "top4": 100,
+   "win": 100,
+   "avgStar": 0
+  },
+  {
+   "key": "briseur:6",
+   "n": 4,
+   "avgPlace": 1.75,
+   "top4": 100,
+   "win": 25,
+   "avgStar": 0
+  },
+  {
+   "key": "selene:6",
+   "n": 13,
+   "avgPlace": 1.92,
+   "top4": 84.6,
+   "win": 76.9,
+   "avgStar": 0
+  },
+  {
+   "key": "braise:6",
+   "n": 52,
+   "avgPlace": 2.29,
+   "top4": 90.4,
+   "win": 44.2,
+   "avgStar": 0
+  },
+  {
+   "key": "assassin:4",
+   "n": 110,
+   "avgPlace": 2.79,
+   "top4": 80,
+   "win": 34.5,
+   "avgStar": 0
+  },
+  {
+   "key": "rouage:6",
+   "n": 92,
+   "avgPlace": 2.83,
+   "top4": 81.5,
+   "win": 33.7,
+   "avgStar": 0
+  },
+  {
+   "key": "sylve:6",
+   "n": 106,
+   "avgPlace": 2.87,
+   "top4": 83,
+   "win": 25.5,
+   "avgStar": 0
+  },
+  {
+   "key": "abysse:6",
+   "n": 26,
+   "avgPlace": 2.88,
+   "top4": 80.8,
+   "win": 34.6,
+   "avgStar": 0
+  },
+  {
+   "key": "duelliste:6",
+   "n": 11,
+   "avgPlace": 2.91,
+   "top4": 81.8,
+   "win": 36.4,
+   "avgStar": 0
+  },
+  {
+   "key": "artilleur:4",
+   "n": 31,
+   "avgPlace": 2.94,
+   "top4": 90.3,
+   "win": 16.1,
+   "avgStar": 0
+  },
+  {
+   "key": "astral:6",
+   "n": 57,
+   "avgPlace": 3.09,
+   "top4": 73.7,
+   "win": 29.8,
+   "avgStar": 0
+  },
+  {
+   "key": "invocateur:2",
+   "n": 223,
+   "avgPlace": 3.15,
+   "top4": 75.3,
+   "win": 26.9,
+   "avgStar": 0
+  },
+  {
+   "key": "briseur:4",
+   "n": 166,
+   "avgPlace": 3.6,
+   "top4": 70.5,
+   "win": 14.5,
+   "avgStar": 0
+  },
+  {
+   "key": "selene:4",
+   "n": 117,
+   "avgPlace": 3.69,
+   "top4": 64.1,
+   "win": 25.6,
+   "avgStar": 0
+  },
+  {
+   "key": "alchimiste:4",
+   "n": 46,
+   "avgPlace": 3.7,
+   "top4": 65.2,
+   "win": 23.9,
+   "avgStar": 0
+  },
+  {
+   "key": "assassin:2",
+   "n": 165,
+   "avgPlace": 3.81,
+   "top4": 58.8,
+   "win": 20.6,
+   "avgStar": 0
+  },
+  {
+   "key": "zenith:6",
+   "n": 77,
+   "avgPlace": 3.86,
+   "top4": 61,
+   "win": 20.8,
+   "avgStar": 0
+  },
+  {
+   "key": "rouage:2",
+   "n": 334,
+   "avgPlace": 3.89,
+   "top4": 60.8,
+   "win": 17.1,
+   "avgStar": 0
+  },
+  {
+   "key": "astral:2",
+   "n": 482,
+   "avgPlace": 3.94,
+   "top4": 60.8,
+   "win": 18.3,
+   "avgStar": 0
+  },
+  {
+   "key": "arcaniste:4",
+   "n": 63,
+   "avgPlace": 4,
+   "top4": 63.5,
+   "win": 12.7,
+   "avgStar": 0
+  },
+  {
+   "key": "sylve:2",
+   "n": 446,
+   "avgPlace": 4.08,
+   "top4": 58.5,
+   "win": 17.3,
+   "avgStar": 0
+  },
+  {
+   "key": "artilleur:2",
+   "n": 293,
+   "avgPlace": 4.17,
+   "top4": 56,
+   "win": 17.1,
+   "avgStar": 0
+  },
+  {
+   "key": "nomade:2",
+   "n": 481,
+   "avgPlace": 4.19,
+   "top4": 57,
+   "win": 16.4,
+   "avgStar": 0
+  },
+  {
+   "key": "braise:4",
+   "n": 167,
+   "avgPlace": 4.21,
+   "top4": 56.3,
+   "win": 9,
+   "avgStar": 0
+  },
+  {
+   "key": "selene:2",
+   "n": 422,
+   "avgPlace": 4.22,
+   "top4": 55.2,
+   "win": 13.5,
+   "avgStar": 0
+  },
+  {
+   "key": "tireur:6",
+   "n": 4,
+   "avgPlace": 4.25,
+   "top4": 50,
+   "win": 0,
+   "avgStar": 0
+  },
+  {
+   "key": "arcaniste:2",
+   "n": 694,
+   "avgPlace": 4.27,
+   "top4": 54.3,
+   "win": 14.7,
+   "avgStar": 0
+  },
+  {
+   "key": "briseur:2",
+   "n": 1015,
+   "avgPlace": 4.27,
+   "top4": 54.6,
+   "win": 13.6,
+   "avgStar": 0
+  },
+  {
+   "key": "gardien:4",
+   "n": 230,
+   "avgPlace": 4.29,
+   "top4": 56.1,
+   "win": 11.7,
+   "avgStar": 0
+  },
+  {
+   "key": "gardien:2",
+   "n": 1050,
+   "avgPlace": 4.32,
+   "top4": 52.9,
+   "win": 13.9,
+   "avgStar": 0
+  },
+  {
+   "key": "nomade:6",
+   "n": 38,
+   "avgPlace": 4.39,
+   "top4": 47.4,
+   "win": 10.5,
+   "avgStar": 0
+  },
+  {
+   "key": "oracle:2",
+   "n": 309,
+   "avgPlace": 4.5,
+   "top4": 48.2,
+   "win": 16.2,
+   "avgStar": 0
+  },
+  {
+   "key": "astral:4",
+   "n": 206,
+   "avgPlace": 4.51,
+   "top4": 49.5,
+   "win": 9.2,
+   "avgStar": 0
+  },
+  {
+   "key": "abysse:4",
+   "n": 147,
+   "avgPlace": 4.52,
+   "top4": 49.7,
+   "win": 12.2,
+   "avgStar": 0
+  },
+  {
+   "key": "braise:2",
+   "n": 312,
+   "avgPlace": 4.55,
+   "top4": 51.9,
+   "win": 10.6,
+   "avgStar": 0
+  },
+  {
+   "key": "duelliste:2",
+   "n": 743,
+   "avgPlace": 4.59,
+   "top4": 48.5,
+   "win": 11.2,
+   "avgStar": 0
+  },
+  {
+   "key": "alchimiste:2",
+   "n": 291,
+   "avgPlace": 4.62,
+   "top4": 47.1,
+   "win": 10.7,
+   "avgStar": 0
+  },
+  {
+   "key": "zenith:4",
+   "n": 250,
+   "avgPlace": 4.65,
+   "top4": 49.6,
+   "win": 7.2,
+   "avgStar": 0
+  },
+  {
+   "key": "zenith:2",
+   "n": 525,
+   "avgPlace": 4.66,
+   "top4": 46.3,
+   "win": 9,
+   "avgStar": 0
+  },
+  {
+   "key": "rouage:4",
+   "n": 134,
+   "avgPlace": 4.69,
+   "top4": 44.8,
+   "win": 9,
+   "avgStar": 0
+  },
+  {
+   "key": "duelliste:4",
+   "n": 157,
+   "avgPlace": 4.7,
+   "top4": 49,
+   "win": 7.6,
+   "avgStar": 0
+  },
+  {
+   "key": "tireur:2",
+   "n": 579,
+   "avgPlace": 4.7,
+   "top4": 45.1,
+   "win": 9.8,
+   "avgStar": 0
+  },
+  {
+   "key": "abysse:2",
+   "n": 355,
+   "avgPlace": 4.79,
+   "top4": 46.2,
+   "win": 8.2,
+   "avgStar": 0
+  },
+  {
+   "key": "sylve:4",
+   "n": 286,
+   "avgPlace": 4.91,
+   "top4": 41.3,
+   "win": 5.6,
+   "avgStar": 0
+  },
+  {
+   "key": "oracle:4",
+   "n": 15,
+   "avgPlace": 5,
+   "top4": 33.3,
+   "win": 26.7,
+   "avgStar": 0
+  },
+  {
+   "key": "gardien:6",
+   "n": 1,
+   "avgPlace": 5,
+   "top4": 0,
+   "win": 0,
+   "avgStar": 0
+  },
+  {
+   "key": "tireur:4",
+   "n": 72,
+   "avgPlace": 5.15,
+   "top4": 36.1,
+   "win": 5.6,
+   "avgStar": 0
+  },
+  {
+   "key": "nomade:4",
+   "n": 155,
+   "avgPlace": 5.59,
+   "top4": 27.7,
+   "win": 3.9,
+   "avgStar": 0
+  }
+ ],
+ "items": [
+  {
+   "id": "fendeur",
+   "name": "Fendeur d’astres",
+   "n": 300,
+   "avgPlace": 3.79,
+   "top4": 59.7,
+   "win": 19.7,
+   "avgStar": 0,
+   "count": 300
+  },
+  {
+   "id": "carillon",
+   "name": "Carillon d’éther",
+   "n": 287,
+   "avgPlace": 3.82,
+   "top4": 62.7,
+   "win": 16.7,
+   "avgStar": 0,
+   "count": 287
+  },
+  {
+   "id": "coeur_geant",
+   "name": "Cœur de géant",
+   "n": 380,
+   "avgPlace": 3.83,
+   "top4": 61.1,
+   "win": 17.6,
+   "avgStar": 0,
+   "count": 380
+  },
+  {
+   "id": "epee_runique",
+   "name": "Épée runique",
+   "n": 416,
+   "avgPlace": 3.88,
+   "top4": 59.9,
+   "win": 16.8,
+   "avgStar": 0,
+   "count": 416
+  },
+  {
+   "id": "cuirasse_lave",
+   "name": "Cuirasse de lave",
+   "n": 469,
+   "avgPlace": 3.88,
+   "top4": 62.7,
+   "win": 15.8,
+   "avgStar": 0,
+   "count": 469
+  },
+  {
+   "id": "sceau_recueil",
+   "name": "Sceau du recueillement",
+   "n": 488,
+   "avgPlace": 3.92,
+   "top4": 60.7,
+   "win": 18.2,
+   "avgStar": 0,
+   "count": 488
+  },
+  {
+   "id": "arc_vent",
+   "name": "Arc du vent rapide",
+   "n": 372,
+   "avgPlace": 3.95,
+   "top4": 56.5,
+   "win": 16.4,
+   "avgStar": 0,
+   "count": 372
+  },
+  {
+   "id": "fend_montagne",
+   "name": "Fend-montagne",
+   "n": 607,
+   "avgPlace": 3.96,
+   "top4": 59.6,
+   "win": 17.8,
+   "avgStar": 0,
+   "count": 607
+  },
+  {
+   "id": "briselame",
+   "name": "Briselame",
+   "n": 577,
+   "avgPlace": 3.97,
+   "top4": 60.1,
+   "win": 18.9,
+   "avgStar": 0,
+   "count": 577
+  },
+  {
+   "id": "fleau_colosses",
+   "name": "Fléau des colosses",
+   "n": 295,
+   "avgPlace": 3.97,
+   "top4": 59,
+   "win": 18.6,
+   "avgStar": 0,
+   "count": 295
+  },
+  {
+   "id": "lame_marees",
+   "name": "Lame des marées",
+   "n": 421,
+   "avgPlace": 4.04,
+   "top4": 59.1,
+   "win": 15.7,
+   "avgStar": 0,
+   "count": 421
+  },
+  {
+   "id": "talisman",
+   "name": "Talisman de régénération",
+   "n": 493,
+   "avgPlace": 4.04,
+   "top4": 57.6,
+   "win": 16.8,
+   "avgStar": 0,
+   "count": 493
+  },
+  {
+   "id": "ecaille_dragon",
+   "name": "Écaille de dragon",
+   "n": 579,
+   "avgPlace": 4.04,
+   "top4": 57.5,
+   "win": 16.8,
+   "avgStar": 0,
+   "count": 579
+  },
+  {
+   "id": "sablier",
+   "name": "Sablier d’azur",
+   "n": 408,
+   "avgPlace": 4.08,
+   "top4": 56.9,
+   "win": 16.7,
+   "avgStar": 0,
+   "count": 408
+  },
+  {
+   "id": "arbalete_siege",
+   "name": "Arbalète de siège",
+   "n": 260,
+   "avgPlace": 4.12,
+   "top4": 56.9,
+   "win": 15.4,
+   "avgStar": 0,
+   "count": 260
+  },
+  {
+   "id": "calice_maree",
+   "name": "Calice de la marée",
+   "n": 481,
+   "avgPlace": 4.14,
+   "top4": 56.1,
+   "win": 15.4,
+   "avgStar": 0,
+   "count": 481
+  },
+  {
+   "id": "grimoire",
+   "name": "Grimoire d’Orrhéa",
+   "n": 326,
+   "avgPlace": 4.15,
+   "top4": 57.4,
+   "win": 13.5,
+   "avgStar": 0,
+   "count": 326
+  },
+  {
+   "id": "baton_courants",
+   "name": "Bâton des courants",
+   "n": 724,
+   "avgPlace": 4.15,
+   "top4": 57.9,
+   "win": 15.3,
+   "avgStar": 0,
+   "count": 724
+  },
+  {
+   "id": "couronne_braise",
+   "name": "Couronne de braise",
+   "n": 381,
+   "avgPlace": 4.18,
+   "top4": 56.4,
+   "win": 16,
+   "avgStar": 0,
+   "count": 381
+  },
+  {
+   "id": "pierre_garde",
+   "name": "Pierre-garde",
+   "n": 608,
+   "avgPlace": 4.19,
+   "top4": 55.6,
+   "win": 12.7,
+   "avgStar": 0,
+   "count": 608
+  },
+  {
+   "id": "cuirasse_titan",
+   "name": "Cuirasse du titan",
+   "n": 677,
+   "avgPlace": 4.2,
+   "top4": 55.4,
+   "win": 16,
+   "avgStar": 0,
+   "count": 677
+  },
+  {
+   "id": "lunettes_horloger",
+   "name": "Lunettes d’horloger",
+   "n": 650,
+   "avgPlace": 4.2,
+   "top4": 56.5,
+   "win": 14.8,
+   "avgStar": 0,
+   "count": 650
+  },
+  {
+   "id": "couronne_lunaire",
+   "name": "Couronne lunaire",
+   "n": 581,
+   "avgPlace": 4.22,
+   "top4": 54.6,
+   "win": 14.3,
+   "avgStar": 0,
+   "count": 581
+  },
+  {
+   "id": "rancune_acier",
+   "name": "Rancune d’acier",
+   "n": 502,
+   "avgPlace": 4.23,
+   "top4": 55,
+   "win": 12.5,
+   "avgStar": 0,
+   "count": 502
+  },
+  {
+   "id": "linceul",
+   "name": "Linceul des marées",
+   "n": 412,
+   "avgPlace": 4.25,
+   "top4": 55.3,
+   "win": 16,
+   "avgStar": 0,
+   "count": 412
+  },
+  {
+   "id": "croc_abysse",
+   "name": "Croc d’abysse",
+   "n": 575,
+   "avgPlace": 4.25,
+   "top4": 55.1,
+   "win": 13.9,
+   "avgStar": 0,
+   "count": 575
+  },
+  {
+   "id": "longue_vue",
+   "name": "Longue-vue d’affût",
+   "n": 423,
+   "avgPlace": 4.25,
+   "top4": 54.4,
+   "win": 15.8,
+   "avgStar": 0,
+   "count": 423
+  },
+  {
+   "id": "faux_crepuscule",
+   "name": "Faux du crépuscule",
+   "n": 549,
+   "avgPlace": 4.27,
+   "top4": 54.5,
+   "win": 13.3,
+   "avgStar": 0,
+   "count": 549
+  },
+  {
+   "id": "cotte_epines",
+   "name": "Cotte d’épines",
+   "n": 473,
+   "avgPlace": 4.27,
+   "top4": 54.5,
+   "win": 11.4,
+   "avgStar": 0,
+   "count": 473
+  },
+  {
+   "id": "bastion",
+   "name": "Bastion de laiton",
+   "n": 388,
+   "avgPlace": 4.32,
+   "top4": 53.4,
+   "win": 13.1,
+   "avgStar": 0,
+   "count": 388
+  },
+  {
+   "id": "egide_cierge",
+   "name": "Égide du cierge",
+   "n": 444,
+   "avgPlace": 4.35,
+   "top4": 54.3,
+   "win": 13.1,
+   "avgStar": 0,
+   "count": 444
+  },
+  {
+   "id": "trophee_chasseur",
+   "name": "Trophée du chasseur",
+   "n": 571,
+   "avgPlace": 4.35,
+   "top4": 53.8,
+   "win": 13.7,
+   "avgStar": 0,
+   "count": 571
+  },
+  {
+   "id": "gemme_savant",
+   "name": "Gemme du savant",
+   "n": 576,
+   "avgPlace": 4.37,
+   "top4": 55,
+   "win": 12.7,
+   "avgStar": 0,
+   "count": 576
+  },
+  {
+   "id": "oeil_chasseur",
+   "name": "Œil du chasseur",
+   "n": 308,
+   "avgPlace": 4.38,
+   "top4": 51.9,
+   "win": 12.3,
+   "avgStar": 0,
+   "count": 308
+  },
+  {
+   "id": "masque_eclipse",
+   "name": "Masque de l’éclipse",
+   "n": 472,
+   "avgPlace": 4.42,
+   "top4": 53.4,
+   "win": 10.6,
+   "avgStar": 0,
+   "count": 472
+  },
+  {
+   "id": "pendule_argent",
+   "name": "Pendule d’argent",
+   "n": 496,
+   "avgPlace": 4.5,
+   "top4": 50.2,
+   "win": 11.7,
+   "avgStar": 0,
+   "count": 496
+  }
+ ],
+ "profiles": [
+  {
+   "profile": "agressif",
+   "n": 249,
+   "avgPlace": 4.32,
+   "top4": 49,
+   "win": 14.9,
+   "avgStar": 0
+  },
+  {
+   "profile": "legendes",
+   "n": 232,
+   "avgPlace": 4.36,
+   "top4": 53.4,
+   "win": 10.8,
+   "avgStar": 0
+  },
+  {
+   "profile": "flexible",
+   "n": 767,
+   "avgPlace": 4.38,
+   "top4": 52.8,
+   "win": 14.2,
+   "avgStar": 0
+  },
+  {
+   "profile": "specialiste",
+   "n": 468,
+   "avgPlace": 4.51,
+   "top4": 49.8,
+   "win": 14.5,
+   "avgStar": 0
+  },
+  {
+   "profile": "defensif",
+   "n": 465,
+   "avgPlace": 4.61,
+   "top4": 49,
+   "win": 9.5,
+   "avgStar": 0
+  },
+  {
+   "profile": "econome",
+   "n": 219,
+   "avgPlace": 5,
+   "top4": 40.2,
+   "win": 7.8,
+   "avgStar": 0
+  }
+ ]
+}

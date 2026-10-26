@@ -165,6 +165,7 @@ export class Controller {
     this.banner = { title: 'La Convergence commence', subtitle: `${opts.opponents} Archontes rivaux · ${labelDifficulty(opts.difficulty)}`, kind: 'info', until: this.now + 3.2 };
     this.enterPhase();
     this.screen = 'game';
+    if (!this.settings.tutorialSeen) this.modal = { kind: 'help' };
     this.sfx('roundStart');
     this.notify();
   }
@@ -406,7 +407,7 @@ export class Controller {
       changed = true;
     }
     const st = this.state;
-    if (this.screen === 'game' && st && !this.paused && this.modal?.kind !== 'pause') {
+    if (this.screen === 'game' && st && !this.paused && this.modal?.kind !== 'pause' && this.modal?.kind !== 'help') {
       if (this.live) {
         // pendant le combat, le canvas lit l'état à chaque image ; l'interface DOM est rafraîchie ~8 fois/s
         if (this.stepLive(dt) && this.now - this.lastLiveNotify > 0.12) {
@@ -572,7 +573,9 @@ export class Controller {
 
   // ── Notifications & audio ─────────────────────────────────────────────────
   toast(text: string, kind: Toast['kind'] = 'info', seconds = 2.8): void {
-    this.toasts = [...this.toasts.slice(-4), { id: toastId++, text, kind, until: this.now + seconds }];
+    // un message identique déjà affiché est prolongé plutôt qu'empilé
+    const rest = this.toasts.filter((t) => t.text !== text);
+    this.toasts = [...rest.slice(-4), { id: toastId++, text, kind, until: this.now + seconds }];
     this.notify();
   }
 
@@ -725,6 +728,7 @@ export class Controller {
 
   closeModal(): void {
     if (!this.modal) return;
+    if (this.modal.kind === 'help' && !this.settings.tutorialSeen) this.updateSettings({ tutorialSeen: true });
     this.modal = null;
     this.sfx('uiClose');
     this.notify();

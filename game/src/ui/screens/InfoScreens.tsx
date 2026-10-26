@@ -4,7 +4,8 @@ import { ROLE_LABELS, type Role } from '../../core/defs';
 import { ECONOMY, POOL_COPIES, SHOP_ODDS, STAGE_DAMAGE, XP_TO_NEXT, COMBAT, BENCH_SIZE } from '../../config/balance';
 import { resetAllData, storageAvailable } from '../../save/save';
 import { ChampionPortrait, ItemIcon, Tip, TraitIcon, costColor, useController } from '../common';
-import { ChampionSheet, ChampionTip, ItemTip, statText } from '../info';
+import { ChampionSheet, ChampionTip, ItemTip } from '../info';
+import { statText } from '../../core/statText';
 import { MenuBackground } from './MenuScreens';
 import { VolumeSliders } from '../game/GameScreen';
 
@@ -239,7 +240,7 @@ export function RulesScreen(): JSX.Element {
         <p>Chaque étape compte des combats contre les Archontes, un <b>carrousel</b> (les joueurs aux PV les plus bas choisissent en premier un champion portant un objet) et une <b>rencontre neutre</b> qui rapporte du butin.</p>
         <h3>Économie</h3>
         <ul>
-          <li>Revenu de base : {ECONOMY.baseIncome} or par manche (moins pendant l’étape 1).</li>
+          <li>Revenu de base : {ECONOMY.baseIncome} or par manche (moins pendant les cinq premières manches).</li>
           <li>Intérêts : 1 or par tranche de {ECONOMY.interestPer} or possédés, jusqu’à {ECONOMY.interestMax}.</li>
           <li>Séries de victoires ou de défaites : +1 à +3 or par manche. Une victoire contre un Archonte rapporte +{ECONOMY.pvpWinGold} or.</li>
           <li>Actualiser la boutique : {ECONOMY.rerollCost} or. Acheter {ECONOMY.xpBuyAmount} XP : {ECONOMY.xpBuyCost} or. Vous gagnez aussi {ECONOMY.passiveXpPerRound} XP par manche.</li>

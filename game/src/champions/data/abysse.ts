@@ -166,7 +166,7 @@ export const ABYSSE: ChampionDef[] = [
     ability: {
       name: 'Abîme tournoyant',
       desc: 'Ouvre un tourbillon sur le plus gros groupe d’ennemis pendant 3 s : les ennemis à 2 hexagones sont attirés vers son centre et subissent {tick} dégâts magiques toutes les 0,5 s.',
-      values: { tick: [70, 105, 300] },
+      values: { tick: [63, 95, 290] },
       target: 'clusterEnemy',
       castTime: 0.5,
       vfx: 'whirlpool',

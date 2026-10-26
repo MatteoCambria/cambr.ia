@@ -3,3 +3,4 @@ dist/
 reports/tmp/
 *.log
 .DS_Store
+reports/qa/*.png

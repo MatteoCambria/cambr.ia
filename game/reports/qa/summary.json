@@ -1,0 +1,189 @@
+{
+ "url": "http://localhost:4174/?qa",
+ "date": "2026-10-26T03:03:50.595Z",
+ "passed": 36,
+ "failed": 0,
+ "results": [
+  {
+   "name": "menu principal affiché",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "écran Encyclopédie",
+   "ok": true,
+   "detail": "encyclopedia"
+  },
+  {
+   "name": "retour au menu depuis Encyclopédie",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "écran Règles du jeu",
+   "ok": true,
+   "detail": "rules"
+  },
+  {
+   "name": "retour au menu depuis Règles du jeu",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "écran Paramètres",
+   "ok": true,
+   "detail": "settings"
+  },
+  {
+   "name": "retour au menu depuis Paramètres",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "écran Crédits",
+   "ok": true,
+   "detail": "credits"
+  },
+  {
+   "name": "retour au menu depuis Crédits",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "mode entraînement : combat lancé",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "paramètre conservé après rechargement",
+   "ok": true,
+   "detail": "true → false"
+  },
+  {
+   "name": "guide « Premiers pas » à la première partie",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "chrono arrêté pendant le guide",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "guide fermé par Échap",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "carrousel : champion obtenu",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "achat par clic",
+   "ok": true,
+   "detail": "[\"mirelle\",\"rugor\"]"
+  },
+  {
+   "name": "glisser réserve → plateau",
+   "ok": true,
+   "detail": "[\"mirelle@3,0\"]"
+  },
+  {
+   "name": "info-bulle au survol",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "clic : fiche du champion",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "Échap ferme la fiche",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "déplacement sur le plateau",
+   "ok": true,
+   "detail": "[\"mirelle@5,2\"]"
+  },
+  {
+   "name": "objet glissé sur un champion",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "vente par dépôt sur la boutique",
+   "ok": true,
+   "detail": "or 19 → 20"
+  },
+  {
+   "name": "raccourci D (actualiser, 2 or)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "raccourci F (XP, 4 or)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "raccourci 1 (recruter)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "Échap : menu pause",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "retour au menu après sauvegarde",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "reprise de la partie sauvegardée",
+   "ok": true,
+   "detail": "manche 1 → 1"
+  },
+  {
+   "name": "1280×720 : pas de défilement de la page",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "1280×720 : combat en cours",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "1920×1080 : pas de défilement de la page",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "1920×1080 : combat en cours",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "partie complète jusqu’à l’écran de fin",
+   "ok": true,
+   "detail": "34 manches, place 8, 16 préparations, 136 s"
+  },
+  {
+   "name": "mémoire JS en fin de partie",
+   "ok": true,
+   "detail": "45 Mo"
+  },
+  {
+   "name": "aucune erreur JavaScript ni console",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "errors": []
+}

@@ -147,7 +147,7 @@ export const NOMADE: ChampionDef[] = [
     ability: {
       name: 'Tourbillon des sables',
       desc: 'Traverse sa cible dans un tourbillon : inflige {adr} % de la PA en dégâts physiques à chaque ennemi sur sa trajectoire, puis gagne {as} % de vitesse d’attaque pendant 4 s.',
-      values: { adr: [215, 225, 250], as: [45, 55, 70] },
+      values: { adr: [240, 255, 300], as: [45, 55, 70] },
       target: 'current',
       castTime: 0.2,
       vfx: 'sandstorm',
@@ -206,7 +206,7 @@ export const NOMADE: ChampionDef[] = [
     ability: {
       name: 'Caravane fantôme',
       desc: 'Appelle {n} Cavaliers spectraux en première ligne (720 PV, 68 dégâts, ×{lvl} selon le rang). Tous les alliés gagnent {as} % de vitesse d’attaque pendant 4 s.',
-      values: { n: [2, 2, 4], lvl: [1, 1.5, 3], as: [25, 30, 60] },
+      values: { n: [2, 2, 4], lvl: [1, 1.5, 3], as: [18, 22, 50] },
       target: 'self',
       castTime: 0.7,
       vfx: 'caravanCall',

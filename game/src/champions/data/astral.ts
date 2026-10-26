@@ -49,7 +49,7 @@ export const ASTRAL: ChampionDef[] = [
     ability: {
       name: 'Champ gravitationnel',
       desc: 'Gagne un bouclier de {shield} PV pendant 4 s ; les ennemis à 2 hexagones ou moins perdent {slow} % de vitesse d’attaque et de déplacement pendant 3 s.',
-      values: { shield: [200, 280, 420], slow: [25, 30, 35] },
+      values: { shield: [180, 250, 380], slow: [20, 25, 30] },
       target: 'self',
       castTime: 0.35,
       vfx: 'gravity',
@@ -150,11 +150,11 @@ export const ASTRAL: ChampionDef[] = [
     role: 'initiator',
     secondaryRole: 'bruiser',
     position: 'front',
-    stats: makeStats('bruiser', 4, [40, 110]),
+    stats: makeStats('bruiser', 4, [40, 110], { hp: 620 }),
     ability: {
       name: 'Chute météorique',
       desc: 'S’élève hors d’atteinte puis s’écrase sur le plus gros groupe d’ennemis après 1 s : {dmg} dégâts magiques à 1 hexagone et étourdissement de {stun} s.',
-      values: { dmg: [215, 325, 900], stun: [1, 1, 1.75] },
+      values: { dmg: [175, 265, 800], stun: [1, 1, 1.75] },
       target: 'clusterEnemy',
       castTime: 0.2,
       vfx: 'meteorRise',

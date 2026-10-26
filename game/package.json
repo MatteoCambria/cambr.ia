@@ -11,9 +11,17 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
-    "sim": "tsx tools/sim/cli.ts",
     "audio": "tsx tools/audio/render.ts",
-    "validate": "tsx tools/validate.ts"
+    "validate": "tsx tools/validate.ts",
+    "sim:smoke": "tsx tools/sim/smoke.ts",
+    "sim:game": "tsx tools/sim/game-smoke.ts",
+    "sim:balance": "tsx tools/sim/balance.ts",
+    "sim:units": "tsx tools/sim/unitpower.ts",
+    "sim:traits": "tsx tools/sim/traitpower.ts",
+    "sim:difficulty": "tsx tools/sim/difficulty.ts",
+    "sim:trace": "tsx tools/sim/trace.ts",
+    "docs": "tsx tools/docs.ts",
+    "qa:browser": "node tools/qa/browser.mjs"
   },
   "dependencies": {
     "@fontsource/alegreya-sans": "5.3.0",

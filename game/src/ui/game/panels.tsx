@@ -274,7 +274,7 @@ function IncomeTip({ gold, income, next }: { gold: number; income: { base: numbe
         <span>+{income.interest}</span>
         <span>Série</span>
         <span>+{income.streak}</span>
-        <span>Victoire JcJ</span>
+        <span>Victoire contre un Archonte</span>
         <span>+{ECONOMY.pvpWinGold}</span>
       </div>
       <div className="muted" style={{ marginTop: 6 }}>

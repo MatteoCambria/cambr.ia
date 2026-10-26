@@ -10,11 +10,11 @@ export const SYLVE: ChampionDef[] = [
     traits: ['sylve', 'gardien'],
     role: 'tank',
     position: 'front',
-    stats: makeStats('tank', 1, [30, 75]),
+    stats: makeStats('tank', 1, [30, 75], { hp: 640, armor: 40 }),
     ability: {
       name: 'Écorce',
       desc: 'Se couvre d’écorce : gagne {dr} % de réduction de dégâts pendant 3 s et récupère {heal} PV.',
-      values: { dr: [35, 40, 45], heal: [120, 180, 270] },
+      values: { dr: [25, 30, 40], heal: [100, 150, 240] },
       target: 'self',
       castTime: 0.25,
       vfx: 'bark',
@@ -213,7 +213,7 @@ export const SYLVE: ChampionDef[] = [
     ability: {
       name: 'Tempête des saisons',
       desc: 'Déchaîne la saison en cours sur sa cible : {dmg} dégâts magiques aux ennemis à 1 hexagone, plus l’effet saisonnier de son passif.',
-      values: { dmg: [240, 360, 900], spring: [120, 180, 400], summer: [40, 60, 150], winter: [30, 35, 50] },
+      values: { dmg: [270, 400, 950], spring: [120, 180, 400], summer: [40, 60, 150], winter: [30, 35, 50] },
       target: 'clusterEnemy',
       vfx: 'seasonStorm',
       actions: [

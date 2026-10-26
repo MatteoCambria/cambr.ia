@@ -199,7 +199,7 @@ export const SELENE: ChampionDef[] = [
     ability: {
       name: 'Pleine lune',
       desc: 'Pendant {dur} s, les alliés gagnent {as} % de vitesse d’attaque et {vamp} % d’omnivampirisme ; les ennemis perdent {slow} % de vitesse d’attaque.',
-      values: { dur: 5, as: [40, 50, 100], vamp: [25, 30, 50], slow: [25, 30, 50] },
+      values: { dur: 5, as: [47, 57, 110], vamp: [27, 32, 55], slow: [25, 30, 50] },
       target: 'self',
       castTime: 0.7,
       vfx: 'fullMoon',

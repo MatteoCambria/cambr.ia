@@ -166,6 +166,7 @@ function Modals(): JSX.Element | null {
   const m = c.modal;
   if (!m) return null;
   if (m.kind === 'pause') return <PauseMenu />;
+  if (m.kind === 'help') return <FirstSteps />;
   if (m.kind === 'unit') {
     const live = m.combatId !== undefined && c.live ? c.live.sim.unit(m.combatId) : null;
     const canSell = !!m.uid && !!c.me && (c.state?.phase === 'planning' || !!c.me.bench.find((b) => b?.uid === m.uid));
@@ -190,6 +191,9 @@ function PauseMenu(): JSX.Element {
           <button className="btn gold" onClick={() => c.togglePause()}>
             Reprendre
           </button>
+          <button className="btn" onClick={() => ((c.modal = { kind: 'help' }), c.notify())}>
+            Premiers pas
+          </button>
           <VolumeSliders />
           <button className="btn" onClick={() => c.quitToMenu(true)}>
             Sauvegarder et quitter
@@ -207,6 +211,44 @@ function PauseMenu(): JSX.Element {
           </button>
         </div>
         {c.live ? <div className="muted" style={{ marginTop: 10, fontSize: 13, color: 'var(--text-dim)', textAlign: 'center' }}>Le combat est en pause. Quitter pendant un combat reprendra la manche au début du combat.</div> : null}
+      </div>
+    </div>
+  );
+}
+
+const FIRST_STEPS: readonly { icon: string; title: string; text: string }[] = [
+  { icon: 'coin', title: 'Recruter', text: 'Achetez des champions dans la boutique en bas (clic ou touches 1 à 5). Actualiser coûte 2 or (D) ; le cadenas (L) garde la boutique pour la manche suivante.' },
+  { icon: 'swords', title: 'Placer', text: 'Glissez vos champions de la réserve vers votre moitié du plateau. Votre niveau fixe le nombre de champions déployés : tanks devant, attaquants à distance derrière.' },
+  { icon: 'star', title: 'Améliorer', text: 'Trois exemplaires identiques fusionnent automatiquement en un champion 2★, puis trois 2★ en un 3★, bien plus puissant.' },
+  { icon: 'zenith', title: 'Synergies', text: 'Des champions différents partageant une origine ou une classe activent des bonus (panneau de gauche). Survolez une synergie pour voir ses paliers.' },
+  { icon: 'sword', title: 'Objets', text: 'Glissez un objet sur un champion. Deux composants sur le même champion forment un objet complet (3 objets au plus).' },
+  { icon: 'xp', title: 'Économie', text: 'Chaque tranche de 10 or rapporte 1 or d’intérêts (5 au plus) ; les séries de victoires ou de défaites aussi. Acheter de l’XP (F, 4 or) fait monter de niveau.' },
+  { icon: 'heart', title: 'Combattre', text: 'Appuyez sur Espace (ou attendez la fin du chrono) : le combat se joue seul. Une défaite coûte des points de vie ; le dernier Archonte debout l’emporte.' },
+];
+
+function FirstSteps(): JSX.Element {
+  const c = useController();
+  return (
+    <div className="modal-back" onClick={() => c.closeModal()}>
+      <div className="modal panel filigree first-steps" onClick={(e) => e.stopPropagation()} role="dialog" aria-label="Premiers pas">
+        <h2>Premiers pas</h2>
+        <p className="muted">Le chrono de préparation est arrêté pendant la lecture. Ce guide reste accessible depuis le menu Pause (Échap).</p>
+        <ol>
+          {FIRST_STEPS.map((s) => (
+            <li key={s.title}>
+              <Icon k={s.icon} size={26} />
+              <div>
+                <strong>{s.title}</strong>
+                <span>{s.text}</span>
+              </div>
+            </li>
+          ))}
+        </ol>
+        <div className="row" style={{ justifyContent: 'center' }}>
+          <button className="btn gold" onClick={() => c.closeModal()} autoFocus>
+            C’est parti
+          </button>
+        </div>
       </div>
     </div>
   );

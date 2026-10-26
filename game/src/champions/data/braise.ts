@@ -15,7 +15,7 @@ export const BRAISE: ChampionDef[] = [
     ability: {
       name: 'Grenade de braise',
       desc: 'Lance une grenade sur sa cible : {dmg} dégâts magiques à 1 hexagone, puis brûle les ennemis touchés ({burn} dégâts magiques par seconde pendant 3 s).',
-      values: { dmg: [140, 210, 310], burn: [20, 30, 45] },
+      values: { dmg: [160, 240, 350], burn: [20, 30, 45] },
       target: 'current',
       castTime: 0.35,
       vfx: 'throw',
@@ -159,7 +159,7 @@ export const BRAISE: ChampionDef[] = [
     passive: {
       name: 'Corps ardent',
       desc: 'Chaque seconde, brûle les ennemis adjacents pour {aura} % de leurs PV max en dégâts magiques.',
-      values: { aura: [1.6, 2.2, 5] },
+      values: { aura: [1.3, 1.8, 5] },
       triggers: [{ on: 'interval', every: 1, actions: [{ do: 'damage', area: { shape: 'circle', at: 'self', radius: 1, side: 'enemies' }, amount: { targetHp: 'aura' }, type: 'magic', canCrit: false }] }],
     },
     ability: {
