@@ -177,7 +177,8 @@ export class BoardRenderer {
     const key = (h: Hex) => h.row * BOARD_COLS + h.col;
     let target: number | null = null;
     let targetValid = true;
-    const focusUid = inp.drag?.source.kind === 'unit' ? inp.drag.source.uid : inp.hoverUid ?? inp.selectedUid;
+    const dragOffBoard = !!inp.drag && inp.drag.over?.kind !== 'board';
+    const focusUid = dragOffBoard ? null : inp.drag?.source.kind === 'unit' ? inp.drag.source.uid : inp.hoverUid ?? inp.selectedUid;
     if (me && !inp.live && focusUid) {
       const slot = me.board.find((s) => s.uid === focusUid);
       const unit = slot ?? me.bench.find((u) => u?.uid === focusUid) ?? null;

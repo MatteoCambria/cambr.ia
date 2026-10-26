@@ -4,4 +4,10 @@ export interface BoardPicker {
   unitAt(clientX: number, clientY: number): string | null;
 }
 
-export const boardBus: { picker: BoardPicker | null } = { picker: null };
+/** Coordonnées écran (client) utiles aux tests automatisés. */
+export interface BoardDebug {
+  benchCenter(i: number): { x: number; y: number };
+  hexCenter(col: number, row: number): { x: number; y: number };
+}
+
+export const boardBus: { picker: BoardPicker | null; debug: BoardDebug | null } = { picker: null, debug: null };

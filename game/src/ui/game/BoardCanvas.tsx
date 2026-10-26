@@ -4,6 +4,7 @@ import { onFrame } from '../../app/loop';
 import { COMBAT } from '../../config/balance';
 import { BoardRenderer } from '../../render/boardRenderer';
 import { boardBus } from './boardBus';
+import { benchSlotCenter, combatHexToScreen, localToCombat } from '../../render/layout';
 import { ChampionTip } from '../info';
 import { FloatAt } from '../common';
 import { getChampion } from '../../core/content';
@@ -39,6 +40,18 @@ export function BoardCanvas(): JSX.Element {
         return d?.uid ?? null;
       },
     };
+    boardBus.debug = {
+      benchCenter(i) {
+        const rect = canvas.getBoundingClientRect();
+        const c = benchSlotCenter(r.L, i);
+        return { x: rect.left + c.x, y: rect.top + c.y };
+      },
+      hexCenter(col, row) {
+        const rect = canvas.getBoundingClientRect();
+        const c = combatHexToScreen(r.L, localToCombat({ col, row }));
+        return { x: rect.left + c.x, y: rect.top + c.y };
+      },
+    };
     const off = onFrame((dt, now) => {
       const c = controller;
       const st = c.state;
@@ -66,6 +79,7 @@ export function BoardCanvas(): JSX.Element {
       off();
       ro.disconnect();
       boardBus.picker = null;
+      boardBus.debug = null;
     };
   }, []);
 

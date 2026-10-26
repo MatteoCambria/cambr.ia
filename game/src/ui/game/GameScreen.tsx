@@ -27,7 +27,7 @@ export function GameScreen(): JSX.Element {
         ) : null}
         <div className="toasts">
           {c.toasts.map((t) => (
-            <div key={t.id} className={`toast ${t.kind}`}>
+            <div key={t.id} className={`toast t-${t.kind}`}>
               {t.text}
             </div>
           ))}

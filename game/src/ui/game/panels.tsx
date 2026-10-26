@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { controller } from '../../app/controller';
 import { ECONOMY, MAX_LEVEL, XP_TO_NEXT } from '../../config/balance';
 import { SCHEDULE, roundAt } from '../../config/rounds';
@@ -362,6 +363,7 @@ export function ItemsPanel(): JSX.Element | null {
       } else {
         c.drag.over = null;
         setPreview(null);
+        c.notify();
       }
     };
     const up = () => {
@@ -398,16 +400,19 @@ export function ItemsPanel(): JSX.Element | null {
         )}
       </div>
       {me.items.length > 10 ? <div className="muted" style={{ padding: '0 10px 6px', fontSize: 12, color: 'var(--text-dim)' }}>+{me.items.length - 10} objet(s) en attente</div> : null}
-      {preview ? (
-        <div className="tip" style={{ left: preview.x + 16, top: preview.y + 12, borderColor: preview.ok ? 'var(--cyan)' : 'var(--danger)' }}>
-          {preview.text}
-        </div>
-      ) : null}
-      {c.drag?.source.kind === 'item' && !preview ? (
-        <div className="tip" style={{ left: c.drag.x + 16, top: c.drag.y + 12 }}>
-          {findItem(me.items[c.drag.source.index])?.name}
-        </div>
-      ) : null}
+      {c.drag?.source.kind === 'item'
+        ? createPortal(
+            <>
+              <div style={{ position: 'fixed', left: c.drag.x - 18, top: c.drag.y - 18, zIndex: 999, pointerEvents: 'none', filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.6))' }}>
+                <ItemIcon id={me.items[c.drag.source.index]} size={36} />
+              </div>
+              <div className="tip" style={{ left: (preview?.x ?? c.drag.x) + 22, top: (preview?.y ?? c.drag.y) + 14, borderColor: preview ? (preview.ok ? 'var(--cyan)' : 'var(--danger)') : undefined }}>
+                {preview ? preview.text : findItem(me.items[c.drag.source.index])?.name}
+              </div>
+            </>,
+            document.body,
+          )
+        : null}
     </div>
   );
 }
