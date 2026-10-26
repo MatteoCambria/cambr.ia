@@ -42,7 +42,7 @@ function makeCtx(state: GameState, p: PlayerState, salt: string): EvalCtx {
     mem: p.ai!,
     view: publicView(state, p.id),
     stage: r.stage,
-    diff: DIFFICULTIES[state.settings.difficulty],
+    diff: DIFFICULTIES[p.ai?.difficulty ?? state.settings.difficulty],
     rng: new Rng(hashString(`${state.settings.seed}:ai:${p.id}:${state.roundIndex}:${salt}`)),
   };
 }
@@ -277,7 +277,7 @@ export function planTurn(state: GameState, p: PlayerState): void {
   // 3. Achats et actualisations
   const threshold = 5.5 + (ctx.stage >= 4 ? 1.5 : 0) - (panic ? 1.5 : 0);
   shopPass(state, p, ctx, floor, threshold);
-  const rollDown = (reachedNow && p.level >= 7 && !mem.rollDownDone) || (panic && ctx.stage >= 3);
+  const rollDown = diff.rollDowns && ((reachedNow && p.level >= 7 && !mem.rollDownDone) || (panic && ctx.stage >= 3));
   if (reachedNow && p.level >= 7) mem.rollDownDone = true;
   if (p.level < 7) mem.rollDownDone = false;
   let rollBudget = 0;
@@ -297,7 +297,7 @@ export function planTurn(state: GameState, p: PlayerState): void {
   const candidates = [...p.board, ...p.bench.filter((u): u is OwnedUnit => !!u)].map((u) => ({ uid: u.uid, defId: u.defId, star: u.star, items: u.items }));
   let limit = deployLimit(p);
   if (diff.slip > 0 && ctx.rng.next() < diff.slip * 0.5) limit = Math.max(1, limit - 1);
-  const chosen = chooseBoard(candidates, Math.min(limit, candidates.length), mem);
+  const chosen = chooseBoard(candidates, Math.min(limit, candidates.length), mem, ctx.rng, diff.boardNoise);
 
   // 5. Objets (sur le plateau pressenti) puis placement
   const provisional = placeUnits(chosen, mem, adaptStyle(ctx.view, ctx.rng), Math.min(1, diff.placement) as 0 | 1, ctx.rng);

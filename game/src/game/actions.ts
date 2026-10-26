@@ -78,7 +78,7 @@ export function buyUnit(state: GameState, p: PlayerState, shopIndex: number): Ac
   const merges = mergeUnits(p);
   normalizeBench(p);
   lastEvents.merges.push(...merges);
-  return ok(merges.length ? `${def.name} passe au rang ${merges[merges.length - 1].star} !` : `${def.name} recruté.`);
+  return ok();
 }
 
 /** Garantit que la réserve garde exactement BENCH_SIZE emplacements. */

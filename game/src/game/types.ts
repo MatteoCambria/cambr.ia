@@ -34,6 +34,8 @@ export interface AiMemory {
   rollDownDone: boolean;
   /** Dernière évaluation de sa force relative (0..1). */
   strength: number;
+  /** Difficulté propre à ce siège (outils d'équilibrage) ; sinon celle de la partie. */
+  difficulty?: Difficulty;
 }
 
 export interface PlayerRunStats {

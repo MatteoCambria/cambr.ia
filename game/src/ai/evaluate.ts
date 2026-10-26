@@ -105,11 +105,15 @@ export function teamScore(units: OwnedUnit[], mem: AiMemory): number {
 }
 
 /** Sélectionne les unités à déployer (glouton + échanges locaux). */
-export function chooseBoard(candidates: OwnedUnit[], limit: number, mem: AiMemory): OwnedUnit[] {
+export function chooseBoard(candidates: OwnedUnit[], limit: number, mem: AiMemory, rng?: Rng, noise = 0): OwnedUnit[] {
   // un seul exemplaire de chaque champion compte pour les synergies : on évite les doublons inutiles
   const chosen: OwnedUnit[] = [];
   const pool = candidates.slice();
   while (chosen.length < limit && pool.length) {
+    if (rng && noise > 0 && rng.chance(noise)) {
+      chosen.push(pool.splice(rng.int(pool.length), 1)[0]);
+      continue;
+    }
     let best = -1;
     let bestScore = -Infinity;
     for (let i = 0; i < pool.length; i++) {
@@ -122,7 +126,7 @@ export function chooseBoard(candidates: OwnedUnit[], limit: number, mem: AiMemor
     chosen.push(pool.splice(best, 1)[0]);
   }
   // améliorations par échange
-  for (let pass = 0; pass < 2; pass++) {
+  for (let pass = 0; pass < (noise > 0.2 ? 0 : 2); pass++) {
     let improved = false;
     for (let i = 0; i < chosen.length; i++) {
       const cur = teamScore(chosen, mem);

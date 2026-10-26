@@ -114,6 +114,10 @@ export interface DifficultyDef {
   itemSmarts: boolean;
   /** Respect du plan de niveau (0..1). */
   discipline: number;
+  /** Probabilité de choisir une unité au hasard lors de la composition du plateau. */
+  boardNoise: number;
+  /** Effectue les « roll-down » de stabilisation au bon moment. */
+  rollDowns: boolean;
 }
 
 export const DIFFICULTIES: Readonly<Record<Difficulty, DifficultyDef>> = {
@@ -121,12 +125,14 @@ export const DIFFICULTIES: Readonly<Record<Difficulty, DifficultyDef>> = {
     id: 'facile',
     label: 'Facile',
     desc: 'Adversaires hésitants : économie approximative, placements perfectibles. Idéal pour découvrir.',
-    noise: 5,
-    slip: 0.3,
+    noise: 8,
+    slip: 0.4,
     placement: 0,
     adapt: false,
     itemSmarts: false,
-    discipline: 0.5,
+    discipline: 0.35,
+    boardNoise: 0.35,
+    rollDowns: false,
   },
   normal: {
     id: 'normal',
@@ -138,6 +144,8 @@ export const DIFFICULTIES: Readonly<Record<Difficulty, DifficultyDef>> = {
     adapt: false,
     itemSmarts: true,
     discipline: 0.9,
+    boardNoise: 0.04,
+    rollDowns: true,
   },
   difficile: {
     id: 'difficile',
@@ -149,6 +157,8 @@ export const DIFFICULTIES: Readonly<Record<Difficulty, DifficultyDef>> = {
     adapt: true,
     itemSmarts: true,
     discipline: 1,
+    boardNoise: 0,
+    rollDowns: true,
   },
 };
 
