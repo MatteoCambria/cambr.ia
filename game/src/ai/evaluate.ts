@@ -86,7 +86,12 @@ export function unitPower(u: OwnedUnit, mem?: AiMemory): number {
 /** Score d'une équipe candidate (plateau). */
 export function teamScore(units: OwnedUnit[], mem: AiMemory): number {
   let s = 0;
-  for (const u of units) s += unitPower(u, mem);
+  const seen = new Set<string>();
+  for (const u of units) {
+    // un second exemplaire identique n'apporte ni synergie ni grand-chose de plus
+    s += unitPower(u, mem) * (seen.has(u.defId) ? 0.45 : 1);
+    seen.add(u.defId);
+  }
   const traits = computeTraits(units);
   for (const t of traits) {
     if (t.level <= 0) continue;

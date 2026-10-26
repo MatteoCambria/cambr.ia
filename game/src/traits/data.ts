@@ -366,9 +366,9 @@ export const TRAITS: readonly TraitDef[] = [
     thresholds: [2, 4],
     levels: [
       {
-        desc: '+15 % de chances de coup critique et +20 % de dégâts critiques.',
+        desc: '+10 % de chances de coup critique et +15 % de dégâts critiques.',
         holders: {
-          stats: [{ stat: 'critChance', value: 15 }, { stat: 'critDamage', value: 20 }, { stat: 'abilityCrit', value: 1 }],
+          stats: [{ stat: 'critChance', value: 10 }, { stat: 'critDamage', value: 15 }, { stat: 'abilityCrit', value: 1 }],
           triggers: [{ on: 'combatStart', actions: [{ do: 'move', mode: 'leapBackline', untargetable: true, vfx: 'shadowLeap' }] }],
         },
       },

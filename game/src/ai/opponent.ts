@@ -16,7 +16,7 @@ import { publicView } from '../game/snapshot';
 import type { AiMemory, AiProfileId, BoardSlot, GameState, OwnedUnit, PlayerState } from '../game/types';
 import { deployLimit } from '../progression/levels';
 import { chooseBoard, ownedCopies, pickTargetTraits, unitPower, unitValue, type EvalCtx } from './evaluate';
-import { adaptStyle, optimizePlacement, pickBoardBySimulation, placeUnits } from './placement';
+import { adaptStyle, estimateStrength, optimizePlacement, pickBoardBySimulation, placeUnits } from './placement';
 import { DIFFICULTIES, PROFILES } from './profiles';
 import { ARCHETYPES } from './archetypes';
 import { CHAMPIONS } from '../core/content';
@@ -57,6 +57,11 @@ function benchCount(p: PlayerState): number {
   return p.bench.filter((u) => u !== null).length;
 }
 
+/** Nombre de champions différents possédés (plateau + réserve). */
+function distinctOwned(p: PlayerState): number {
+  return new Set([...p.board, ...p.bench.filter((u): u is OwnedUnit => !!u)].map((u) => u.defId)).size;
+}
+
 /** Passe d'achats sur la boutique actuelle. */
 function shopPass(state: GameState, p: PlayerState, ctx: EvalCtx, floor: number, threshold: number): void {
   const order = p.shop
@@ -66,7 +71,14 @@ function shopPass(state: GameState, p: PlayerState, ctx: EvalCtx, floor: number,
   for (const s of order) {
     const def = getChampion(s.id!);
     const pairUp = ownedCopies(p, def.id) % 3 === 2;
-    const affordable = p.gold - def.cost >= floor || (pairUp && p.gold >= def.cost);
+    // remplir le plateau passe avant les intérêts : une place vide ne rapporte rien
+    const fillsBoard = ownedCopies(p, def.id) === 0 && distinctOwned(p) < deployLimit(p);
+    const affordable = p.gold - def.cost >= floor || ((pairUp || fillsBoard) && p.gold >= def.cost);
+    if (fillsBoard && affordable) {
+      if (benchCount(p) >= BENCH_SIZE - 1 && !makeRoom(state, p, ctx, s.v + 10)) continue;
+      buyUnit(state, p, s.i);
+      continue;
+    }
     if (!affordable) continue;
     if (s.v < threshold && !pairUp) continue;
     if (benchCount(p) >= BENCH_SIZE - 1 && !pairUp) {
@@ -256,8 +268,16 @@ export function planTurn(state: GameState, p: PlayerState): void {
   mem.lastPlanRound = ri;
 
   // 2. Niveau
-  const panic = p.hp < prof.panicHp;
+  let panic = p.hp < prof.panicHp;
   let floor = prof.floor(p.hp, ctx.stage);
+  // Difficile : estime sa force réelle contre les plateaux observés et adapte ses dépenses
+  if (diff.adapt && ctx.stage >= 3 && p.board.length) {
+    mem.strength = estimateStrength(p.board, ctx.view, ctx.stage, hashString(`${state.settings.seed}:str:${p.id}:${ri}`));
+    if (mem.strength < 0.34 && p.hp < 75) {
+      panic = true;
+      floor = Math.min(floor, 20);
+    } else if (mem.strength > 0.66) floor = Math.max(floor, Math.min(50, floor + 10));
+  }
   if (panic) floor = Math.min(floor, p.hp < 25 ? 0 : 10);
   const tl = targetLevel(mem, ri) + (panic && p.hp < 30 && ctx.stage >= 4 ? 1 : 0);
   const reachedNow = p.level < tl;

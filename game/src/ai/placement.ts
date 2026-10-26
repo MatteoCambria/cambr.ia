@@ -258,3 +258,24 @@ export function pickBoardBySimulation(candidates: OwnedUnit[][], mem: AiMemory, 
   });
   return best;
 }
+
+/** Force estimée (0..1) d'un plateau contre les plateaux publics des adversaires les plus forts. */
+export function estimateStrength(slots: BoardSlot[], view: PublicView, stage: number, seedBase: number): number {
+  const opponents = view.players
+    .filter((p) => p.alive && p.snapshot && p.snapshot.board.length > 0)
+    .sort((a, b) => b.snapshot!.level - a.snapshot!.level || a.hp - b.hp)
+    .slice(0, 3);
+  if (!opponents.length || !slots.length) return 0.5;
+  let w = 0;
+  opponents.forEach((op, i) => {
+    const r = buildCombat(
+      [
+        { units: slots.map((s) => ({ defId: s.defId, star: s.star, items: s.items, hex: { col: s.col, row: s.row } })) },
+        { units: op.snapshot!.board.map((s) => ({ defId: s.defId, star: s.star, items: s.items, hex: { col: s.col, row: s.row } })) },
+      ],
+      { seed: seedBase + 977 + i, stage },
+    ).run();
+    w += r.winner === 0 ? 1 : r.winner === -1 ? 0.5 : 0;
+  });
+  return w / opponents.length;
+}

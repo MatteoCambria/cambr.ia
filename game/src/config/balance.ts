@@ -88,7 +88,7 @@ export const COMBAT = {
   dt: 1 / 30, // pas de simulation fixe (s)
   overtimeStart: 30, // début de l'Embrasement
   hardLimit: 48, // fin forcée : match nul
-  overtimeDamageRampPerSec: 0.12, // +12 % de dégâts infligés par seconde d'Embrasement
+  overtimeDamageRampPerSec: 0.2, // +20 % de dégâts infligés par seconde d'Embrasement
   overtimeHealingCut: 0.5,
   manaPerAttackDefault: 10,
   manaFromDamagePre: 0.01,
