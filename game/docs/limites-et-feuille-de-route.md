@@ -11,9 +11,10 @@ spectateur. Tout s'exécute dans le navigateur, hors ligne.
 **Plateformes**
 - Vérifié uniquement dans Chromium (sans interface, via Playwright). Firefox, Safari et Edge
   n'ont pas été testés ; le jeu n'utilise que des API standard.
-- Conçu pour un écran de bureau à partir de 1280×720 (vérifié à 1280×720, 1600×900 et 1920×1080).
-  Les petits écrans et les tablettes ne sont pas pris en charge : la mise en page n'est pas
-  adaptée en dessous de 1280 px de large et les interactions tactiles n'ont pas été testées.
+- Conçu pour un écran de bureau à partir de 1024×768 (vérifié à 1024×768, 1280×720, 1366×768,
+  1600×900 et 1920×1080 ; sous 1180 px de large, le panneau des raccourcis est masqué). Les
+  écrans plus petits et les téléphones ne sont pas pris en charge, et les interactions tactiles
+  n'ont pas été testées.
 - Performances mesurées seulement en rendu logiciel sans carte graphique (≈ 30 images/s en
   1600×900, conditions défavorables). Aucune mesure sur du matériel réel.
 

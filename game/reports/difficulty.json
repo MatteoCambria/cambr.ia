@@ -1,0 +1,36 @@
+{
+ "games": 32,
+ "seats": [
+  "facile",
+  "facile",
+  "normal",
+  "normal",
+  "normal",
+  "difficile",
+  "difficile",
+  "difficile"
+ ],
+ "results": [
+  {
+   "difficulty": "facile",
+   "n": 64,
+   "avgPlace": 6.75,
+   "top4": 9.4,
+   "wins": 0
+  },
+  {
+   "difficulty": "normal",
+   "n": 96,
+   "avgPlace": 4.13,
+   "top4": 55.2,
+   "wins": 14.6
+  },
+  {
+   "difficulty": "difficile",
+   "n": 96,
+   "avgPlace": 3.38,
+   "top4": 71.9,
+   "wins": 18.8
+  }
+ ]
+}

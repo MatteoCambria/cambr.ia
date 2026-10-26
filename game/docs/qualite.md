@@ -26,15 +26,15 @@ Toutes les simulations sont déterministes (graine fixe) et s'exécutent sans in
 
 | Commande | Volume | Résultat |
 |---|---|---|
-| `sim:smoke` | 300 combats d'équipes aléatoires | 0 erreur, 0 match nul, durée moyenne 18,9 s, maximum 39 s |
-| `sim:units` | 6 000 combats à 2★ et 6 000 à 1★ | 60 champions entre 43,5 % et 57,6 % face aux champions de même coût, au rang pertinent |
+| `sim:smoke` | 300 combats d'équipes aléatoires | 0 erreur, 0 match nul, durée moyenne 18,7 s, maximum 38,5 s |
+| `sim:units` | 6 000 combats à 2★ et 6 000 à 1★ | 60 champions entre 43,7 % et 57,7 % face aux champions de même coût, au rang pertinent |
 | `sim:traits` | 300 combats × 2 configurations × 35 paliers | gain propre de chaque palier ; voir [equilibrage.md](equilibrage.md) |
-| `sim:balance` | 300 parties complètes à 8 IA (Normal), 40 en Difficile | ≈ 44 000 combats ; voir [equilibrage.md](equilibrage.md) |
-| `sim:difficulty` | 32 lobbies mixtes (3 Facile, 2 Normal, 3 Difficile) | gradient de difficulté ; voir [equilibrage.md](equilibrage.md) |
+| `sim:balance` | 300 parties complètes à 8 IA (Normal), 40 en Difficile | 49 953 combats entre Archontes, exécutés sans exception ; voir [equilibrage.md](equilibrage.md) |
+| `sim:difficulty` | 32 lobbies mixtes (2 Facile, 3 Normal, 3 Difficile) | place moyenne 6,75 / 4,13 / 3,38 ; voir [equilibrage.md](equilibrage.md) |
 | `sim:game` | 1 partie complète | déroulé lisible manche par manche |
 
 Exports : `reports/balance-*.json` et `.csv` (champions, synergies, objets), `reports/unitpower-*.json`,
-`reports/traitpower.json`.
+`reports/traitpower.json`, `reports/difficulty.json`.
 
 ## 3. Vérifications dans le navigateur (`npm run qa:browser`)
 
@@ -49,8 +49,8 @@ vérifie, avec captures d'écran dans `reports/qa/` :
   glissé sur un champion ; vente par dépôt sur la boutique ; raccourcis `D`, `F`, `1` ; menu pause.
 - **Sauvegarde** : « Sauvegarder et quitter », rechargement de la page, « Continuer la partie »
   reprend la même manche.
-- **Résolutions** : 1280×720 et 1920×1080, plateau complet au niveau 8, préparation et combat,
-  sans défilement de page.
+- **Résolutions** : 1024×768, 1280×720 et 1920×1080, plateau complet au niveau 8, préparation
+  et combat, sans défilement de page.
 - **Partie complète** : de la première manche à l'écran de fin, à vitesse ×3, avec une stratégie
   simple (acheter, monter de niveau, déployer, équiper).
 - **Erreurs** : aucune exception JavaScript ni message d'erreur dans la console sur l'ensemble.
@@ -79,7 +79,21 @@ de trois parties complètes enchaînées.
 | Double variation de hauteur sur les effets sonores | variation appliquée une seule fois, par le gestionnaire audio |
 | Libellés « combat JcJ » ambigus dans un jeu solo | remplacés par « combat contre un Archonte » |
 | Règles : revenu réduit annoncé « pendant l'étape 1 » alors qu'il couvre les cinq premières manches | texte corrigé |
+| Notifications identiques empilées (« La réserve est pleine. » ×3) | un message identique est prolongé au lieu d'être répété |
+| Barre du bas plus large que l'écran en 1024×768 | mise en page étroite : panneau des raccourcis masqué, colonnes resserrées |
 
 ## 5. Dernière exécution
 
-_Complété à la livraison._
+Version optimisée (`npm run build && npm run preview`), Chromium sans interface :
+
+| Bloc | Vérifications | Résultat |
+|---|---|---|
+| Navigation et paramètres | 11 | toutes réussies |
+| Première partie, interactions, raccourcis, sauvegarde | 18 | toutes réussies |
+| Résolutions 1024×768, 1280×720, 1920×1080 | 6 | toutes réussies, sans défilement de page |
+| Partie complète à ×3 | 2 | écran de fin atteint (34 manches, 163 s) ; mémoire JavaScript 45 Mo |
+| Erreurs JavaScript ou console | 1 | aucune |
+| **Total** | **38** | **38 réussies** |
+
+Le détail est enregistré dans `reports/qa/summary.json` ; les captures (non versionnées) sont
+régénérées dans `reports/qa/` à chaque exécution. Une sélection figure dans `docs/captures/`.

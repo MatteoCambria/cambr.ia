@@ -470,6 +470,14 @@ input[type='range'] { accent-color: var(--gold); width: 220px; }
   .bottombar { grid-template-columns: 200px 1fr 196px; }
   .card-name { font-size: 13px; }
 }
+@media (max-width: 1180px) {
+  /* écrans étroits : les raccourcis restent dans le guide et la pause, la boutique prend la place */
+  .game { grid-template-columns: 184px 1fr 180px; }
+  .bottombar { grid-template-columns: 184px 1fr; }
+  .help-panel { display: none !important; }
+  .shop-side { min-width: 128px; }
+  .panel-title { letter-spacing: 0.08em; white-space: nowrap; gap: 6px; }
+}
 @media (max-height: 760px) {
   .card { min-height: 92px; }
   .game { grid-template-rows: 46px 1fr auto; }

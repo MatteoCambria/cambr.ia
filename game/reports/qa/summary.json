@@ -1,7 +1,7 @@
 {
  "url": "http://localhost:4174/?qa",
- "date": "2026-10-26T03:03:50.595Z",
- "passed": 36,
+ "date": "2026-10-26T03:15:24.466Z",
+ "passed": 38,
  "failed": 0,
  "results": [
   {
@@ -82,7 +82,7 @@
   {
    "name": "achat par clic",
    "ok": true,
-   "detail": "[\"mirelle\",\"rugor\"]"
+   "detail": "[\"mirelle\",\"liora\"]"
   },
   {
    "name": "glisser réserve → plateau",
@@ -150,6 +150,16 @@
    "detail": "manche 1 → 1"
   },
   {
+   "name": "1024×768 : pas de défilement de la page",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "1024×768 : combat en cours",
+   "ok": true,
+   "detail": ""
+  },
+  {
    "name": "1280×720 : pas de défilement de la page",
    "ok": true,
    "detail": ""
@@ -172,7 +182,7 @@
   {
    "name": "partie complète jusqu’à l’écran de fin",
    "ok": true,
-   "detail": "34 manches, place 8, 16 préparations, 136 s"
+   "detail": "34 manches, place 8, 16 préparations, 163 s"
   },
   {
    "name": "mémoire JS en fin de partie",

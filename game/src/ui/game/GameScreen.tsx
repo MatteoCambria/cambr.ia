@@ -151,7 +151,7 @@ function Carousel(): JSX.Element | null {
 
 function HelpPanel(): JSX.Element {
   return (
-    <div className="panel" style={{ padding: '8px 12px', fontSize: 13, color: 'var(--text-dim)', display: 'flex', flexDirection: 'column', gap: 4, justifyContent: 'center' }}>
+    <div className="panel help-panel" style={{ padding: '8px 12px', fontSize: 13, color: 'var(--text-dim)', display: 'flex', flexDirection: 'column', gap: 4, justifyContent: 'center' }}>
       <div style={{ fontFamily: 'var(--font-display)', color: 'var(--gold)', fontSize: 12, letterSpacing: '0.12em', textTransform: 'uppercase' }}>Raccourcis</div>
       <div><span className="kbd">D</span> actualiser · <span className="kbd">F</span> XP · <span className="kbd">L</span> verrou</div>
       <div><span className="kbd">E</span> vendre · <span className="kbd">W</span> plateau ⇄ réserve</div>

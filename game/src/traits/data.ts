@@ -373,9 +373,9 @@ export const TRAITS: readonly TraitDef[] = [
         },
       },
       {
-        desc: '+20 % de chances de coup critique et +25 % de dégâts critiques.',
+        desc: '+16 % de chances de coup critique et +20 % de dégâts critiques.',
         holders: {
-          stats: [{ stat: 'critChance', value: 20 }, { stat: 'critDamage', value: 25 }, { stat: 'abilityCrit', value: 1 }],
+          stats: [{ stat: 'critChance', value: 16 }, { stat: 'critDamage', value: 20 }, { stat: 'abilityCrit', value: 1 }],
           triggers: [{ on: 'combatStart', actions: [{ do: 'move', mode: 'leapBackline', untargetable: true, vfx: 'shadowLeap' }] }],
         },
       },
@@ -392,9 +392,9 @@ export const TRAITS: readonly TraitDef[] = [
     counter: 'Les assassins, les harpons et les attirances réduisent la distance ; placer ses tanks près de leur ligne.',
     thresholds: [2, 4, 6],
     levels: [
-      { desc: '+6 % de dégâts par hexagone de distance.', holders: { stats: [{ stat: 'dmgPerHex', value: 6 }] } },
-      { desc: '+9 % de dégâts par hexagone de distance.', holders: { stats: [{ stat: 'dmgPerHex', value: 9 }] } },
-      { desc: '+14 % de dégâts par hexagone de distance.', holders: { stats: [{ stat: 'dmgPerHex', value: 14 }] } },
+      { desc: '+7 % de dégâts par hexagone de distance.', holders: { stats: [{ stat: 'dmgPerHex', value: 7 }] } },
+      { desc: '+10 % de dégâts par hexagone de distance.', holders: { stats: [{ stat: 'dmgPerHex', value: 10 }] } },
+      { desc: '+15 % de dégâts par hexagone de distance.', holders: { stats: [{ stat: 'dmgPerHex', value: 15 }] } },
     ],
   },
   {
@@ -424,8 +424,8 @@ export const TRAITS: readonly TraitDef[] = [
     counter: 'Les dégâts de zone et les exécutions dispersent les invocations ; frapper directement l’Invocateur.',
     thresholds: [2, 4],
     levels: [
-      { desc: 'Invocations +30 % (PV et dégâts). +15 mana de départ.', holders: { stats: [{ stat: 'summonPower', value: 30 }, { stat: 'mana', value: 15 }] } },
-      { desc: 'Invocations +70 %. +35 mana de départ.', holders: { stats: [{ stat: 'summonPower', value: 70 }, { stat: 'mana', value: 35 }] } },
+      { desc: 'Invocations +20 % (PV et dégâts). +10 mana de départ.', holders: { stats: [{ stat: 'summonPower', value: 20 }, { stat: 'mana', value: 10 }] } },
+      { desc: 'Invocations +55 %. +30 mana de départ.', holders: { stats: [{ stat: 'summonPower', value: 55 }, { stat: 'mana', value: 30 }] } },
     ],
   },
   {

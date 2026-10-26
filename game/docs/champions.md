@@ -745,7 +745,7 @@ Objets conseillés : Sablier d’azur, Couronne lunaire, Égide du cierge, Sceau
 
 PV 710/1278/2300 · PA 49/74/110 · vitesse d’attaque 0,65 · armure 15 · RM 18 · portée 4 · mana 50/100
 
-**Abîme tournoyant** — Ouvre un tourbillon sur le plus gros groupe d’ennemis pendant 3 s : les ennemis à 2 hexagones sont attirés vers son centre et subissent **70/105/300**✦ dégâts magiques toutes les 0,5 s.
+**Abîme tournoyant** — Ouvre un tourbillon sur le plus gros groupe d’ennemis pendant 3 s : les ennemis à 2 hexagones sont attirés vers son centre et subissent **63/95/290**✦ dégâts magiques toutes les 0,5 s.
 
 Rôle : Contrôleuse de zone : regroupe les ennemis pour les autres compétences de zone.
 

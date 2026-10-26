@@ -7,6 +7,11 @@ combats se jouent seuls. Le dernier Archonte debout remporte la Convergence.
 Univers, personnages, illustrations, musiques et textes sont originaux. Le jeu fonctionne
 entièrement hors ligne, dans le navigateur, sans compte ni serveur.
 
+| | |
+|---|---|
+| ![Préparation : boutique, réserve, synergies et adversaires](docs/captures/preparation.jpg) | ![Combat automatique](docs/captures/combat.jpg) |
+| ![Fiche d'un champion](docs/captures/fiche.jpg) | ![Écran de fin de partie](docs/captures/fin.jpg) |
+
 ## Lancer le jeu
 
 Prérequis : [Node.js](https://nodejs.org) 20 ou plus récent (testé avec Node 22).
@@ -29,7 +34,8 @@ serveur de fichiers statiques convient (`python3 -m http.server -d dist`). L'ouv
 en `file://` ne fonctionne pas : les navigateurs bloquent alors les modules et le chargement de l'audio.
 
 Navigateur : vérifié dans Chromium ; le jeu n'utilise que des API standard (Canvas 2D, Web Audio,
-`localStorage`) et vise les navigateurs de bureau récents. Résolution conseillée : 1280×720 ou plus.
+`localStorage`) et vise les navigateurs de bureau récents. Résolution : 1024×768 au minimum,
+1280×720 ou plus conseillé.
 
 ## Contenu
 
@@ -82,10 +88,10 @@ npm run sim:game                     # une partie complète à 8 IA
 npm run sim:balance -- 100 normal    # parties complètes → reports/balance-*.json/csv
 npm run sim:units -- 6000 2          # puissance des champions à coût égal → reports/unitpower-*.json
 npm run sim:traits -- 300            # valeur propre des synergies → reports/traitpower.json
-npm run sim:difficulty -- 24         # lobbies mixtes Facile / Normal / Difficile
+npm run sim:difficulty -- 32         # lobbies mixtes Facile / Normal / Difficile → reports/difficulty.json
 npm run sim:trace -- econome        # suivi manche par manche d'un profil d'IA (or, niveau, PV)
 npm run docs                         # régénère les catalogues docs/*.md depuis les données
-npm run audio                        # régénère musiques et effets (public/audio)
+npm run audio                        # régénère musiques et effets (public/audio ; nécessite ffmpeg)
 ```
 
 Résultats et décisions : [docs/equilibrage.md](docs/equilibrage.md) · tests et vérifications :
@@ -121,3 +127,11 @@ tests/           tests Vitest
 public/audio/    musiques et effets générés (MP3) et manifeste
 reports/         résultats exportés des simulations
 ```
+
+## Licences des éléments tiers
+
+- React et React DOM : MIT
+- Polices Cinzel et Alegreya Sans (paquets `@fontsource`) : SIL Open Font License 1.1
+- Outils de développement (Vite, TypeScript, Vitest, tsx) : non inclus dans le jeu livré
+
+Musiques, effets sonores, graphismes, textes et données de jeu ont été créés pour ce projet.

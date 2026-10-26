@@ -189,7 +189,7 @@ Comment la contrer : Les étourdissements et le désarmement coupent la montée 
 Au début du combat, les Assassins bondissent sur la ligne arrière ennemie. Leurs compétences peuvent être critiques.
 
 - **(2)** +10 % de chances de coup critique et +15 % de dégâts critiques.
-- **(4)** +20 % de chances de coup critique et +25 % de dégâts critiques.
+- **(4)** +16 % de chances de coup critique et +20 % de dégâts critiques.
 
 Champions : Mirelle (1), Kesh (2), Félis (3), Ombral (3), Lunor (4)
 
@@ -201,9 +201,9 @@ Comment la contrer : Placer ses unités fragiles au centre, entourées d’alli�
 
 Les Tireurs infligent davantage de dégâts pour chaque hexagone qui les sépare de leur cible.
 
-- **(2)** +6 % de dégâts par hexagone de distance.
-- **(4)** +9 % de dégâts par hexagone de distance.
-- **(6)** +14 % de dégâts par hexagone de distance.
+- **(2)** +7 % de dégâts par hexagone de distance.
+- **(4)** +10 % de dégâts par hexagone de distance.
+- **(6)** +15 % de dégâts par hexagone de distance.
 
 Champions : Pim (1), Ronceval (2), Séraphine (2), Isaure (3), Amara (4), Pulsara (4)
 
@@ -229,8 +229,8 @@ Comment la contrer : La résistance magique, le silence et les interruptions de 
 
 Les invocations des Invocateurs sont plus puissantes, et les Invocateurs commencent le combat avec du mana.
 
-- **(2)** Invocations +30 % (PV et dégâts). +15 mana de départ.
-- **(4)** Invocations +70 %. +35 mana de départ.
+- **(2)** Invocations +20 % (PV et dégâts). +10 mana de départ.
+- **(4)** Invocations +55 %. +30 mana de départ.
 
 Champions : Tic (1), Morvain (4), Octave (4), Myrrhine (5), Néantis (5)
 

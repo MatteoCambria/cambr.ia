@@ -358,6 +358,7 @@ export function CreditsScreen(): JSX.Element {
           <li>Interface en React, rendu du plateau en Canvas 2D (personnages dessinés de façon procédurale).</li>
           <li>Bande-son et bruitages synthétisés hors ligne par un synthétiseur DSP écrit pour le jeu.</li>
           <li>Polices : Cinzel et Alegreya Sans (SIL Open Font License).</li>
+          <li>Bibliothèque d’interface : React (licence MIT).</li>
         </ul>
         <h3>Conception, développement, art technique, musique et tests</h3>
         <p>Réalisé avec Claude Code (Anthropic), pour Cambr.IA.</p>

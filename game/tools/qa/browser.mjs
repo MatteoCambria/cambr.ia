@@ -229,6 +229,7 @@ async function interactions(browser) {
 // ── 3. Résolutions ─────────────────────────────────────────────────────────
 async function resolutions(browser) {
   for (const [w, h] of [
+    [1024, 768],
     [1280, 720],
     [1920, 1080],
   ]) {

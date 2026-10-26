@@ -51,3 +51,10 @@ Le script envoie alors les données en `POST` (`FormData`) et affiche la confirm
 - Lenis : MIT
 - Polices : SIL Open Font License 1.1
 - Icônes : Lucide (ISC)
+
+## Jeu : Orrhéa — Tactiques des Sphères
+
+Le dossier [`game/`](game/) contient un projet distinct et indépendant du site : un auto-battler
+tactique solo jouable dans le navigateur (TypeScript, React, Canvas 2D, Web Audio). Il a sa propre
+installation (`cd game && npm install && npm run dev`) et sa documentation : voir
+[game/README.md](game/README.md).
