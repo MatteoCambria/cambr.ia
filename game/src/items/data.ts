@@ -391,3 +391,22 @@ export const COMBINED: readonly ItemDef[] = [
 ];
 
 export const ITEMS: readonly ItemDef[] = [...COMPONENTS, ...COMBINED];
+
+/** Consommables : ne s'équipent pas, ils s'utilisent sur une unité. */
+export interface ConsumableDef {
+  id: string;
+  name: string;
+  desc: string;
+  icon: string;
+  color: string;
+}
+
+export const CONSUMABLES: readonly ConsumableDef[] = [
+  {
+    id: 'cle_demontage',
+    name: 'Clé de démontage',
+    desc: 'Utilisée sur un champion, retire tous ses objets et les replace dans la réserve d’objets.',
+    icon: 'key',
+    color: '#ffd27a',
+  },
+];

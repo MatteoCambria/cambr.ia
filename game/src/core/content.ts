@@ -11,7 +11,7 @@ import { BRAISE } from '../champions/data/braise';
 import { NOMADE } from '../champions/data/nomade';
 import { ASTRAL } from '../champions/data/astral';
 import { TRAITS } from '../traits/data';
-import { ITEMS, COMPONENTS, COMBINED } from '../items/data';
+import { ITEMS, COMPONENTS, COMBINED, CONSUMABLES, type ConsumableDef } from '../items/data';
 import { SUMMONS, CREATURES } from '../creatures/data';
 
 export const CHAMPIONS: readonly ChampionDef[] = [...ZENITH, ...SELENE, ...ROUAGE, ...SYLVE, ...ABYSSE, ...BRAISE, ...NOMADE, ...ASTRAL];
@@ -72,4 +72,9 @@ export function championsWithTrait(trait: string): ChampionDef[] {
   return CHAMPIONS.filter((c) => c.traits.includes(trait));
 }
 
-export { TRAITS, ITEMS, COMPONENTS, COMBINED, SUMMONS, CREATURES };
+export function findConsumable(id: string): ConsumableDef | undefined {
+  return CONSUMABLES.find((c) => c.id === id);
+}
+
+export { TRAITS, ITEMS, COMPONENTS, COMBINED, CONSUMABLES, SUMMONS, CREATURES };
+export type { ConsumableDef };
