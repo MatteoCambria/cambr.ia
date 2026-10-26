@@ -15,7 +15,7 @@ export const ZENITH: ChampionDef[] = [
     ability: {
       name: 'Serment du bouclier',
       desc: 'Lève son bouclier : gagne un bouclier de {shield} PV pendant 4 s et provoque les ennemis adjacents pendant {taunt} s.',
-      values: { shield: [280, 380, 520], taunt: [1.5, 1.75, 2] },
+      values: { shield: [240, 330, 470], taunt: [1.5, 1.75, 2] },
       target: 'self',
       castTime: 0.3,
       vfx: 'sunShield',
@@ -127,7 +127,7 @@ export const ZENITH: ChampionDef[] = [
     ability: {
       name: 'Bannière de l’Aurore',
       desc: 'Plante sa bannière : pendant {dur} s, les alliés à 2 hexagones ou moins de la bannière gagnent {as} % de vitesse d’attaque et récupèrent {regen} PV par seconde.',
-      values: { dur: 5, as: [25, 35, 50], regen: [25, 35, 60] },
+      values: { dur: 5, as: [20, 30, 45], regen: [18, 26, 45] },
       target: 'self',
       vfx: 'banner',
       actions: [
@@ -238,7 +238,7 @@ export const ZENITH: ChampionDef[] = [
     ability: {
       name: 'Lever du jour',
       desc: 'Tous les alliés reçoivent un bouclier de {shieldPct} % de leurs PV max pendant 5 s ; tous les ennemis subissent {dmg} dégâts magiques et sont aveuglés {blind} s.',
-      values: { shieldPct: [20, 25, 60], dmg: [200, 300, 1500], blind: [1, 1.25, 3] },
+      values: { shieldPct: [15, 20, 60], dmg: [165, 250, 1500], blind: [1, 1.25, 3] },
       target: 'self',
       castTime: 0.8,
       vfx: 'sunrise',

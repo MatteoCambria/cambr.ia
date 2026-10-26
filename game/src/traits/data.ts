@@ -87,8 +87,8 @@ export const TRAITS: readonly TraitDef[] = [
         leader: { triggers: [{ on: 'combatStart', actions: [{ do: 'summon', unit: 'rouage_automaton', at: 'front', level: 1, vfx: 'gearAssemble' }] }] },
       },
       {
-        desc: 'Sentinelle (≈1 300 PV) qui provoque les ennemis adjacents toutes les 4 s. Les Rouages gagnent 18 % de vitesse d’attaque.',
-        holders: { stats: [{ stat: 'asPct', value: 18 }] },
+        desc: 'Sentinelle (≈1 100 PV) qui provoque les ennemis adjacents toutes les 4 s. Les Rouages gagnent 15 % de vitesse d’attaque.',
+        holders: { stats: [{ stat: 'asPct', value: 15 }] },
         leader: { triggers: [{ on: 'combatStart', actions: [{ do: 'summon', unit: 'rouage_sentinel', at: 'front', level: 1, vfx: 'gearAssemble' }] }] },
       },
       {
@@ -110,8 +110,8 @@ export const TRAITS: readonly TraitDef[] = [
     thresholds: [2, 4, 6],
     levels: [
       {
-        desc: '+4 % PV max toutes les 3 s (8 fois max).',
-        holders: { triggers: [{ on: 'interval', every: 3, actions: [{ do: 'status', area: { shape: 'self' }, status: { kind: 'stats', duration: 0, id: 'sylve_growth', stack: 'stack', maxStacks: 8, stats: [{ stat: 'hpPct', value: 4 }], tag: 'Croissance' } }] }] },
+        desc: '+5,5 % PV max toutes les 3 s (8 fois max).',
+        holders: { triggers: [{ on: 'interval', every: 3, actions: [{ do: 'status', area: { shape: 'self' }, status: { kind: 'stats', duration: 0, id: 'sylve_growth', stack: 'stack', maxStacks: 8, stats: [{ stat: 'hpPct', value: 5.5 }], tag: 'Croissance' } }] }] },
       },
       {
         desc: '+7 % PV max toutes les 3 s (8 fois max).',
@@ -149,12 +149,12 @@ export const TRAITS: readonly TraitDef[] = [
     thresholds: [2, 4, 6],
     levels: [
       {
-        desc: 'Exécute les ennemis sous 10 % de PV.',
-        holders: { triggers: [{ on: 'damageDealt', cond: { c: 'targetHpBelow', pct: 10 }, actions: [{ do: 'execute', threshold: 10, vfx: 'drown' }] }] },
+        desc: 'Exécute les ennemis sous 12 % de PV.',
+        holders: { triggers: [{ on: 'damageDealt', cond: { c: 'targetHpBelow', pct: 12 }, actions: [{ do: 'execute', threshold: 12, vfx: 'drown' }] }] },
       },
       {
-        desc: 'Exécute les ennemis sous 17 % de PV.',
-        holders: { triggers: [{ on: 'damageDealt', cond: { c: 'targetHpBelow', pct: 17 }, actions: [{ do: 'execute', threshold: 17, vfx: 'drown' }] }] },
+        desc: 'Exécute les ennemis sous 20 % de PV.',
+        holders: { triggers: [{ on: 'damageDealt', cond: { c: 'targetHpBelow', pct: 20 }, actions: [{ do: 'execute', threshold: 20, vfx: 'drown' }] }] },
       },
       {
         desc: 'Exécute sous 25 % de PV, et tous les alliés exécutent sous 12 %.',
@@ -184,10 +184,10 @@ export const TRAITS: readonly TraitDef[] = [
         },
       },
       {
-        desc: 'Brûlure : 1,5 % des PV max par seconde. +10 % de dégâts à chaque allié tombé.',
+        desc: 'Brûlure : 1,2 % des PV max par seconde. +10 % de dégâts à chaque allié tombé.',
         holders: {
           triggers: [
-            { on: 'attack', actions: [{ do: 'status', status: { kind: 'burn', duration: 3, id: 'braise_burn', dps: { targetHp: 1.5 }, stats: [{ stat: 'healReceived', value: -33 }], tag: 'Brûlure' } }] },
+            { on: 'attack', actions: [{ do: 'status', status: { kind: 'burn', duration: 3, id: 'braise_burn', dps: { targetHp: 1.2 }, stats: [{ stat: 'healReceived', value: -33 }], tag: 'Brûlure' } }] },
             { on: 'allyDeath', actions: [{ do: 'status', area: { shape: 'self' }, status: { kind: 'stats', duration: 0, id: 'braise_rage', stack: 'stack', maxStacks: 6, stats: [{ stat: 'damageAmp', value: 10 }], tag: 'Colère' } }] },
           ],
         },
@@ -215,19 +215,19 @@ export const TRAITS: readonly TraitDef[] = [
     thresholds: [2, 4, 6],
     levels: [
       {
-        desc: '+1 or après chaque combat JcJ. Les Nomades gagnent 10 % de vitesse d’attaque et 25 % de vitesse de déplacement pendant 5 s.',
+        desc: '+1 or après chaque combat JcJ. Les Nomades gagnent 15 % de vitesse d’attaque et 25 % de vitesse de déplacement pendant 6 s.',
         economy: { goldAfterCombat: 1 },
-        holders: { triggers: [{ on: 'combatStart', actions: [{ do: 'status', area: { shape: 'self' }, status: { kind: 'stats', duration: 5, id: 'nomade_wind', stats: [{ stat: 'asPct', value: 10 }, { stat: 'moveSpeedPct', value: 25 }], tag: 'Vent porteur' } }] }] },
+        holders: { triggers: [{ on: 'combatStart', actions: [{ do: 'status', area: { shape: 'self' }, status: { kind: 'stats', duration: 6, id: 'nomade_wind', stats: [{ stat: 'asPct', value: 15 }, { stat: 'moveSpeedPct', value: 25 }], tag: 'Vent porteur' } }] }] },
       },
       {
-        desc: '+2 or après chaque combat JcJ et un composant toutes les 3 victoires. 15 % de vitesse d’attaque pendant 5 s.',
+        desc: '+2 or après chaque combat JcJ et un composant toutes les 3 victoires. 22 % de vitesse d’attaque pendant 6 s.',
         economy: { goldAfterCombat: 2, componentEveryNWins: 3 },
-        holders: { triggers: [{ on: 'combatStart', actions: [{ do: 'status', area: { shape: 'self' }, status: { kind: 'stats', duration: 5, id: 'nomade_wind', stats: [{ stat: 'asPct', value: 15 }, { stat: 'moveSpeedPct', value: 25 }], tag: 'Vent porteur' } }] }] },
+        holders: { triggers: [{ on: 'combatStart', actions: [{ do: 'status', area: { shape: 'self' }, status: { kind: 'stats', duration: 6, id: 'nomade_wind', stats: [{ stat: 'asPct', value: 22 }, { stat: 'moveSpeedPct', value: 25 }], tag: 'Vent porteur' } }] }] },
       },
       {
-        desc: '+3 or après chaque combat JcJ et un composant toutes les 2 victoires. 25 % de vitesse d’attaque pendant 5 s.',
+        desc: '+3 or après chaque combat JcJ et un composant toutes les 2 victoires. 32 % de vitesse d’attaque pendant 6 s.',
         economy: { goldAfterCombat: 3, componentEveryNWins: 2 },
-        holders: { triggers: [{ on: 'combatStart', actions: [{ do: 'status', area: { shape: 'self' }, status: { kind: 'stats', duration: 5, id: 'nomade_wind', stats: [{ stat: 'asPct', value: 25 }, { stat: 'moveSpeedPct', value: 25 }], tag: 'Vent porteur' } }] }] },
+        holders: { triggers: [{ on: 'combatStart', actions: [{ do: 'status', area: { shape: 'self' }, status: { kind: 'stats', duration: 6, id: 'nomade_wind', stats: [{ stat: 'asPct', value: 32 }, { stat: 'moveSpeedPct', value: 25 }], tag: 'Vent porteur' } }] }] },
       },
     ],
   },
@@ -260,19 +260,19 @@ export const TRAITS: readonly TraitDef[] = [
         },
       },
       {
-        desc: 'Chaque champion Astral renaît une fois avec 40 % de ses PV.',
-        holders: { triggers: [{ on: 'lethal', once: true, actions: [{ do: 'preventDeath', hpPct: 40, invulnerable: 1, vfx: 'starRebirth' }] }] },
+        desc: 'Chaque champion Astral renaît une fois avec 30 % de ses PV.',
+        holders: { triggers: [{ on: 'lethal', once: true, actions: [{ do: 'preventDeath', hpPct: 30, invulnerable: 1, vfx: 'starRebirth' }] }] },
       },
       {
-        desc: 'Chaque champion Astral renaît une fois avec 60 % de ses PV et gagne 40 Puissance.',
+        desc: 'Chaque champion Astral renaît une fois avec 45 % de ses PV et gagne 30 Puissance.',
         holders: {
           triggers: [
             {
               on: 'lethal',
               once: true,
               actions: [
-                { do: 'preventDeath', hpPct: 60, invulnerable: 1, vfx: 'starRebirth' },
-                { do: 'status', area: { shape: 'self' }, status: { kind: 'stats', duration: 0, id: 'astral_reborn', stats: [{ stat: 'ap', value: 40 }], tag: 'Étoile renée' } },
+                { do: 'preventDeath', hpPct: 45, invulnerable: 1, vfx: 'starRebirth' },
+                { do: 'status', area: { shape: 'self' }, status: { kind: 'stats', duration: 0, id: 'astral_reborn', stats: [{ stat: 'ap', value: 30 }], tag: 'Étoile renée' } },
               ],
             },
           ],
@@ -301,17 +301,17 @@ export const TRAITS: readonly TraitDef[] = [
         },
       },
       {
-        desc: 'Gardiens : +55 armure et RM. Alliés adjacents : +30.',
+        desc: 'Gardiens : +42 armure et RM. Alliés adjacents : +22.',
         holders: {
-          stats: [{ stat: 'armor', value: 55 }, { stat: 'mr', value: 55 }],
-          triggers: [{ on: 'combatStart', actions: [{ do: 'status', area: { shape: 'adjacentAllies' }, status: { kind: 'stats', duration: 0, id: 'gardien_aura', stats: [{ stat: 'armor', value: 30 }, { stat: 'mr', value: 30 }], tag: 'Rempart' } }] }],
+          stats: [{ stat: 'armor', value: 42 }, { stat: 'mr', value: 42 }],
+          triggers: [{ on: 'combatStart', actions: [{ do: 'status', area: { shape: 'adjacentAllies' }, status: { kind: 'stats', duration: 0, id: 'gardien_aura', stats: [{ stat: 'armor', value: 22 }, { stat: 'mr', value: 22 }], tag: 'Rempart' } }] }],
         },
       },
       {
-        desc: 'Gardiens : +90 armure et RM. Alliés adjacents : +50.',
+        desc: 'Gardiens : +70 armure et RM. Alliés adjacents : +35.',
         holders: {
-          stats: [{ stat: 'armor', value: 90 }, { stat: 'mr', value: 90 }],
-          triggers: [{ on: 'combatStart', actions: [{ do: 'status', area: { shape: 'adjacentAllies' }, status: { kind: 'stats', duration: 0, id: 'gardien_aura', stats: [{ stat: 'armor', value: 50 }, { stat: 'mr', value: 50 }], tag: 'Rempart' } }] }],
+          stats: [{ stat: 'armor', value: 70 }, { stat: 'mr', value: 70 }],
+          triggers: [{ on: 'combatStart', actions: [{ do: 'status', area: { shape: 'adjacentAllies' }, status: { kind: 'stats', duration: 0, id: 'gardien_aura', stats: [{ stat: 'armor', value: 35 }, { stat: 'mr', value: 35 }], tag: 'Rempart' } }] }],
         },
       },
     ],
@@ -328,8 +328,8 @@ export const TRAITS: readonly TraitDef[] = [
     thresholds: [2, 4, 6],
     levels: [
       { desc: 'Équipe : +100 PV. Briseurs : +20 % PV max.', team: { stats: [{ stat: 'hp', value: 100 }] }, holders: { stats: [{ stat: 'hpPct', value: 20 }] } },
-      { desc: 'Équipe : +175 PV. Briseurs : +40 % PV max.', team: { stats: [{ stat: 'hp', value: 175 }] }, holders: { stats: [{ stat: 'hpPct', value: 40 }] } },
-      { desc: 'Équipe : +250 PV. Briseurs : +65 % PV max.', team: { stats: [{ stat: 'hp', value: 250 }] }, holders: { stats: [{ stat: 'hpPct', value: 65 }] } },
+      { desc: 'Équipe : +120 PV. Briseurs : +25 % PV max.', team: { stats: [{ stat: 'hp', value: 120 }] }, holders: { stats: [{ stat: 'hpPct', value: 25 }] } },
+      { desc: 'Équipe : +200 PV. Briseurs : +50 % PV max.', team: { stats: [{ stat: 'hp', value: 200 }] }, holders: { stats: [{ stat: 'hpPct', value: 50 }] } },
     ],
   },
   {
@@ -343,8 +343,8 @@ export const TRAITS: readonly TraitDef[] = [
     counter: 'Les étourdissements et le désarmement coupent la montée en puissance ; les dégâts de zone tuent avant les cumuls.',
     thresholds: [2, 4, 6],
     levels: [
-      { desc: '+4 % de vitesse d’attaque par attaque (10 fois).', holders: { triggers: [{ on: 'attack', actions: [{ do: 'status', area: { shape: 'self' }, status: { kind: 'stats', duration: 0, id: 'duel', stack: 'stack', maxStacks: 10, stats: [{ stat: 'asPct', value: 4 }], tag: 'Fièvre du duel' } }] }] } },
-      { desc: '+7 % de vitesse d’attaque par attaque (10 fois).', holders: { triggers: [{ on: 'attack', actions: [{ do: 'status', area: { shape: 'self' }, status: { kind: 'stats', duration: 0, id: 'duel', stack: 'stack', maxStacks: 10, stats: [{ stat: 'asPct', value: 7 }], tag: 'Fièvre du duel' } }] }] } },
+      { desc: '+6 % de vitesse d’attaque par attaque (10 fois).', holders: { triggers: [{ on: 'attack', actions: [{ do: 'status', area: { shape: 'self' }, status: { kind: 'stats', duration: 0, id: 'duel', stack: 'stack', maxStacks: 10, stats: [{ stat: 'asPct', value: 6 }], tag: 'Fièvre du duel' } }] }] } },
+      { desc: '+8 % de vitesse d’attaque par attaque (10 fois).', holders: { triggers: [{ on: 'attack', actions: [{ do: 'status', area: { shape: 'self' }, status: { kind: 'stats', duration: 0, id: 'duel', stack: 'stack', maxStacks: 10, stats: [{ stat: 'asPct', value: 8 }], tag: 'Fièvre du duel' } }] }] } },
       {
         desc: '+11 % de vitesse d’attaque par attaque (10 fois) et 12 % d’omnivampirisme.',
         holders: {
@@ -373,9 +373,9 @@ export const TRAITS: readonly TraitDef[] = [
         },
       },
       {
-        desc: '+30 % de chances de coup critique et +45 % de dégâts critiques.',
+        desc: '+20 % de chances de coup critique et +25 % de dégâts critiques.',
         holders: {
-          stats: [{ stat: 'critChance', value: 30 }, { stat: 'critDamage', value: 45 }, { stat: 'abilityCrit', value: 1 }],
+          stats: [{ stat: 'critChance', value: 20 }, { stat: 'critDamage', value: 25 }, { stat: 'abilityCrit', value: 1 }],
           triggers: [{ on: 'combatStart', actions: [{ do: 'move', mode: 'leapBackline', untargetable: true, vfx: 'shadowLeap' }] }],
         },
       },
@@ -392,7 +392,7 @@ export const TRAITS: readonly TraitDef[] = [
     counter: 'Les assassins, les harpons et les attirances réduisent la distance ; placer ses tanks près de leur ligne.',
     thresholds: [2, 4, 6],
     levels: [
-      { desc: '+5 % de dégâts par hexagone de distance.', holders: { stats: [{ stat: 'dmgPerHex', value: 5 }] } },
+      { desc: '+6 % de dégâts par hexagone de distance.', holders: { stats: [{ stat: 'dmgPerHex', value: 6 }] } },
       { desc: '+9 % de dégâts par hexagone de distance.', holders: { stats: [{ stat: 'dmgPerHex', value: 9 }] } },
       { desc: '+14 % de dégâts par hexagone de distance.', holders: { stats: [{ stat: 'dmgPerHex', value: 14 }] } },
     ],
@@ -440,7 +440,7 @@ export const TRAITS: readonly TraitDef[] = [
     thresholds: [2, 4],
     levels: [
       { desc: 'Équipe : +1 mana par seconde. Oracles : soins et boucliers +20 %.', team: { stats: [{ stat: 'manaRegen', value: 1 }] }, holders: { stats: [{ stat: 'healPower', value: 20 }] } },
-      { desc: 'Équipe : +2,5 mana par seconde. Oracles : soins et boucliers +45 %.', team: { stats: [{ stat: 'manaRegen', value: 2.5 }] }, holders: { stats: [{ stat: 'healPower', value: 45 }] } },
+      { desc: 'Équipe : +2 mana par seconde. Oracles : soins et boucliers +35 %.', team: { stats: [{ stat: 'manaRegen', value: 2 }] }, holders: { stats: [{ stat: 'healPower', value: 35 }] } },
     ],
   },
   {
@@ -455,16 +455,16 @@ export const TRAITS: readonly TraitDef[] = [
     thresholds: [2, 4],
     levels: [
       {
-        desc: 'Corrosion : −20 % d’armure et de RM pendant 4 s.',
-        holders: { triggers: [{ on: 'abilityHit', actions: [{ do: 'status', status: { kind: 'stats', duration: 4, id: 'corrosion', stats: [{ stat: 'armorPct', value: -20 }, { stat: 'mrPct', value: -20 }], tag: 'Corrosion' } }] }] },
+        desc: 'Corrosion : −30 % d’armure et de RM pendant 4 s.',
+        holders: { triggers: [{ on: 'abilityHit', actions: [{ do: 'status', status: { kind: 'stats', duration: 4, id: 'corrosion', stats: [{ stat: 'armorPct', value: -30 }, { stat: 'mrPct', value: -30 }], tag: 'Corrosion' } }] }] },
       },
       {
-        desc: 'Corrosion : −40 % d’armure et de RM pendant 4 s, et Blessure (−33 % de soins).',
+        desc: 'Corrosion : −50 % d’armure et de RM pendant 4 s, et Blessure (−33 % de soins).',
         holders: {
           triggers: [
             {
               on: 'abilityHit',
-              actions: [{ do: 'status', status: { kind: 'stats', duration: 4, id: 'corrosion', stats: [{ stat: 'armorPct', value: -40 }, { stat: 'mrPct', value: -40 }, { stat: 'healReceived', value: -33 }], tag: 'Corrosion' } }],
+              actions: [{ do: 'status', status: { kind: 'stats', duration: 4, id: 'corrosion', stats: [{ stat: 'armorPct', value: -50 }, { stat: 'mrPct', value: -50 }, { stat: 'healReceived', value: -33 }], tag: 'Corrosion' } }],
             },
           ],
         },
@@ -477,20 +477,20 @@ export const TRAITS: readonly TraitDef[] = [
     kind: 'class',
     color: '#d6b25a',
     icon: 'artilleur',
-    desc: "Toutes les 3 attaques, l’Artilleur tire un obus qui touche les ennemis autour de sa cible.",
+    desc: "Toutes les 2 attaques, l’Artilleur tire un obus qui touche les ennemis autour de sa cible.",
     lore: "Les Artilleurs considèrent que les ennemis regroupés sont une invitation.",
     counter: 'Espacer ses unités ; les assassins et harpons atteignent facilement les Artilleurs immobiles.',
     thresholds: [2, 4],
     levels: [
       {
-        desc: 'Obus : 60 % de la PA en dégâts physiques aux ennemis adjacents à la cible.',
-        holders: { triggers: [{ on: 'nthAttack', every: 3, actions: [{ do: 'damage', area: { shape: 'circle', at: 'target', radius: 1, side: 'enemies', excludeTarget: true }, amount: { ad: 60 }, type: 'physical', vfx: 'shell' }] }] },
+        desc: 'Toutes les 2 attaques, obus : 90 % de la PA en dégâts physiques aux ennemis adjacents à la cible.',
+        holders: { triggers: [{ on: 'nthAttack', every: 2, actions: [{ do: 'damage', area: { shape: 'circle', at: 'target', radius: 1, side: 'enemies', excludeTarget: true }, amount: { ad: 90 }, type: 'physical', vfx: 'shell' }] }] },
       },
       {
-        desc: 'Obus : 120 % de la PA. Les Artilleurs gagnent 15 % de vitesse d’attaque.',
+        desc: 'Toutes les 2 attaques, obus : 150 % de la PA. Les Artilleurs gagnent 15 % de vitesse d’attaque.',
         holders: {
           stats: [{ stat: 'asPct', value: 15 }],
-          triggers: [{ on: 'nthAttack', every: 3, actions: [{ do: 'damage', area: { shape: 'circle', at: 'target', radius: 1, side: 'enemies', excludeTarget: true }, amount: { ad: 120 }, type: 'physical', vfx: 'shell' }] }],
+          triggers: [{ on: 'nthAttack', every: 2, actions: [{ do: 'damage', area: { shape: 'circle', at: 'target', radius: 1, side: 'enemies', excludeTarget: true }, amount: { ad: 150 }, type: 'physical', vfx: 'shell' }] }],
         },
       },
     ],

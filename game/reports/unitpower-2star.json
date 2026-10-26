@@ -1,0 +1,482 @@
+[
+ {
+  "id": "nebulos",
+  "name": "Nébulos",
+  "cost": 1,
+  "n": 729,
+  "winRate": 60.4,
+  "avgDmg": 671
+ },
+ {
+  "id": "aurel",
+  "name": "Aurel",
+  "cost": 1,
+  "n": 746,
+  "winRate": 57,
+  "avgDmg": 685
+ },
+ {
+  "id": "brindille",
+  "name": "Brindille",
+  "cost": 1,
+  "n": 719,
+  "winRate": 56.9,
+  "avgDmg": 715
+ },
+ {
+  "id": "tic",
+  "name": "Tic",
+  "cost": 1,
+  "n": 750,
+  "winRate": 56.5,
+  "avgDmg": 624
+ },
+ {
+  "id": "rugor",
+  "name": "Rugor",
+  "cost": 1,
+  "n": 698,
+  "winRate": 55.1,
+  "avgDmg": 783
+ },
+ {
+  "id": "mirelle",
+  "name": "Mirelle",
+  "cost": 1,
+  "n": 692,
+  "winRate": 51.9,
+  "avgDmg": 1594
+ },
+ {
+  "id": "bertrade",
+  "name": "Bertrade",
+  "cost": 1,
+  "n": 725,
+  "winRate": 47.4,
+  "avgDmg": 691
+ },
+ {
+  "id": "liora",
+  "name": "Liora",
+  "cost": 1,
+  "n": 738,
+  "winRate": 45.5,
+  "avgDmg": 606
+ },
+ {
+  "id": "iota",
+  "name": "Iota",
+  "cost": 1,
+  "n": 750,
+  "winRate": 45.2,
+  "avgDmg": 1423
+ },
+ {
+  "id": "murene",
+  "name": "Murène",
+  "cost": 1,
+  "n": 728,
+  "winRate": 45,
+  "avgDmg": 807
+ },
+ {
+  "id": "coralie",
+  "name": "Coralie",
+  "cost": 1,
+  "n": 735,
+  "winRate": 43.7,
+  "avgDmg": 1292
+ },
+ {
+  "id": "tison",
+  "name": "Tison",
+  "cost": 1,
+  "n": 742,
+  "winRate": 43,
+  "avgDmg": 1460
+ },
+ {
+  "id": "pim",
+  "name": "Pim",
+  "cost": 1,
+  "n": 754,
+  "winRate": 43,
+  "avgDmg": 1493
+ },
+ {
+  "id": "gorm",
+  "name": "Gorm",
+  "cost": 2,
+  "n": 1686,
+  "winRate": 56.8,
+  "avgDmg": 959
+ },
+ {
+  "id": "kesh",
+  "name": "Kesh",
+  "cost": 2,
+  "n": 1668,
+  "winRate": 56.1,
+  "avgDmg": 1711
+ },
+ {
+  "id": "cassian",
+  "name": "Cassian",
+  "cost": 2,
+  "n": 1632,
+  "winRate": 53.7,
+  "avgDmg": 1327
+ },
+ {
+  "id": "ilvane",
+  "name": "Ilvane",
+  "cost": 2,
+  "n": 1662,
+  "winRate": 53.7,
+  "avgDmg": 668
+ },
+ {
+  "id": "oriel",
+  "name": "Oriel",
+  "cost": 2,
+  "n": 1624,
+  "winRate": 52.5,
+  "avgDmg": 1185
+ },
+ {
+  "id": "yselle",
+  "name": "Yselle",
+  "cost": 2,
+  "n": 1637,
+  "winRate": 52.4,
+  "avgDmg": 1469
+ },
+ {
+  "id": "gaspard",
+  "name": "Gaspard Vis-de-Fer",
+  "cost": 2,
+  "n": 1662,
+  "winRate": 51.5,
+  "avgDmg": 2181
+ },
+ {
+  "id": "hargo",
+  "name": "Hargo",
+  "cost": 2,
+  "n": 1652,
+  "winRate": 51.4,
+  "avgDmg": 792
+ },
+ {
+  "id": "clemence",
+  "name": "Clémence",
+  "cost": 2,
+  "n": 1696,
+  "winRate": 46.5,
+  "avgDmg": 767
+ },
+ {
+  "id": "taliya",
+  "name": "Taliya",
+  "cost": 2,
+  "n": 1588,
+  "winRate": 45.7,
+  "avgDmg": 882
+ },
+ {
+  "id": "seraphine",
+  "name": "Séraphine",
+  "cost": 2,
+  "n": 1638,
+  "winRate": 43.9,
+  "avgDmg": 1640
+ },
+ {
+  "id": "vesna",
+  "name": "Vesna",
+  "cost": 2,
+  "n": 1701,
+  "winRate": 43.4,
+  "avgDmg": 954
+ },
+ {
+  "id": "ronceval",
+  "name": "Ronceval",
+  "cost": 2,
+  "n": 1712,
+  "winRate": 42.6,
+  "avgDmg": 1531
+ },
+ {
+  "id": "grumhald",
+  "name": "Grumhald",
+  "cost": 3,
+  "n": 1889,
+  "winRate": 57,
+  "avgDmg": 1507
+ },
+ {
+  "id": "astree",
+  "name": "Astrée",
+  "cost": 3,
+  "n": 1820,
+  "winRate": 56.4,
+  "avgDmg": 848
+ },
+ {
+  "id": "auguste",
+  "name": "Auguste",
+  "cost": 3,
+  "n": 1843,
+  "winRate": 55.8,
+  "avgDmg": 930
+ },
+ {
+  "id": "ysolde",
+  "name": "Dame Ysolde",
+  "cost": 3,
+  "n": 1810,
+  "winRate": 55.6,
+  "avgDmg": 876
+ },
+ {
+  "id": "ombral",
+  "name": "Ombral",
+  "cost": 3,
+  "n": 1824,
+  "winRate": 53.6,
+  "avgDmg": 2018
+ },
+ {
+  "id": "felis",
+  "name": "Félis",
+  "cost": 3,
+  "n": 1910,
+  "winRate": 49.9,
+  "avgDmg": 1850
+ },
+ {
+  "id": "heliodore",
+  "name": "Héliodore",
+  "cost": 3,
+  "n": 1771,
+  "winRate": 49.7,
+  "avgDmg": 2414
+ },
+ {
+  "id": "calyx",
+  "name": "Calyx",
+  "cost": 3,
+  "n": 1839,
+  "winRate": 49.2,
+  "avgDmg": 2367
+ },
+ {
+  "id": "isaure",
+  "name": "Isaure",
+  "cost": 3,
+  "n": 1880,
+  "winRate": 47.2,
+  "avgDmg": 2292
+ },
+ {
+  "id": "velane",
+  "name": "Vélane",
+  "cost": 3,
+  "n": 1888,
+  "winRate": 46.1,
+  "avgDmg": 816
+ },
+ {
+  "id": "barnabe",
+  "name": "Barnabé",
+  "cost": 3,
+  "n": 1852,
+  "winRate": 44.2,
+  "avgDmg": 2386
+ },
+ {
+  "id": "cendrine",
+  "name": "Cendrine",
+  "cost": 3,
+  "n": 1826,
+  "winRate": 43.4,
+  "avgDmg": 2306
+ },
+ {
+  "id": "sirocco",
+  "name": "Sirocco",
+  "cost": 3,
+  "n": 1848,
+  "winRate": 42,
+  "avgDmg": 1358
+ },
+ {
+  "id": "celestin",
+  "name": "Célestin",
+  "cost": 4,
+  "n": 1216,
+  "winRate": 56.9,
+  "avgDmg": 2170
+ },
+ {
+  "id": "ignivar",
+  "name": "Ignivar",
+  "cost": 4,
+  "n": 1294,
+  "winRate": 55.7,
+  "avgDmg": 2039
+ },
+ {
+  "id": "nerea",
+  "name": "Néréa",
+  "cost": 4,
+  "n": 1193,
+  "winRate": 55.4,
+  "avgDmg": 3512
+ },
+ {
+  "id": "valerian",
+  "name": "Valérian",
+  "cost": 4,
+  "n": 1176,
+  "winRate": 54.3,
+  "avgDmg": 1024
+ },
+ {
+  "id": "lunor",
+  "name": "Lunor",
+  "cost": 4,
+  "n": 1239,
+  "winRate": 52.9,
+  "avgDmg": 2637
+ },
+ {
+  "id": "octave",
+  "name": "Octave",
+  "cost": 4,
+  "n": 1199,
+  "winRate": 50.4,
+  "avgDmg": 816
+ },
+ {
+  "id": "morvain",
+  "name": "Morvain",
+  "cost": 4,
+  "n": 1230,
+  "winRate": 47.8,
+  "avgDmg": 881
+ },
+ {
+  "id": "thalassor",
+  "name": "Thalassor",
+  "cost": 4,
+  "n": 1231,
+  "winRate": 47.5,
+  "avgDmg": 1425
+ },
+ {
+  "id": "melisande",
+  "name": "Mélisande",
+  "cost": 4,
+  "n": 1226,
+  "winRate": 45.1,
+  "avgDmg": 2887
+ },
+ {
+  "id": "pulsara",
+  "name": "Pulsara",
+  "cost": 4,
+  "n": 1190,
+  "winRate": 45,
+  "avgDmg": 2821
+ },
+ {
+  "id": "amara",
+  "name": "Amara",
+  "cost": 4,
+  "n": 1159,
+  "winRate": 44.5,
+  "avgDmg": 3279
+ },
+ {
+  "id": "aldaia",
+  "name": "Aldaïa",
+  "cost": 4,
+  "n": 1141,
+  "winRate": 43.8,
+  "avgDmg": 2826
+ },
+ {
+  "id": "orrheon",
+  "name": "Maître Orrhéon",
+  "cost": 5,
+  "n": 1023,
+  "winRate": 55.9,
+  "avgDmg": 1152
+ },
+ {
+  "id": "solenne",
+  "name": "Solenne",
+  "cost": 5,
+  "n": 1057,
+  "winRate": 53.7,
+  "avgDmg": 2817
+ },
+ {
+  "id": "myrrhine",
+  "name": "Myrrhine",
+  "cost": 5,
+  "n": 1071,
+  "winRate": 53.4,
+  "avgDmg": 839
+ },
+ {
+  "id": "phenea",
+  "name": "Phénéa",
+  "cost": 5,
+  "n": 1092,
+  "winRate": 50.5,
+  "avgDmg": 4911
+ },
+ {
+  "id": "chronaxe",
+  "name": "Chronaxe",
+  "cost": 5,
+  "n": 1048,
+  "winRate": 49.8,
+  "avgDmg": 4031
+ },
+ {
+  "id": "vorhn",
+  "name": "Vorhn",
+  "cost": 5,
+  "n": 1090,
+  "winRate": 48.8,
+  "avgDmg": 3290
+ },
+ {
+  "id": "abyssandre",
+  "name": "Abyssandre",
+  "cost": 5,
+  "n": 1098,
+  "winRate": 47.9,
+  "avgDmg": 3030
+ },
+ {
+  "id": "neantis",
+  "name": "Néantis",
+  "cost": 5,
+  "n": 1113,
+  "winRate": 46.1,
+  "avgDmg": 3489
+ },
+ {
+  "id": "ophelune",
+  "name": "Ophélune",
+  "cost": 5,
+  "n": 1048,
+  "winRate": 44.3,
+  "avgDmg": 980
+ }
+]

@@ -1,0 +1,247 @@
+[
+ {
+  "trait": "Zénith",
+  "count": 2,
+  "withTrait": 60.7,
+  "without": 50.5,
+  "delta": 10.2
+ },
+ {
+  "trait": "Zénith",
+  "count": 4,
+  "withTrait": 69.8,
+  "without": 35.2,
+  "delta": 34.6
+ },
+ {
+  "trait": "Sélène",
+  "count": 2,
+  "withTrait": 56.7,
+  "without": 45.7,
+  "delta": 11
+ },
+ {
+  "trait": "Sélène",
+  "count": 4,
+  "withTrait": 73.7,
+  "without": 44.5,
+  "delta": 29.2
+ },
+ {
+  "trait": "Rouage",
+  "count": 2,
+  "withTrait": 48.7,
+  "without": 32.3,
+  "delta": 16.4
+ },
+ {
+  "trait": "Rouage",
+  "count": 4,
+  "withTrait": 52,
+  "without": 22,
+  "delta": 30
+ },
+ {
+  "trait": "Sylve",
+  "count": 2,
+  "withTrait": 51.8,
+  "without": 40.3,
+  "delta": 11.5
+ },
+ {
+  "trait": "Sylve",
+  "count": 4,
+  "withTrait": 66.2,
+  "without": 38.3,
+  "delta": 27.9
+ },
+ {
+  "trait": "Abysse",
+  "count": 2,
+  "withTrait": 50.5,
+  "without": 43,
+  "delta": 7.5
+ },
+ {
+  "trait": "Abysse",
+  "count": 4,
+  "withTrait": 59.3,
+  "without": 38.7,
+  "delta": 20.6
+ },
+ {
+  "trait": "Braise",
+  "count": 2,
+  "withTrait": 50,
+  "without": 37,
+  "delta": 13
+ },
+ {
+  "trait": "Braise",
+  "count": 4,
+  "withTrait": 62.3,
+  "without": 24.3,
+  "delta": 38
+ },
+ {
+  "trait": "Nomade",
+  "count": 2,
+  "withTrait": 41.7,
+  "without": 41.7,
+  "delta": 0
+ },
+ {
+  "trait": "Nomade",
+  "count": 4,
+  "withTrait": 36.3,
+  "without": 28.7,
+  "delta": 7.6
+ },
+ {
+  "trait": "Astral",
+  "count": 2,
+  "withTrait": 53.7,
+  "without": 42,
+  "delta": 11.7
+ },
+ {
+  "trait": "Astral",
+  "count": 4,
+  "withTrait": 63,
+  "without": 26.7,
+  "delta": 36.3
+ },
+ {
+  "trait": "Gardien",
+  "count": 2,
+  "withTrait": 63.2,
+  "without": 44,
+  "delta": 19.2
+ },
+ {
+  "trait": "Gardien",
+  "count": 4,
+  "withTrait": 77.3,
+  "without": 41.2,
+  "delta": 36.1
+ },
+ {
+  "trait": "Briseur",
+  "count": 2,
+  "withTrait": 60.5,
+  "without": 37,
+  "delta": 23.5
+ },
+ {
+  "trait": "Briseur",
+  "count": 4,
+  "withTrait": 77.3,
+  "without": 33.3,
+  "delta": 44
+ },
+ {
+  "trait": "Duelliste",
+  "count": 2,
+  "withTrait": 51,
+  "without": 41,
+  "delta": 10
+ },
+ {
+  "trait": "Duelliste",
+  "count": 4,
+  "withTrait": 54,
+  "without": 23.3,
+  "delta": 30.7
+ },
+ {
+  "trait": "Assassin",
+  "count": 2,
+  "withTrait": 61.2,
+  "without": 43.5,
+  "delta": 17.7
+ },
+ {
+  "trait": "Assassin",
+  "count": 4,
+  "withTrait": 84,
+  "without": 38,
+  "delta": 46
+ },
+ {
+  "trait": "Tireur",
+  "count": 2,
+  "withTrait": 45.7,
+  "without": 29.2,
+  "delta": 16.5
+ },
+ {
+  "trait": "Tireur",
+  "count": 4,
+  "withTrait": 41.7,
+  "without": 15.7,
+  "delta": 26
+ },
+ {
+  "trait": "Arcaniste",
+  "count": 2,
+  "withTrait": 47.3,
+  "without": 32.7,
+  "delta": 14.6
+ },
+ {
+  "trait": "Arcaniste",
+  "count": 4,
+  "withTrait": 45,
+  "without": 10.8,
+  "delta": 34.2
+ },
+ {
+  "trait": "Invocateur",
+  "count": 2,
+  "withTrait": 57.7,
+  "without": 33.8,
+  "delta": 23.9
+ },
+ {
+  "trait": "Oracle",
+  "count": 2,
+  "withTrait": 50,
+  "without": 37.2,
+  "delta": 12.8
+ },
+ {
+  "trait": "Oracle",
+  "count": 4,
+  "withTrait": 44.5,
+  "without": 11.2,
+  "delta": 33.3
+ },
+ {
+  "trait": "Alchimiste",
+  "count": 2,
+  "withTrait": 49.2,
+  "without": 42.8,
+  "delta": 6.4
+ },
+ {
+  "trait": "Alchimiste",
+  "count": 4,
+  "withTrait": 62.3,
+  "without": 48,
+  "delta": 14.3
+ },
+ {
+  "trait": "Artilleur",
+  "count": 2,
+  "withTrait": 44.3,
+  "without": 42.7,
+  "delta": 1.6
+ },
+ {
+  "trait": "Artilleur",
+  "count": 4,
+  "withTrait": 53.3,
+  "without": 28.7,
+  "delta": 24.6
+ }
+]

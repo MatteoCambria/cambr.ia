@@ -70,7 +70,7 @@ export const SUMMONS: Readonly<Record<string, SummonDef>> = {
     id: 'rouage_sentinel',
     name: 'Sentinelle',
     desc: 'Sentinelle blindée qui provoque les ennemis adjacents toutes les 4 s.',
-    stats: { hp: 1300, ad: 70, as: 0.7, armor: 50, mr: 50, range: 1, mana: [0, 0] },
+    stats: { hp: 1100, ad: 65, as: 0.7, armor: 45, mr: 45, range: 1, mana: [0, 0] },
     passive: {
       triggers: [{ on: 'interval', every: 4, actions: [{ do: 'status', area: { shape: 'circle', at: 'self', radius: 1, side: 'enemies' }, status: { kind: 'taunt', duration: 1.25, tag: 'Provoqué' } }] }],
     },

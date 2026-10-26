@@ -71,11 +71,11 @@ export const BRAISE: ChampionDef[] = [
     traits: ['braise', 'briseur'],
     role: 'bruiser',
     position: 'front',
-    stats: makeStats('bruiser', 2, [40, 90]),
+    stats: makeStats('bruiser', 2, [30, 100], { hp: 640 }),
     passive: {
       name: 'Forgé dans la perte',
       desc: 'Chaque fois qu’un allié tombe, Gorm récupère {heal} % de ses PV max et gagne {ad} % de PA (cumulable).',
-      values: { heal: [10, 12, 15], ad: [15, 18, 22] },
+      values: { heal: [8, 10, 12], ad: [12, 14, 18] },
       triggers: [
         {
           on: 'allyDeath',
@@ -89,7 +89,7 @@ export const BRAISE: ChampionDef[] = [
     ability: {
       name: 'Enclume',
       desc: 'Abat son marteau sur sa cible : {adr} % de la PA en dégâts physiques et étourdissement de {stun} s.',
-      values: { adr: [200, 210, 230], stun: [1, 1.25, 1.5] },
+      values: { adr: [170, 180, 200], stun: [0.75, 1, 1.25] },
       target: 'current',
       castTime: 0.4,
       vfx: 'hammerSmash',
@@ -159,7 +159,7 @@ export const BRAISE: ChampionDef[] = [
     passive: {
       name: 'Corps ardent',
       desc: 'Chaque seconde, brûle les ennemis adjacents pour {aura} % de leurs PV max en dégâts magiques.',
-      values: { aura: [2, 2.5, 5] },
+      values: { aura: [1.6, 2.2, 5] },
       triggers: [{ on: 'interval', every: 1, actions: [{ do: 'damage', area: { shape: 'circle', at: 'self', radius: 1, side: 'enemies' }, amount: { targetHp: 'aura' }, type: 'magic', canCrit: false }] }],
     },
     ability: {

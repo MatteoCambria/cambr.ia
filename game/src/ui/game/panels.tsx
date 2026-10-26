@@ -98,7 +98,7 @@ export function TraitsPanel(): JSX.Element | null {
                     ))}
                   </div>
                   {t.level === 0 && next ? <div className="trait-hint">encore {next - t.count}</div> : null}
-                  {potential.has(t.id) && next ? <div className="trait-hint">↑ un champion disponible fait progresser</div> : null}
+                  {potential.has(t.id) && next ? <div className="trait-hint">↑ disponible en boutique ou réserve</div> : null}
                 </div>
                 <div className="trait-count">{t.count}</div>
               </div>

@@ -24,16 +24,17 @@ export interface BoardLayout {
 export function computeLayout(w: number, h: number): BoardLayout {
   const worldW = SQRT3 * (BOARD_COLS + 0.5);
   const worldH = 1.5 * (BOARD_ROWS - 1) + 2;
-  // place pour la réserve sous le plateau
+  // place pour la réserve sous le plateau et pour les figurines de la rangée du haut
   const benchBand = 1.7;
+  const topBand = 1.25;
   const rByW = (w * 0.94) / worldW;
-  const rByH = (h * 0.92) / (worldH * TILT + benchBand * 1.15);
+  const rByH = (h * 0.95) / (worldH * TILT + benchBand * 1.15 + topBand);
   const hexR = Math.max(18, Math.min(rByW, rByH));
   const boardPxW = worldW * hexR;
   const boardPxH = worldH * hexR * TILT;
-  const totalH = boardPxH + benchBand * hexR * 1.15;
+  const totalH = topBand * hexR + boardPxH + benchBand * hexR * 1.15;
   const originX = (w - boardPxW) / 2 + (SQRT3 / 2) * hexR;
-  const originY = (h - totalH) / 2 + hexR * TILT;
+  const originY = (h - totalH) / 2 + topBand * hexR + hexR * TILT;
   const benchStep = Math.min((boardPxW * 0.98) / BENCH_SIZE, hexR * 1.75);
   const benchX0 = w / 2 - (benchStep * (BENCH_SIZE - 1)) / 2;
   const benchY = originY + boardPxH + hexR * 0.55;

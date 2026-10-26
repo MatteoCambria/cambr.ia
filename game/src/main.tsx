@@ -13,8 +13,8 @@ import { controller } from './app/controller';
 window.addEventListener('error', (e) => console.error('[orrhea] erreur non gérée :', e.error ?? e.message));
 window.addEventListener('unhandledrejection', (e) => console.error('[orrhea] promesse rejetée :', e.reason));
 
-// Accès de diagnostic en développement uniquement (tests automatisés dans le navigateur)
-if (import.meta.env.DEV) (window as unknown as { __orrhea: unknown }).__orrhea = { controller };
+// Accès de diagnostic pour les tests automatisés (développement, ou ?qa dans l'adresse)
+if (import.meta.env.DEV || new URLSearchParams(location.search).has('qa')) (window as unknown as { __orrhea: unknown }).__orrhea = { controller };
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

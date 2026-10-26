@@ -210,3 +210,51 @@ export function optimizePlacement(units: OwnedUnit[], mem: AiMemory, view: Publi
   });
   return best;
 }
+
+/**
+ * Difficile : compare plusieurs compositions candidates en les simulant (placement adapté)
+ * contre les plateaux publics des adversaires les plus menaçants, et garde la meilleure.
+ */
+export function pickBoardBySimulation(candidates: OwnedUnit[][], mem: AiMemory, view: PublicView, stage: number, rng: Rng, seedBase: number): OwnedUnit[] {
+  const uniq: OwnedUnit[][] = [];
+  const seen = new Set<string>();
+  for (const c of candidates) {
+    const key = c.map((u) => u.uid).sort().join(',');
+    if (!seen.has(key)) {
+      seen.add(key);
+      uniq.push(c);
+    }
+  }
+  if (uniq.length <= 1) return uniq[0] ?? [];
+  const opponents = view.players
+    .filter((p) => p.alive && p.snapshot && p.snapshot.board.length > 0)
+    .sort((a, b) => b.snapshot!.level - a.snapshot!.level || a.hp - b.hp)
+    .slice(0, 2);
+  if (!opponents.length) return uniq[0];
+  const style = adaptStyle(view, rng);
+  let best = uniq[0];
+  let bestScore = -Infinity;
+  uniq.forEach((units, ci) => {
+    const slots = placeUnits(units, mem, style, 1, rng);
+    let score = 0;
+    opponents.forEach((op, oi) => {
+      const sim = buildCombat(
+        [
+          { units: slots.map((s) => ({ defId: s.defId, star: s.star, items: s.items, hex: { col: s.col, row: s.row } })) },
+          { units: op.snapshot!.board.map((s) => ({ defId: s.defId, star: s.star, items: s.items, hex: { col: s.col, row: s.row } })) },
+        ],
+        { seed: seedBase + 101 + ci * 13 + oi, stage },
+      );
+      const r = sim.run();
+      if (r.winner === 0) score += 10 + r.survivors.filter((x) => x.side === 0).length;
+      else if (r.winner === 1) score -= r.survivors.filter((x) => x.side === 1).length;
+      score += sim.units.filter((u) => u.side === 0).reduce((a, u) => a + u.combat.damageDealt, 0) / 2000;
+    });
+    if (ci === 0) score += 1; // légère préférence pour la composition planifiée
+    if (score > bestScore) {
+      bestScore = score;
+      best = units;
+    }
+  });
+  return best;
+}

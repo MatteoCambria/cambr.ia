@@ -4,7 +4,8 @@ import { onFrame } from '../../app/loop';
 import { drawArenaBackground } from '../../render/arenaArt';
 import { drawUnit } from '../../render/sprites';
 import { CHAMPIONS, getChampion, getTrait } from '../../core/content';
-import { DIFFICULTIES } from '../../ai/profiles';
+import { DIFFICULTIES, PROFILES } from '../../ai/profiles';
+import { roundAt } from '../../config/rounds';
 import { PREP_TIME_OPTIONS } from '../../config/balance';
 import { hasSavedGame, storageAvailable } from '../../save/save';
 import { computeTraits } from '../../combat/setup';
@@ -247,9 +248,9 @@ export function EndScreen(): JSX.Element | null {
                 <div key={p.id} className={`standing ${p.id === HUMAN_ID ? 'me' : ''}`}>
                   <b style={{ color: p.placement === 1 ? 'var(--gold-bright)' : 'var(--text)' }}>{p.placement}e</b>
                   <span>
-                    {p.name} <span style={{ color: 'var(--text-dim)', fontSize: 13 }}>{p.title}{p.ai ? ` · ${p.ai.profile}` : ''}</span>
+                    {p.name} <span style={{ color: 'var(--text-dim)', fontSize: 13 }}>{p.title}{p.ai && p.id !== HUMAN_ID ? ` · ${PROFILES[p.ai.profile].label}` : ''}</span>
                   </span>
-                  <span style={{ color: 'var(--text-dim)', fontSize: 13 }}>{p.alive ? `${p.hp} PV` : `éliminé manche ${p.eliminatedRound !== null ? p.eliminatedRound + 1 : '?'}`}</span>
+                  <span style={{ color: 'var(--text-dim)', fontSize: 13 }}>{p.alive ? `${p.hp} PV` : `éliminé en ${p.eliminatedRound !== null ? roundAt(p.eliminatedRound).label : '?'}`}</span>
                 </div>
               ))}
             </div>

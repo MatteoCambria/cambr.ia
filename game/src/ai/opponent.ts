@@ -16,7 +16,7 @@ import { publicView } from '../game/snapshot';
 import type { AiMemory, AiProfileId, BoardSlot, GameState, OwnedUnit, PlayerState } from '../game/types';
 import { deployLimit } from '../progression/levels';
 import { chooseBoard, ownedCopies, pickTargetTraits, unitPower, unitValue, type EvalCtx } from './evaluate';
-import { adaptStyle, optimizePlacement, placeUnits } from './placement';
+import { adaptStyle, optimizePlacement, pickBoardBySimulation, placeUnits } from './placement';
 import { DIFFICULTIES, PROFILES } from './profiles';
 import { ARCHETYPES } from './archetypes';
 import { CHAMPIONS } from '../core/content';
@@ -297,7 +297,15 @@ export function planTurn(state: GameState, p: PlayerState): void {
   const candidates = [...p.board, ...p.bench.filter((u): u is OwnedUnit => !!u)].map((u) => ({ uid: u.uid, defId: u.defId, star: u.star, items: u.items }));
   let limit = deployLimit(p);
   if (diff.slip > 0 && ctx.rng.next() < diff.slip * 0.5) limit = Math.max(1, limit - 1);
-  const chosen = chooseBoard(candidates, Math.min(limit, candidates.length), mem, ctx.rng, diff.boardNoise);
+  let chosen = chooseBoard(candidates, Math.min(limit, candidates.length), mem, ctx.rng, diff.boardNoise);
+  if (diff.placement === 2 && candidates.length > limit && ctx.stage >= 2) {
+    // variantes : la plus puissante brute, et la planifiée avec la meilleure unité de réserve en plus
+    const byPower = candidates.slice().sort((a, b) => unitPower(b, mem) - unitPower(a, mem)).slice(0, limit);
+    const rest = candidates.filter((u) => !chosen.includes(u)).sort((a, b) => unitPower(b, mem) - unitPower(a, mem));
+    const weakest = chosen.slice().sort((a, b) => unitPower(a, mem) - unitPower(b, mem))[0];
+    const swapped = rest.length && weakest ? chosen.map((u) => (u === weakest ? rest[0] : u)) : chosen;
+    chosen = pickBoardBySimulation([chosen, byPower, swapped], mem, ctx.view, ctx.stage, ctx.rng, hashString(`${state.settings.seed}:board:${p.id}:${ri}`));
+  }
 
   // 5. Objets (sur le plateau pressenti) puis placement
   const provisional = placeUnits(chosen, mem, adaptStyle(ctx.view, ctx.rng), Math.min(1, diff.placement) as 0 | 1, ctx.rng);

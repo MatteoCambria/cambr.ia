@@ -166,7 +166,7 @@ export const SELENE: ChampionDef[] = [
     ability: {
       name: 'Songe partagé',
       desc: 'Lie sa cible et les 2 ennemis les plus proches d’elle pendant {dur} s : {share} % des dégâts subis par l’un sont répartis entre les autres. Inflige {dmg} dégâts magiques à chacun.',
-      values: { dur: 4, share: [40, 45, 60], dmg: [220, 330, 800] },
+      values: { dur: 4, share: [45, 50, 60], dmg: [265, 395, 900] },
       target: 'clusterEnemy',
       vfx: 'dreamLink',
       actions: [
@@ -188,18 +188,18 @@ export const SELENE: ChampionDef[] = [
     role: 'enchanter',
     secondaryRole: 'battery',
     position: 'back',
-    stats: makeStats('support', 5, [50, 120]),
+    stats: makeStats('support', 5, [60, 100]),
     attack: { projectile: 'moonBolt', speed: 12 },
     passive: {
       name: 'Flux lunaire',
       desc: 'Toutes les 3 s, confère {mana} mana à l’allié le plus proche de lancer sa compétence.',
-      values: { mana: [10, 15, 40] },
+      values: { mana: [15, 20, 40] },
       triggers: [{ on: 'interval', every: 3, actions: [{ do: 'mana', area: { shape: 'select', sel: 'highestManaAlly' }, amount: 'mana' }] }],
     },
     ability: {
       name: 'Pleine lune',
       desc: 'Pendant {dur} s, les alliés gagnent {as} % de vitesse d’attaque et {vamp} % d’omnivampirisme ; les ennemis perdent {slow} % de vitesse d’attaque.',
-      values: { dur: 5, as: [30, 40, 100], vamp: [20, 25, 50], slow: [20, 25, 50] },
+      values: { dur: 5, as: [40, 50, 100], vamp: [25, 30, 50], slow: [25, 30, 50] },
       target: 'self',
       castTime: 0.7,
       vfx: 'fullMoon',

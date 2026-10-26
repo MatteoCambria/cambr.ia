@@ -307,7 +307,7 @@ export class Controller {
     const sum = st.lastRound?.summaries.find((s) => s.playerId === HUMAN_ID);
     if (sum) {
       const lootText = sum.loot.length ? ` · Butin : ${sum.loot.join(', ')}` : '';
-      if (sum.won) this.banner = { title: 'Victoire', subtitle: `+${sum.goldGained} or${lootText}`, kind: 'win', until: this.now + 2.6 };
+      if (sum.won) this.banner = { title: 'Victoire', subtitle: `${sum.goldGained ? `+${sum.goldGained} or` : ''}${sum.goldGained ? lootText : lootText.replace(/^ · /, '')}` || 'Aucun dégât subi', kind: 'win', until: this.now + 2.6 };
       else if (sum.draw) this.banner = { title: 'Égalité', subtitle: `−${sum.damageTaken} PV`, kind: 'draw', until: this.now + 2.6 };
       else this.banner = { title: 'Défaite', subtitle: `−${sum.damageTaken} PV${sum.goldGained ? ` · +${sum.goldGained} or` : ''}${lootText}`, kind: 'loss', until: this.now + 2.6 };
     }
@@ -493,7 +493,7 @@ export class Controller {
       const last = this.sfxThrottle.get(id) ?? -1;
       if (this.now * 1000 - last < ms / this.settings.combatSpeed) return;
       this.sfxThrottle.set(id, this.now * 1000);
-      audio.playSfx(id, { ...opts, detune: (opts?.detune ?? 0) + (Math.random() - 0.5) * 120 });
+      audio.playSfx(id, opts);
     };
     switch (e.e) {
       case 'attack':

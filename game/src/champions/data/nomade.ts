@@ -10,12 +10,12 @@ export const NOMADE: ChampionDef[] = [
     traits: ['nomade', 'tireur'],
     role: 'marksman',
     position: 'back',
-    stats: makeStats('marksman', 1, [0, 60]),
+    stats: makeStats('marksman', 1, [0, 50]),
     attack: { projectile: 'pellet', speed: 15 },
     ability: {
       name: 'Pièce lancée',
       desc: 'Lance une pièce sur sa cible pour {adr} % de la PA en dégâts physiques. Si elle l’achève, Pim gagne 1 or (2 max par combat).',
-      values: { adr: [210, 220, 240] },
+      values: { adr: [250, 265, 300] },
       target: 'current',
       castTime: 0.25,
       vfx: 'coinFlip',
@@ -48,7 +48,7 @@ export const NOMADE: ChampionDef[] = [
     ability: {
       name: 'Mirage',
       desc: 'Laisse un mirage (320 PV ×{lvl}) qui provoque les ennemis adjacents, puis réapparaît derrière l’ennemi le plus éloigné et le frappe pour {adr} % de la PA.',
-      values: { adr: [240, 260, 300], lvl: [1, 1.5, 2.2] },
+      values: { adr: [205, 225, 260], lvl: [0.75, 1.1, 1.7] },
       target: 'farthestEnemy',
       castTime: 0.2,
       vfx: 'mirage',
@@ -71,12 +71,12 @@ export const NOMADE: ChampionDef[] = [
     role: 'amplifier',
     secondaryRole: 'enchanter',
     position: 'back',
-    stats: makeStats('support', 2, [30, 80]),
+    stats: makeStats('support', 2, [40, 65]),
     attack: { projectile: 'windBolt', speed: 13 },
     ability: {
       name: 'Longue-vue',
-      desc: 'Taliya et les alliés adjacents gagnent +{range} de portée d’attaque et {as} % de vitesse d’attaque pendant 5 s.',
-      values: { range: [1, 1, 2], as: [20, 30, 45] },
+      desc: 'Taliya et les alliés adjacents gagnent +{range} de portée d’attaque, {as} % de vitesse d’attaque et {amp} % de dégâts infligés pendant 5 s.',
+      values: { range: [1, 1, 2], as: [40, 50, 65], amp: [12, 18, 25] },
       target: 'self',
       castTime: 0.3,
       vfx: 'spyglass',
@@ -84,7 +84,7 @@ export const NOMADE: ChampionDef[] = [
         {
           do: 'status',
           area: { shape: 'adjacentAllies', includeSelf: true },
-          status: { kind: 'stats', duration: 5, id: 'longuevue', stats: [{ stat: 'range', value: 'range' }, { stat: 'asPct', value: 'as' }], tag: 'Longue-vue' },
+          status: { kind: 'stats', duration: 5, id: 'longuevue', stats: [{ stat: 'range', value: 'range' }, { stat: 'asPct', value: 'as' }, { stat: 'damageAmp', value: 'amp' }], tag: 'Longue-vue' },
           vfx: 'windBuff',
         },
       ],
@@ -103,7 +103,7 @@ export const NOMADE: ChampionDef[] = [
     role: 'artillery',
     secondaryRole: 'amplifier',
     position: 'back',
-    stats: makeStats('support', 3, [30, 80], { hp: 580 }),
+    stats: makeStats('support', 3, [30, 70], { hp: 600 }),
     attack: { projectile: 'flaskSmall', speed: 10 },
     passive: {
       name: 'Fin négociateur',
@@ -113,7 +113,7 @@ export const NOMADE: ChampionDef[] = [
     ability: {
       name: 'Élixir instable',
       desc: 'Lance une fiole sur le plus gros groupe d’ennemis : {dmg} dégâts magiques à 1 hexagone et réduction de {shred} % de leur résistance magique pendant 4 s.',
-      values: { dmg: [200, 300, 460], shred: [30, 35, 40] },
+      values: { dmg: [250, 370, 570], shred: [30, 35, 40] },
       target: 'clusterEnemy',
       castTime: 0.4,
       vfx: 'throw',
@@ -147,7 +147,7 @@ export const NOMADE: ChampionDef[] = [
     ability: {
       name: 'Tourbillon des sables',
       desc: 'Traverse sa cible dans un tourbillon : inflige {adr} % de la PA en dégâts physiques à chaque ennemi sur sa trajectoire, puis gagne {as} % de vitesse d’attaque pendant 4 s.',
-      values: { adr: [160, 170, 190], as: [35, 45, 60] },
+      values: { adr: [215, 225, 250], as: [45, 55, 70] },
       target: 'current',
       castTime: 0.2,
       vfx: 'sandstorm',
@@ -176,7 +176,7 @@ export const NOMADE: ChampionDef[] = [
     ability: {
       name: 'Bordée',
       desc: 'Ordonne une bordée : les boulets balaient une bande de 3 hexagones de large jusqu’au bord du plateau, infligeant {adr} % de la PA en dégâts physiques à chaque ennemi touché.',
-      values: { adr: [220, 240, 450] },
+      values: { adr: [295, 315, 560] },
       target: 'clusterEnemy',
       castTime: 0.55,
       vfx: 'broadsideCall',
@@ -206,7 +206,7 @@ export const NOMADE: ChampionDef[] = [
     ability: {
       name: 'Caravane fantôme',
       desc: 'Appelle {n} Cavaliers spectraux en première ligne (720 PV, 68 dégâts, ×{lvl} selon le rang). Tous les alliés gagnent {as} % de vitesse d’attaque pendant 4 s.',
-      values: { n: [2, 2, 4], lvl: [1, 1.4, 3], as: [20, 25, 60] },
+      values: { n: [2, 2, 4], lvl: [1, 1.5, 3], as: [25, 30, 60] },
       target: 'self',
       castTime: 0.7,
       vfx: 'caravanCall',

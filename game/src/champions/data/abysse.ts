@@ -42,7 +42,7 @@ export const ABYSSE: ChampionDef[] = [
     ability: {
       name: 'Vague',
       desc: 'Envoie une vague en ligne droite (5 hexagones) qui inflige {dmg} dégâts magiques à chaque ennemi touché et réduit sa vitesse d’attaque de {slow} % pendant 2 s.',
-      values: { dmg: [170, 250, 370], slow: [25, 30, 35] },
+      values: { dmg: [195, 285, 430], slow: [25, 30, 35] },
       target: 'current',
       castTime: 0.35,
       vfx: 'wave',
@@ -188,7 +188,7 @@ export const ABYSSE: ChampionDef[] = [
     role: 'fighter',
     secondaryRole: 'bruiser',
     position: 'front',
-    stats: makeStats('bruiser', 5, [40, 90], { as: 0.7 }),
+    stats: makeStats('bruiser', 5, [30, 70], { as: 0.75, armor: 45, mr: 45 }),
     passive: {
       name: 'Faim insatiable',
       desc: 'Chaque élimination lui confère {hpk} % de PV max (cumulable) et lui rend 20 % de ses PV max.',
@@ -206,7 +206,7 @@ export const ABYSSE: ChampionDef[] = [
     ability: {
       name: 'Engloutir',
       desc: 'Engloutit l’ennemi le plus affaibli à 2 hexagones ou moins : s’il a moins de {thr} % de ses PV, il est tué sur le coup ; sinon il subit {dmg} dégâts magiques.',
-      values: { thr: [30, 40, 100], dmg: [350, 525, 2500] },
+      values: { thr: [35, 45, 100], dmg: [480, 720, 2500] },
       target: 'lowestHpPctEnemy',
       range: 2,
       castTime: 0.5,

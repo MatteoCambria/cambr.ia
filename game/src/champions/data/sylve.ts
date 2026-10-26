@@ -14,7 +14,7 @@ export const SYLVE: ChampionDef[] = [
     ability: {
       name: 'Écorce',
       desc: 'Se couvre d’écorce : gagne {dr} % de réduction de dégâts pendant 3 s et récupère {heal} PV.',
-      values: { dr: [40, 45, 50], heal: [150, 220, 330] },
+      values: { dr: [35, 40, 45], heal: [120, 180, 270] },
       target: 'self',
       castTime: 0.25,
       vfx: 'bark',
@@ -138,7 +138,7 @@ export const SYLVE: ChampionDef[] = [
     passive: {
       name: 'Sève ancienne',
       desc: 'Régénère {regen} % de ses PV max chaque seconde.',
-      values: { regen: [1.5, 2, 3] },
+      values: { regen: [0.9, 1.2, 2] },
       triggers: [{ on: 'interval', every: 1, actions: [{ do: 'heal', area: { shape: 'self' }, amount: { casterHp: 'regen' } }] }],
     },
     ability: {
@@ -245,11 +245,11 @@ export const SYLVE: ChampionDef[] = [
     role: 'bruiser',
     secondaryRole: 'tank',
     position: 'front',
-    stats: makeStats('bruiser', 5, [60, 120]),
+    stats: makeStats('bruiser', 5, [80, 110]),
     ability: {
       name: 'Éveil primordial',
       desc: 'Première utilisation : s’éveille pour le reste du combat (+{hp} % PV max, +{ad} % PA, ses attaques touchent aussi les ennemis adjacents pour {splash} %). Utilisations suivantes : frappe le sol pour {slam} dégâts magiques autour de lui.',
-      values: { hp: [50, 60, 150], ad: [30, 40, 100], splash: [60, 70, 100], slam: [250, 400, 2000] },
+      values: { hp: [65, 75, 150], ad: [40, 50, 100], splash: [75, 85, 100], slam: [300, 450, 2000] },
       target: 'self',
       castTime: 0.7,
       vfx: 'awaken',

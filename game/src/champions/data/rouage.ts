@@ -101,12 +101,12 @@ export const ROUAGE: ChampionDef[] = [
     role: 'battery',
     secondaryRole: 'amplifier',
     position: 'back',
-    stats: makeStats('support', 2, [30, 70]),
+    stats: makeStats('support', 2, [30, 60]),
     attack: { projectile: 'boltCopper', speed: 12 },
     ability: {
       name: 'Remontoir',
       desc: 'Remonte l’allié le plus proche de lancer sa compétence : il gagne {mana} mana. Lui et Clémence gagnent {as} % de vitesse d’attaque pendant 4 s.',
-      values: { mana: [25, 35, 50], as: [20, 30, 45] },
+      values: { mana: [30, 40, 55], as: [30, 40, 55] },
       target: 'highestManaAlly',
       vfx: 'windUp',
       actions: [
@@ -149,7 +149,7 @@ export const ROUAGE: ChampionDef[] = [
     ability: {
       name: 'Soupape',
       desc: 'Libère la vapeur : gagne {dr} % de réduction de dégâts pendant 3 s et réduit de {slow} % la vitesse d’attaque des ennemis adjacents pendant 3 s.',
-      values: { dr: [40, 45, 55], slow: [30, 35, 40] },
+      values: { dr: [35, 40, 50], slow: [30, 35, 40] },
       target: 'self',
       castTime: 0.3,
       vfx: 'steam',
@@ -232,7 +232,7 @@ export const ROUAGE: ChampionDef[] = [
     ability: {
       name: 'Arrêt du temps',
       desc: 'Fige tous les ennemis (étourdissement) pendant {stun} s, puis leur inflige {dmg} dégâts magiques.',
-      values: { stun: [1.5, 2, 8], dmg: [250, 375, 2000] },
+      values: { stun: [1.25, 1.5, 8], dmg: [210, 315, 2000] },
       target: 'self',
       castTime: 0.9,
       vfx: 'timeStop',
@@ -255,11 +255,11 @@ export const ROUAGE: ChampionDef[] = [
     role: 'protector',
     secondaryRole: 'tank',
     position: 'front',
-    stats: makeStats('tank', 5, [80, 150]),
+    stats: makeStats('tank', 5, [40, 160]),
     passive: {
       name: 'Échappement',
       desc: 'Au début du combat, les alliés adjacents gagnent {res} armure et résistance magique.',
-      values: { res: [15, 25, 60] },
+      values: { res: [12, 18, 60] },
       triggers: [
         { on: 'combatStart', actions: [{ do: 'status', area: { shape: 'adjacentAllies' }, status: { kind: 'stats', duration: 0, id: 'orrheon_aura', stats: [{ stat: 'armor', value: 'res' }, { stat: 'mr', value: 'res' }], tag: 'Échappement' } }] },
       ],
@@ -267,7 +267,7 @@ export const ROUAGE: ChampionDef[] = [
     ability: {
       name: 'Rembobinage',
       desc: 'Rembobine le temps : chaque allié retrouve les PV qu’il avait 4 s plus tôt (si c’était plus) et est purifié de ses effets négatifs. Orrhéon gagne un bouclier de {shield} PV.',
-      values: { shield: [500, 800, 3000] },
+      values: { shield: [300, 450, 2500] },
       target: 'self',
       castTime: 0.8,
       vfx: 'rewind',

@@ -104,13 +104,16 @@ export interface BuildOptions {
   stage: number;
   recordEvents?: boolean;
   labels?: [string, string];
+  /** Outils d'équilibrage : synergies neutralisées par camp. */
+  disabledTraits?: [readonly string[], readonly string[]];
 }
 
 export function buildCombat(sides: readonly [SideSpec, SideSpec], opts: BuildOptions): CombatSim {
   const sim = new CombatSim({ seed: opts.seed, stage: opts.stage, recordEvents: opts.recordEvents, summons: SUMMONS, labels: opts.labels });
   sides.forEach((spec, sideIdx) => {
     const side = sideIdx as SideId;
-    const traits = computeTraits(spec.units).filter((t) => t.level > 0);
+    const off = opts.disabledTraits?.[sideIdx] ?? [];
+    const traits = computeTraits(spec.units).filter((t) => t.level > 0 && !off.includes(t.id));
     const units = spec.units.slice().sort((a, b) => a.hex.row - b.hex.row || a.hex.col - b.hex.col);
 
     // meneur de chaque synergie : le porteur le plus en retrait

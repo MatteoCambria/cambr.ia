@@ -86,6 +86,8 @@ export class BoardRenderer {
   drawn: DrawnUnit[] = [];
   private cssW = 0;
   private cssH = 0;
+  private tileLayer: HTMLCanvasElement | null = null;
+  private tileSig = '';
 
   constructor(canvas: HTMLCanvasElement) {
     this.canvas = canvas;
@@ -203,24 +205,48 @@ export class BoardRenderer {
       }
     }
     const dragging = !!inp.drag && inp.drag.source.kind === 'unit' && !inp.locked;
+    // Les cases ne changent que lors d'un survol, d'un glisser ou d'un changement de phase :
+    // on les dessine dans un calque mis en cache, réutilisé tant que leur état est identique.
+    const states: string[] = [];
     for (let row = 0; row < BOARD_ROWS; row++) {
       for (let col = 0; col < BOARD_COLS; col++) {
-        const h = { col, row };
-        const c = combatHexToScreen(L, h);
-        const k = key(h);
+        const k = key({ col, row });
         const own = row >= PLAYER_ROWS;
         let highlight: 'none' | 'hover' | 'valid' | 'invalid' | 'range' | 'zone' = 'none';
         if (target === k) highlight = targetValid ? 'hover' : 'invalid';
         else if (adjacency.has(k)) highlight = 'zone';
         else if (range.has(k)) highlight = 'range';
         else if (dragging && own) highlight = 'valid';
-        ctx.save();
-        ctx.translate(c.x, c.y);
-        ctx.scale(1, TILT);
-        drawHexTile(ctx, 0, 0, L.hexR * 0.97, { owner: inp.live ? (own ? 0 : 1) : own ? 0 : -1, highlight, parity: (col + row) & 1 });
-        ctx.restore();
+        states.push(highlight);
       }
     }
+    const sig = `${L.width}x${L.height}|${this.dpr}|${inp.live ? 1 : 0}|${states.join(',')}`;
+    if (sig !== this.tileSig || !this.tileLayer) {
+      this.tileSig = sig;
+      const layer = this.tileLayer ?? document.createElement('canvas');
+      layer.width = Math.round(L.width * this.dpr);
+      layer.height = Math.round(L.height * this.dpr);
+      const lctx = layer.getContext('2d')!;
+      lctx.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
+      lctx.clearRect(0, 0, L.width, L.height);
+      let i = 0;
+      for (let row = 0; row < BOARD_ROWS; row++) {
+        for (let col = 0; col < BOARD_COLS; col++) {
+          const c = combatHexToScreen(L, { col, row });
+          const own = row >= PLAYER_ROWS;
+          lctx.save();
+          lctx.translate(c.x, c.y);
+          lctx.scale(1, TILT);
+          drawHexTile(lctx, 0, 0, L.hexR * 0.97, { owner: inp.live ? (own ? 0 : 1) : own ? 0 : -1, highlight: states[i++] as 'none', parity: (col + row) & 1 });
+          lctx.restore();
+        }
+      }
+      this.tileLayer = layer;
+    }
+    ctx.save();
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.drawImage(this.tileLayer, 0, 0);
+    ctx.restore();
   }
 
   private drawBench(inp: RenderInput): void {
