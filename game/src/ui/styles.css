@@ -492,3 +492,17 @@ input[type='range'] { accent-color: var(--gold); width: 220px; }
 .first-steps li img { margin-top: 2px; }
 .first-steps li strong { display: block; color: var(--gold-bright); font-size: 15px; }
 .first-steps li span { font-size: 14px; line-height: 1.4; color: var(--text); }
+
+/* Confirmation dans la page */
+.confirm-box { display: flex; flex-direction: column; gap: 8px; padding: 10px 12px; border-radius: 10px; border: 1px solid rgba(239, 106, 82, 0.6); background: rgba(239, 106, 82, 0.08); }
+.confirm-box p { margin: 0; font-size: 14px; color: var(--text); }
+.confirm-box .row { display: flex; gap: 8px; flex-wrap: wrap; }
+.confirm-box .btn { flex: 1; }
+
+/* Écrans trop étroits : le plateau demande un écran d'ordinateur */
+.narrow-notice { display: none; }
+@media (max-width: 900px) {
+  .narrow-notice { display: grid; place-items: center; position: fixed; inset: 0; z-index: 1000; padding: 24px max(16px, env(safe-area-inset-right, 0px)) 24px max(16px, env(safe-area-inset-left, 0px)); background: var(--bg-0); color: var(--text); text-align: center; }
+  .narrow-notice h1 { font-family: var(--font-display); color: var(--gold-bright); font-size: 26px; letter-spacing: 0.08em; margin: 0 0 12px; }
+  .narrow-notice p { max-width: 34ch; margin: 0 auto; line-height: 1.5; color: var(--text-dim); }
+}

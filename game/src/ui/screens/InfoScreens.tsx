@@ -3,7 +3,7 @@ import { CHAMPIONS, COMBINED, COMPONENTS, TRAITS, combine, getTrait } from '../.
 import { ROLE_LABELS, type Role } from '../../core/defs';
 import { ECONOMY, POOL_COPIES, SHOP_ODDS, STAGE_DAMAGE, XP_TO_NEXT, COMBAT, BENCH_SIZE } from '../../config/balance';
 import { resetAllData, storageAvailable } from '../../save/save';
-import { ChampionPortrait, ItemIcon, Tip, TraitIcon, costColor, useController } from '../common';
+import { ChampionPortrait, ConfirmButton, ItemIcon, Tip, TraitIcon, costColor, useController } from '../common';
 import { ChampionSheet, ChampionTip, ItemTip } from '../info';
 import { statText } from '../../core/statText';
 import { MenuBackground } from './MenuScreens';
@@ -327,17 +327,15 @@ export function SettingsScreen(): JSX.Element {
           <p style={{ color: 'var(--text-dim)', margin: '0 0 8px' }}>
             {storageAvailable() ? 'Les paramètres, statistiques et la partie en cours sont enregistrés localement dans ce navigateur.' : 'Le stockage local est indisponible : rien ne sera conservé après fermeture.'}
           </p>
-          <button
-            className="btn danger"
-            onClick={() => {
-              if (confirm('Effacer paramètres, statistiques et partie en cours ?')) {
-                resetAllData();
-                location.reload();
-              }
+          <ConfirmButton
+            label="Réinitialiser toutes les données"
+            question="Effacer les paramètres, les statistiques et la partie en cours ?"
+            confirmLabel="Tout effacer"
+            onConfirm={() => {
+              resetAllData();
+              location.reload();
             }}
-          >
-            Réinitialiser toutes les données
-          </button>
+          />
         </section>
       </div>
     </PageFrame>

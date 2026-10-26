@@ -126,3 +126,30 @@ export function FloatAt({ x, y, children }: { x: number; y: number; children: Re
 export function Stars({ n }: { n: number }): JSX.Element {
   return <span className="star-row">{'★'.repeat(n)}</span>;
 }
+
+/**
+ * Bouton d'action irréversible avec confirmation dans la page (les boîtes de dialogue
+ * natives sont bloquées dans certains cadres d'affichage).
+ */
+export function ConfirmButton({ label, question, confirmLabel, onConfirm }: { label: string; question: string; confirmLabel: string; onConfirm: () => void }): JSX.Element {
+  const [asking, setAsking] = useState(false);
+  if (!asking)
+    return (
+      <button className="btn danger" onClick={() => setAsking(true)}>
+        {label}
+      </button>
+    );
+  return (
+    <div className="confirm-box" role="alertdialog" aria-label={question}>
+      <p>{question}</p>
+      <div className="row">
+        <button className="btn danger" onClick={onConfirm} autoFocus>
+          {confirmLabel}
+        </button>
+        <button className="btn ghost" onClick={() => setAsking(false)}>
+          Annuler
+        </button>
+      </div>
+    </div>
+  );
+}

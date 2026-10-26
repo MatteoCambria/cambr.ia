@@ -32,7 +32,21 @@ export function App(): JSX.Element {
       window.removeEventListener('keydown', unlock);
     };
   }, []);
-  switch (c.screen) {
+  return (
+    <>
+      <Screen screen={c.screen} />
+      <div className="narrow-notice" role="note">
+        <div>
+          <h1>Orrhéa</h1>
+          <p>Le plateau de jeu demande un écran d’au moins 1024 pixels de large. Ouvrez cette page sur un ordinateur ou agrandissez la fenêtre.</p>
+        </div>
+      </div>
+    </>
+  );
+}
+
+function Screen({ screen }: { screen: typeof controller.screen }): JSX.Element {
+  switch (screen) {
     case 'game':
       return <GameScreen />;
     case 'setup':

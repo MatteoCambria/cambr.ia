@@ -5,7 +5,7 @@ import { getChampion, getItem } from '../../core/content';
 import { HUMAN_ID, carouselTurn } from '../../game/game';
 import { BoardCanvas } from './BoardCanvas';
 import { ItemsPanel, OpponentsPanel, ShopPanel, TopBar, TraitsPanel } from './panels';
-import { ChampionPortrait, Icon, ItemIcon, Tip, costColor, useController } from '../common';
+import { ChampionPortrait, ConfirmButton, Icon, ItemIcon, Tip, costColor, useController } from '../common';
 import { ChampionSheet, ChampionTip, ItemTip } from '../info';
 
 export function GameScreen(): JSX.Element {
@@ -198,17 +198,15 @@ function PauseMenu(): JSX.Element {
           <button className="btn" onClick={() => c.quitToMenu(true)}>
             Sauvegarder et quitter
           </button>
-          <button
-            className="btn danger"
-            onClick={() => {
-              if (confirm('Abandonner la partie ? Elle comptera comme une défaite.')) {
-                c.modal = null;
-                c.abandon();
-              }
+          <ConfirmButton
+            label="Abandonner"
+            question="Abandonner la partie ? Elle comptera comme une défaite."
+            confirmLabel="Abandonner la partie"
+            onConfirm={() => {
+              c.modal = null;
+              c.abandon();
             }}
-          >
-            Abandonner
-          </button>
+          />
         </div>
         {c.live ? <div className="muted" style={{ marginTop: 10, fontSize: 13, color: 'var(--text-dim)', textAlign: 'center' }}>Le combat est en pause. Quitter pendant un combat reprendra la manche au début du combat.</div> : null}
       </div>
